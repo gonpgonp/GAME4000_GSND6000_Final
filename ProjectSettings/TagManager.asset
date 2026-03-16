@@ -41,5 +41,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 2109306057
+    locked: 0
+  - name: BarObjects
+    uniqueID: 2169745517
+    locked: 0
+  - name: Table
+    uniqueID: 4233702553
+    locked: 0
+  - name: Balls
+    uniqueID: 2859905509
+    locked: 0
+  - name: Players
+    uniqueID: 3964090151
+    locked: 0
   m_RenderingLayers:
   - Default
