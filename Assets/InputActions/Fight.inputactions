@@ -14,6 +14,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Player1Attack",
+                    "type": "Button",
+                    "id": "c38792f7-622c-449b-963d-815e6a40bf96",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -71,6 +80,17 @@
                     "action": "Player1Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "5d11744e-76a9-481d-8909-3f274f33ccf4",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player1Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -86,6 +106,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Player2Attack",
+                    "type": "Button",
+                    "id": "61e2067b-7740-4ad2-be52-1e6a7381cc29",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -143,6 +172,28 @@
                     "action": "Player2Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "de27a92c-449e-4aa0-a423-c84df46539fa",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player2Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2f5cddc8-2d2d-4ef6-b9b8-26ba8beb0d67",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Player2Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
