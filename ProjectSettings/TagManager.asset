@@ -15,8 +15,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - PlayerHurtbox
+  - PlayerHitbox
   - 
   - 
   - 
