@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CueBall
   - NumberBall
+  - Pocket
   layers:
   - Default
   - TransparentFX

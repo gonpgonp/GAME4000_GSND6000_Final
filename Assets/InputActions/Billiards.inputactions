@@ -22,10 +22,10 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
-                    "name": "TEST_AddPocket",
+                    "name": "AddPocket",
                     "type": "Button",
                     "id": "3ec17103-abbd-4c1c-b049-37ef398bd351",
                     "expectedControlType": "",
@@ -34,18 +34,36 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "TEST_SeePath",
+                    "name": "BlockPocket",
                     "type": "Button",
-                    "id": "dee346a8-5c36-4dcb-8fb6-c47c49e8921d",
+                    "id": "1ccfa9b0-59a4-4d04-b7ca-4da2af704e30",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "TEST_SwapBalls",
+                    "name": "SwapBalls",
                     "type": "Button",
                     "id": "f15fc226-5e19-4229-b0a4-cd27ee3af76b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BallShuffle",
+                    "type": "Button",
+                    "id": "7aa1768e-ce39-4a3a-a617-3cd98bc12279",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SecondTap",
+                    "type": "Button",
+                    "id": "ed8cb075-713d-4ebb-b12d-03c62009bbbf",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -82,18 +100,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "TEST_AddPocket",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "22cdeb58-0373-47ed-aeed-b4a6626e9d79",
-                    "path": "<Keyboard>/2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "TEST_SeePath",
+                    "action": "AddPocket",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -104,7 +111,40 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "TEST_SwapBalls",
+                    "action": "SwapBalls",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7ad3ec7c-e4da-45c0-a17f-6cf460fbe5ee",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BallShuffle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "094f1a0a-2da9-4e11-a929-9ca97962c9e1",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BlockPocket",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0c4e864d-b23a-4f57-a4dc-3421732cd2d0",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondTap",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
