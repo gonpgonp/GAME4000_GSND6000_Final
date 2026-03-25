@@ -1465,7 +1465,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &537295488
 Canvas:
   m_ObjectHideFlags: 0
@@ -1475,7 +1475,7 @@ Canvas:
   m_GameObject: {fileID: 537295483}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 2
+  m_RenderMode: 1
   m_Camera: {fileID: 871455059}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -5412,7 +5412,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &2146285640
 Canvas:
   m_ObjectHideFlags: 0
@@ -5422,7 +5422,7 @@ Canvas:
   m_GameObject: {fileID: 2146285637}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 2
+  m_RenderMode: 1
   m_Camera: {fileID: 871455059}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
