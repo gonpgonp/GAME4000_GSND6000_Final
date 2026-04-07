@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: c93ee2209bb2c4d10872cfdad7bb8cea
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 447422757038140605
+    second: Pool Balls_0
+  - first:
+      213: -8561384071327997173
+    second: Pool Balls_1
+  - first:
+      213: -2427353543544229643
+    second: Pool Balls_2
+  - first:
+      213: -3029645658531405839
+    second: Pool Balls_3
+  - first:
+      213: -5450006989464441221
+    second: Pool Balls_4
+  - first:
+      213: -2880910190022982508
+    second: Pool Balls_5
+  - first:
+      213: -5108699955809010899
+    second: Pool Balls_6
+  - first:
+      213: -6568359418671952100
+    second: Pool Balls_7
+  - first:
+      213: 1164609556184466759
+    second: Pool Balls_8
+  - first:
+      213: 8732423263620093627
+    second: Pool Balls_9
+  - first:
+      213: 440886184974528801
+    second: Pool Balls_10
+  - first:
+      213: 5739745977108177712
+    second: Pool Balls_11
+  - first:
+      213: -9206422140921109007
+    second: Pool Balls_12
+  - first:
+      213: -625763042915915538
+    second: Pool Balls_13
+  - first:
+      213: -6268174459196360579
+    second: Pool Balls_14
+  - first:
+      213: -4844662536661401906
+    second: Pool Balls_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pool Balls_
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 771
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbc2fa180a0953600800000000000000
+      internalID: 447422757038140605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pool Balls_1
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 771
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03aeca1c8adf2980800000000000000
+      internalID: -8561384071327997173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pool Balls_2
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 770
+        width: 203
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f0b2c410de405ed0800000000000000
+      internalID: -2427353543544229643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pool Balls_3
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 770
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ff5ee7435984f5d0800000000000000
+      internalID: -3029645658531405839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pool Balls_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 519
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7e6399b48fad54b0800000000000000
+      internalID: -5450006989464441221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pool Balls_5
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 516
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49480e52273f408d0800000000000000
+      internalID: -2880910190022982508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pool Balls_6
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 512
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2b33fd05704a19b0800000000000000
+      internalID: -5108699955809010899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pool Balls_7
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 509
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1f87fcc8ef78d4a0800000000000000
+      internalID: -6568359418671952100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pool Balls_8
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 273
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74586629836892010800000000000000
+      internalID: 1164609556184466759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pool Balls_9
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 268
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb6de6021bccf2970800000000000000
+      internalID: 8732423263620093627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pool Balls_10
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 264
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 121b8c936a75e1600800000000000000
+      internalID: 440886184974528801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pool Balls_11
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 265
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033a2824e8ca7af40800000000000000
+      internalID: 5739745977108177712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pool Balls_12
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 22
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f52b1e27d73c3080800000000000000
+      internalID: -9206422140921109007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pool Balls_13
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 18
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee8ed61f3d7d057f0800000000000000
+      internalID: -625763042915915538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pool Balls_14
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 13
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d78bc612a88f209a0800000000000000
+      internalID: -6268174459196360579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pool Balls_15
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 13
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece77ad471d44ccb0800000000000000
+      internalID: -4844662536661401906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 65fd38b4117064c9e8cc200850cf06e7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Pool Balls_: 447422757038140605
+      Pool Balls_1: -8561384071327997173
+      Pool Balls_10: 440886184974528801
+      Pool Balls_11: 5739745977108177712
+      Pool Balls_12: -9206422140921109007
+      Pool Balls_13: -625763042915915538
+      Pool Balls_14: -6268174459196360579
+      Pool Balls_15: -4844662536661401906
+      Pool Balls_2: -2427353543544229643
+      Pool Balls_3: -3029645658531405839
+      Pool Balls_4: -5450006989464441221
+      Pool Balls_5: -2880910190022982508
+      Pool Balls_6: -5108699955809010899
+      Pool Balls_7: -6568359418671952100
+      Pool Balls_8: 1164609556184466759
+      Pool Balls_9: 8732423263620093627
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
