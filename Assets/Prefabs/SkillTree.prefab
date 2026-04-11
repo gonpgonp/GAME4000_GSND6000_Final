@@ -447,7 +447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 303, y: -63.999992}
+  m_AnchoredPosition: {x: 300, y: 0}
   m_SizeDelta: {x: 89.45, y: 78.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7813300202789945846
@@ -568,7 +568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297, y: -165}
+  m_AnchoredPosition: {x: 0, y: -128}
   m_SizeDelta: {x: 89.45, y: 78.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5451758117329251495
@@ -928,7 +928,7 @@ MonoBehaviour:
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TableSkill3","value":{"$content":8,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"PointsDisplay","value":{"$content":9,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"SkillUnlockManager","value":{"$content":10,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TotalPoints","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TotalPoints","value":{"$content":10,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"PointsThisRound","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
@@ -995,7 +995,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 303, y: -166}
+  m_AnchoredPosition: {x: 300, y: -128}
   m_SizeDelta: {x: 89.45, y: 78.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &791785287936402984
@@ -1527,7 +1527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 33.999996}
+  m_AnchoredPosition: {x: -300, y: 128}
   m_SizeDelta: {x: 89.45, y: 78.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &120494057960729516
@@ -1648,7 +1648,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 303, y: 35.000008}
+  m_AnchoredPosition: {x: 300, y: 128}
   m_SizeDelta: {x: 89.45, y: 78.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9126101241039213727
@@ -1924,7 +1924,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: -65}
+  m_AnchoredPosition: {x: -300, y: 0}
   m_SizeDelta: {x: 89.45, y: 78.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1151508820033689712
@@ -2319,7 +2319,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297, y: -62.999992}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 89.45, y: 78.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &305310886801349547
@@ -2440,7 +2440,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: -167}
+  m_AnchoredPosition: {x: -300, y: -128}
   m_SizeDelta: {x: 89.45, y: 78.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1907119990244442588
@@ -2628,7 +2628,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -297, y: 36.000008}
+  m_AnchoredPosition: {x: 0, y: 128}
   m_SizeDelta: {x: 89.45, y: 78.38}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7632678747274036194
