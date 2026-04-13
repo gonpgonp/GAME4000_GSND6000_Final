@@ -25,72 +25,9 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "AddPocket",
+                    "name": "Give10Points",
                     "type": "Button",
                     "id": "3ec17103-abbd-4c1c-b049-37ef398bd351",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "BlockPocket",
-                    "type": "Button",
-                    "id": "1ccfa9b0-59a4-4d04-b7ca-4da2af704e30",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "SwapBalls",
-                    "type": "Button",
-                    "id": "f15fc226-5e19-4229-b0a4-cd27ee3af76b",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "BallShuffle",
-                    "type": "Button",
-                    "id": "7aa1768e-ce39-4a3a-a617-3cd98bc12279",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "SecondTap",
-                    "type": "Button",
-                    "id": "ed8cb075-713d-4ebb-b12d-03c62009bbbf",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "GravityPocket",
-                    "type": "Button",
-                    "id": "43858e1b-4e33-4764-91a2-36bc9a0c0072",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "HeavyBall",
-                    "type": "Button",
-                    "id": "f2791615-a581-4daf-8445-4945df55c3dd",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "InaccurateShot",
-                    "type": "Button",
-                    "id": "4aac7148-6df0-483e-bf58-9d5b40a053ab",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -123,88 +60,11 @@
                 {
                     "name": "",
                     "id": "90e3902e-a686-4c5f-b8be-c86da6bdd544",
-                    "path": "<Keyboard>/1",
+                    "path": "<Keyboard>/0",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "AddPocket",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5a9213b0-6cdb-4bff-8511-be41b9736761",
-                    "path": "<Keyboard>/3",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SwapBalls",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7ad3ec7c-e4da-45c0-a17f-6cf460fbe5ee",
-                    "path": "<Keyboard>/4",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "BallShuffle",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "094f1a0a-2da9-4e11-a929-9ca97962c9e1",
-                    "path": "<Keyboard>/2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "BlockPocket",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0c4e864d-b23a-4f57-a4dc-3421732cd2d0",
-                    "path": "<Keyboard>/5",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SecondTap",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "464a012c-35db-4d42-8313-2829e309fe63",
-                    "path": "<Keyboard>/6",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "GravityPocket",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3dad0764-e211-4e47-a6ea-66bd03a4b02b",
-                    "path": "<Keyboard>/7",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "HeavyBall",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "78c1fb4f-83e2-4399-8225-9e80659b9f38",
-                    "path": "<Keyboard>/8",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "InaccurateShot",
+                    "action": "Give10Points",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
