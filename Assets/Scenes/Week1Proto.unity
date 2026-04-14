@@ -8949,16 +8949,27 @@ PrefabInstance:
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"SkillActivateManager","value":{"$content":11,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TotalPoints","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"PointsThisRound","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"X_close","value":{"$content":12,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"P1Shop","value":{"$content":13,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"P2Shop","value":{"$content":14,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
       objectReference: {fileID: 0}
     - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: _data._objectReferences.Array.size
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: '_data._objectReferences.Array.data[11]'
       value: 
       objectReference: {fileID: 158641959}
+    - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: '_data._objectReferences.Array.data[13]'
+      value: 
+      objectReference: {fileID: 796020580}
+    - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: '_data._objectReferences.Array.data[14]'
+      value: 
+      objectReference: {fileID: 1051201970}
     - target: {fileID: 6369878327405293478, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_text
       value: 'Richard''s Total Swagger:'
@@ -13537,6 +13548,10 @@ PrefabInstance:
       propertyPath: '_data._objectReferences.Array.data[11]'
       value: 
       objectReference: {fileID: 158641959}
+    - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: '_data._objectReferences.Array.data[14]'
+      value: 
+      objectReference: {fileID: 1051201970}
     - target: {fileID: 8848543410597723641, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Pivot.x
       value: 0
