@@ -8931,6 +8931,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 181.9
       objectReference: {fileID: 0}
+    - target: {fileID: 1757185907717912670, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1879780187785117345, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Name
       value: P2_SkillTree
@@ -13548,6 +13552,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1757185907717912670, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1879780187785117345, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Name
       value: P1_SkillTree
