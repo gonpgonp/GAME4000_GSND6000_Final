@@ -6976,6 +6976,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032366001}
   m_CullTransparentMesh: 1
+--- !u!1 &1049213699 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5186856795624478893, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 2120488451277475718}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1049441746
 GameObject:
   m_ObjectHideFlags: 0
@@ -8834,6 +8839,11 @@ Transform:
   - {fileID: 845587568}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1313656922 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5186856795624478893, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 1322062540}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1316397202
 GameObject:
   m_ObjectHideFlags: 0
@@ -8950,22 +8960,24 @@ PrefabInstance:
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TotalPoints","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"PointsThisRound","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"X_close","value":{"$content":12,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"P1Shop","value":{"$content":13,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"P2Shop","value":{"$content":14,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
       objectReference: {fileID: 0}
     - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: _data._objectReferences.Array.size
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: '_data._objectReferences.Array.data[11]'
       value: 
       objectReference: {fileID: 158641959}
     - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: '_data._objectReferences.Array.data[12]'
+      value: 
+      objectReference: {fileID: 1313656922}
+    - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: '_data._objectReferences.Array.data[13]'
       value: 
-      objectReference: {fileID: 796020580}
+      objectReference: {fileID: 1051201970}
     - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: '_data._objectReferences.Array.data[14]'
       value: 
@@ -13544,10 +13556,49 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3879357923667381946, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879357923667381946, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: _data._json
+      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"CueSkill1","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"CueSkill2","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"CueSkill3","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BallSkill1","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BallSkill2","value":{"$content":4,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BallSkill3","value":{"$content":5,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TableSkill1","value":{"$content":6,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TableSkill2","value":{"$content":7,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TableSkill3","value":{"$content":8,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"PointsDisplay","value":{"$content":9,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"SkillUnlockManager","value":{"$content":10,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"SkillActivateManager","value":{"$content":11,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TotalPoints","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"PointsThisRound","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"X_close","value":{"$content":12,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: _data._objectReferences.Array.size
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: '_data._objectReferences.Array.data[11]'
       value: 
       objectReference: {fileID: 158641959}
+    - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: '_data._objectReferences.Array.data[12]'
+      value: 
+      objectReference: {fileID: 1049213699}
+    - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: '_data._objectReferences.Array.data[13]'
+      value: 
+      objectReference: {fileID: 1051201970}
     - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: '_data._objectReferences.Array.data[14]'
       value: 
