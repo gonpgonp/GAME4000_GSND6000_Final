@@ -979,6 +979,27 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8848543410597723641}
     m_Modifications:
+    - target: {fileID: 1512015322444728234, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_text
+      value: 1 Swagger to unlock, 1 Swagger for each use, one use per round, lasts
+        until the whole game.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735939559171372656, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Name
       value: TableSkill1
@@ -1001,7 +1022,27 @@ PrefabInstance:
       objectReference: {fileID: 6268559112226348763, guid: 5cab98580deb047dcaf34642bae098ab, type: 3}
     - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_text
-      value: Table Skill 1 Description
+      value: 'Magnetic: Choose a pocket to become magnetic for both players.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontStyle
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127858324893220029, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -299
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127858324893220029, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -707.7
       objectReference: {fileID: 0}
     - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: _data._json
@@ -1011,6 +1052,10 @@ PrefabInstance:
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"UsedObj","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Description","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 8439840518459154348, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1132,6 +1177,27 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8848543410597723641}
     m_Modifications:
+    - target: {fileID: 1512015322444728234, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_text
+      value: 3 Swagger to unlock, 3 Swagger for each use, one use per round, lasts
+        the whole game.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735939559171372656, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Name
       value: TableSkill3
@@ -1154,7 +1220,37 @@ PrefabInstance:
       objectReference: {fileID: -3823233994670677566, guid: ca04bfa6cf43a4e37a91c2b4c78da75d, type: 3}
     - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_text
-      value: Tabke Skill 3 Description
+      value: 'Add Pocket: Add a pocket to anywhere on the table felt.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontStyle
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127858324893220029, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127858324893220029, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -259.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -214.7
       objectReference: {fileID: 0}
     - target: {fileID: 8439840518459154348, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1276,6 +1372,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8848543410597723641}
     m_Modifications:
+    - target: {fileID: 1512015322444728234, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_text
+      value: 2 Swagger to unlock, 2 Swagger for each use, one use per round.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735939559171372656, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Name
       value: BallSkill2
@@ -1306,7 +1422,39 @@ PrefabInstance:
       objectReference: {fileID: 7283174425786427449, guid: 59b0a6792b0f44474b6d52b58d76cc82, type: 3}
     - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_text
-      value: Ball Skill 2 Description
+      value: 'Randomize Balls: Randomize all balls on the table.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontStyle
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127858324893220029, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127858324893220029, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -458.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 821.167
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10.583
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -440
       objectReference: {fileID: 0}
     - target: {fileID: 8439840518459154348, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1432,6 +1580,27 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1512015322444728234, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_text
+      value: 2 Swagger to unlock, 2 Swagger for each use, one use per round, lasts
+        the whole game.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735939559171372656, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Name
       value: TableSkill2
@@ -1458,7 +1627,35 @@ PrefabInstance:
       objectReference: {fileID: 3006084584083100669, guid: afcc51e67b3cb40f9ac358c2ba90f312, type: 3}
     - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_text
-      value: Table Skill 2 Description
+      value: 'Cover: Block one of the pockets for both players.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontStyle
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127858324893220029, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127858324893220029, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -458.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -440.3
       objectReference: {fileID: 0}
     - target: {fileID: 8439840518459154348, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1580,6 +1777,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8848543410597723641}
     m_Modifications:
+    - target: {fileID: 1512015322444728234, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_text
+      value: 3 Swagger to unlock, 3 Swagger for each use, one use per round.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735939559171372656, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Name
       value: CueSkill3
@@ -1602,7 +1819,37 @@ PrefabInstance:
       objectReference: {fileID: 5168645406658300347, guid: 215c0c1c9779c46be9ef81ac9885d4e9, type: 3}
     - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_text
-      value: Cue Skill 3 Description
+      value: 'Wacky: Make your opponent''s next shot inaccurate.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontStyle
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127858324893220029, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -233.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 821.167
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 310.58325
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -216.7
       objectReference: {fileID: 0}
     - target: {fileID: 8439840518459154348, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1724,34 +1971,47 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8848543410597723641}
     m_Modifications:
+    - target: {fileID: 916938883775026716, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512015322444728234, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735939559171372656, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Name
       value: CueSkill1
       objectReference: {fileID: 0}
-    - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Locked","value":{"$content":true,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Used","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"LockedObj","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"UsedObj","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Description","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_text
+      value: 'Aim: See where you''re aiming.
+
+'
       objectReference: {fileID: 0}
-    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 800
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
       objectReference: {fileID: 0}
-    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 150
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontStyle
+      value: 16
       objectReference: {fileID: 0}
-    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -660
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 9021172408354775723, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Pivot.x
@@ -1856,6 +2116,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8848543410597723641}
     m_Modifications:
+    - target: {fileID: 1512015322444728234, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_text
+      value: 1 Swagger to unlock, 1 Swagger for each use, one use per round.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735939559171372656, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Name
       value: BallSkill1
@@ -1878,7 +2158,23 @@ PrefabInstance:
       objectReference: {fileID: -7674126136112139331, guid: cbf2a875393a74648a8c8fc2ce20cf1a, type: 3}
     - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_text
-      value: Ball Skill 1 Description
+      value: 'Swap Balls: Swap two balls of your choice.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontStyle
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127858324893220029, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: _data._json
@@ -1888,6 +2184,10 @@ PrefabInstance:
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"UsedObj","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Description","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8439840518459154348, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2009,9 +2309,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8848543410597723641}
     m_Modifications:
+    - target: {fileID: 1512015322444728234, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_text
+      value: 2 Swagger to unlock, 2 Swagger for each use, one use per round.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735939559171372656, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Name
       value: CueSkill2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863313165750680120, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5280232408917342130, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Sprite
@@ -2019,7 +2347,31 @@ PrefabInstance:
       objectReference: {fileID: -373691578625994236, guid: 95a6776a5e8d04085965f31b0aa42915, type: 3}
     - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_text
-      value: Cue Skill 2 Description
+      value: 'Second Tap: Take a second shot on your turn.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontStyle
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127858324893220029, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -459.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -440.8
       objectReference: {fileID: 0}
     - target: {fileID: 9021172408354775723, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Pivot.x
@@ -2124,6 +2476,27 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8848543410597723641}
     m_Modifications:
+    - target: {fileID: 1512015322444728234, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_text
+      value: 3 Swagger to unlock, 3 Swagger for each use, lasts until the end of
+        the round.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536950566543561750, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735939559171372656, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Name
       value: BallSkill3
@@ -2154,7 +2527,35 @@ PrefabInstance:
       objectReference: {fileID: 2316819536790688417, guid: dc0e421f87a9a435b8870568c2667e89, type: 3}
     - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_text
-      value: Ball Skill 3 Description
+      value: 'Heavy: Make your opponent''s cue ball super heavy.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontStyle
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127858324893220029, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127858324893220029, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -233.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -215
       objectReference: {fileID: 0}
     - target: {fileID: 8439840518459154348, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
