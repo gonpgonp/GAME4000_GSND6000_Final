@@ -924,6 +924,7 @@ MonoBehaviour:
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"PissedMessages","value":{"$content":11,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"DickHead","value":{"$content":12,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"RichardHead","value":{"$content":13,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"RageHandler","value":{"$content":14,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 780306836}
@@ -940,6 +941,7 @@ MonoBehaviour:
     - {fileID: 603365896}
     - {fileID: 638396523}
     - {fileID: 1345256042}
+    - {fileID: 817804646}
 --- !u!114 &143117322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14846,8 +14848,8 @@ SceneRoots:
   - {fileID: 754115959}
   - {fileID: 973076421553178350}
   - {fileID: 158641963}
-  - {fileID: 817804649}
   - {fileID: 143117319}
+  - {fileID: 817804649}
   - {fileID: 170198565}
   - {fileID: 1818612682}
   - {fileID: 1273620732}
