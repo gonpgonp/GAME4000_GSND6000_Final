@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Week1Proto.unity
     guid: f5108bf0267c84b17b173fb38c2aa426
-  - enabled: 1
-    path: Assets/Scenes/FightProto.unity
-    guid: 2c99b2c4b9f064abfa394b3f15aca891
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
