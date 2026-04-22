@@ -3979,17 +3979,11 @@ PrefabInstance:
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Used","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"LockedObj","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"UsedObj","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Description","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"CostObj","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"CanUnlock","value":{"$content":true,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"CanUnlockObj","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
       objectReference: {fileID: 0}
-    - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: _data._objectReferences.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: '_data._objectReferences.Array.data[2]'
-      value: 
-      objectReference: {fileID: 4544173843932589644}
     - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -300
@@ -4186,10 +4180,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -259.69
       objectReference: {fileID: 0}
-    - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: '_data._objectReferences.Array.data[2]'
-      value: 
-      objectReference: {fileID: 2506325879930886536}
     - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -300
@@ -4395,10 +4385,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -458.4
       objectReference: {fileID: 0}
-    - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: '_data._objectReferences.Array.data[2]'
-      value: 
-      objectReference: {fileID: 4115034100331224707}
     - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_SizeDelta.x
       value: 821.167
@@ -4609,10 +4595,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -458.2
       objectReference: {fileID: 0}
-    - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: '_data._objectReferences.Array.data[2]'
-      value: 
-      objectReference: {fileID: 6436576612340502067}
     - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -300
@@ -4808,10 +4790,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -233.1
       objectReference: {fileID: 0}
-    - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: '_data._objectReferences.Array.data[2]'
-      value: 
-      objectReference: {fileID: 2629127180344289553}
     - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_SizeDelta.x
       value: 821.167
@@ -4998,20 +4976,10 @@ PrefabInstance:
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"LockedObj","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"UsedObj","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"CostObj","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"CanUnlock","value":{"$content":true,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"CanUnlockObj","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
       objectReference: {fileID: 0}
-    - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: _data._objectReferences.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: '_data._objectReferences.Array.data[2]'
-      value: 
-      objectReference: {fileID: 1698541632549635777}
-    - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: '_data._objectReferences.Array.data[3]'
-      value: 
-      objectReference: {fileID: 5360670843269558563}
     - target: {fileID: 8439840518459154348, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5125,11 +5093,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
   m_PrefabInstance: {fileID: 7531554975828706700}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5360670843269558563 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2513458165198664879, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-  m_PrefabInstance: {fileID: 7531554975828706700}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8223644834810531202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5204,17 +5167,11 @@ PrefabInstance:
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Used","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"LockedObj","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"UsedObj","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Description","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"CostObj","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"CanUnlock","value":{"$content":true,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"CanUnlockObj","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
       objectReference: {fileID: 0}
-    - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: _data._objectReferences.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: '_data._objectReferences.Array.data[2]'
-      value: 
-      objectReference: {fileID: 236424019430128866}
     - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.5
@@ -5400,10 +5357,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -459.1
       objectReference: {fileID: 0}
-    - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: '_data._objectReferences.Array.data[2]'
-      value: 
-      objectReference: {fileID: 8101912807725855772}
     - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 300
@@ -5606,23 +5559,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -233.3
       objectReference: {fileID: 0}
-    - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Locked","value":{"$content":true,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Used","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"LockedObj","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"UsedObj","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Description","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: _data._objectReferences.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6548625189352745293, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
-      propertyPath: '_data._objectReferences.Array.data[2]'
-      value: 
-      objectReference: {fileID: 1329314491256891532}
     - target: {fileID: 6724800182381316918, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.6
