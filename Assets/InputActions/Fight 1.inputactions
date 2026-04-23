@@ -115,6 +115,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "P2Guard",
+                    "type": "Button",
+                    "id": "77b248a8-bda7-4a37-af68-388ff5d4ecd9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -192,6 +201,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "P2Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f88bf2a7-2bbf-4bb4-80fa-d66c586b92e1",
+                    "path": "<Keyboard>/quote",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "P2Guard",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
