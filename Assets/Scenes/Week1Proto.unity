@@ -14224,6 +14224,7 @@ GameObject:
   - component: {fileID: 1567204597}
   - component: {fileID: 1567204596}
   - component: {fileID: 1567204603}
+  - component: {fileID: 1567204604}
   m_Layer: 0
   m_Name: CueBall
   m_TagString: Player
@@ -14268,7 +14269,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567204595}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
   m_Name: 
@@ -14548,6 +14549,20 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1567204604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567204595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e6bf90a7e2b6427bbbe07c68a9d9460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  click: {fileID: 1941665774305630647, guid: 7646f9394e2d2944fba66b74ae5319c7, type: 3}
+  clickedOnBall: 0
 --- !u!1 &1587844255 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3112388435808788414, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}

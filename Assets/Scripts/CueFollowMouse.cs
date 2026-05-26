@@ -54,11 +54,11 @@ public class CueFollowMouse : MonoBehaviour
         // need to add if statement for ShopOpen or DoingClickPowerUp (vars don't exist yet)
        if (click.action.IsPressed())
         {
-            spriteRenderer.color = new Color(1f, 1f, 1f, .3f);
+            spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
         }
         else
         {
-            spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+            spriteRenderer.color = new Color(1f, 1f, 1f, .3f);
 
         }
         
