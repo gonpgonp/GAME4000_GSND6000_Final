@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -935038603407597467}
   - component: {fileID: 7900789487127896956}
   - component: {fileID: 8468554236326005872}
+  - component: {fileID: 6176750739871423426}
   m_Layer: 0
   m_Name: PoolBall
   m_TagString: NumberBall
@@ -183,7 +184,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5714164804969375625}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
   m_Name: 
@@ -289,3 +290,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6176750739871423426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5714164804969375625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fbe27e769ed64267ad2a36cdea68454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'

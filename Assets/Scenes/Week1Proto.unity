@@ -197,6 +197,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 11Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2129,6 +2133,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 14Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2277,6 +2285,53 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6044691601500241335, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 2120488451277475718}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &260714265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 260714267}
+  - component: {fileID: 260714266}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &260714266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260714265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a39faba32a24591addc9c18e6476a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  p1Score: 0
+  p2Score: 0
+  billiardsIsP2Turn: 0
+--- !u!4 &260714267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260714265}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.58983, y: -4.31825, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &281587917
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,6 +2484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 5Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3939,6 +3998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 4Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4404,6 +4467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7802,6 +7869,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 10Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8488,6 +8559,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 7Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9212,6 +9287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 15Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9963,6 +10042,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 9Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13135,6 +13218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13310,6 +13397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 6Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14224,7 +14315,7 @@ GameObject:
   - component: {fileID: 1567204597}
   - component: {fileID: 1567204596}
   - component: {fileID: 1567204603}
-  - component: {fileID: 1567204604}
+  - component: {fileID: 1567204605}
   m_Layer: 0
   m_Name: CueBall
   m_TagString: Player
@@ -14269,7 +14360,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567204595}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
   m_Name: 
@@ -14549,7 +14640,7 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!114 &1567204604
+--- !u!114 &1567204605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14558,11 +14649,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1567204595}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e6bf90a7e2b6427bbbe07c68a9d9460, type: 3}
+  m_Script: {fileID: 11500000, guid: 9562ca4c11d9cd046aed97c269116fa6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
-  click: {fileID: 1941665774305630647, guid: 7646f9394e2d2944fba66b74ae5319c7, type: 3}
-  clickedOnBall: 0
+  m_EditorClassIdentifier: Assembly-CSharp::CueBall
 --- !u!1 &1587844255 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3112388435808788414, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -15359,6 +15448,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 1Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15690,6 +15783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 12Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16273,6 +16370,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 13Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18475,6 +18576,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 8Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19107,3 +19212,4 @@ SceneRoots:
   - {fileID: 1589639141}
   - {fileID: 489890793}
   - {fileID: 1541251787}
+  - {fileID: 260714267}
