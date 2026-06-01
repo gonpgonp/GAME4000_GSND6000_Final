@@ -198,6 +198,14 @@ PrefabInstance:
       value: 11Ball
       objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: cueBall
+      value: 
+      objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: rageManager
+      value: 
+      objectReference: {fileID: 817804650}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 260714266}
@@ -2134,6 +2142,14 @@ PrefabInstance:
       value: 14Ball
       objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: cueBall
+      value: 
+      objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: rageManager
+      value: 
+      objectReference: {fileID: 817804650}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 260714266}
@@ -2317,6 +2333,7 @@ MonoBehaviour:
   p1Score: 0
   p2Score: 0
   billiardsIsP2Turn: 0
+  winner: 0
 --- !u!4 &260714267
 Transform:
   m_ObjectHideFlags: 0
@@ -2484,6 +2501,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: 5Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: cueBall
+      value: 
+      objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: rageManager
+      value: 
+      objectReference: {fileID: 817804650}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
@@ -3999,6 +4024,14 @@ PrefabInstance:
       value: 4Ball
       objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: cueBall
+      value: 
+      objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: rageManager
+      value: 
+      objectReference: {fileID: 817804650}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 260714266}
@@ -4467,6 +4500,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: cueBall
+      value: 
+      objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: rageManager
+      value: 
+      objectReference: {fileID: 817804650}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
@@ -6690,8 +6731,9 @@ GameObject:
   - component: {fileID: 817804649}
   - component: {fileID: 817804648}
   - component: {fileID: 817804647}
+  - component: {fileID: 817804650}
   m_Layer: 5
-  m_Name: RageHandler
+  m_Name: RageManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6749,6 +6791,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &817804650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817804646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0123d5c64e7e84567ac6d0fd3fcb7062, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  p1Rage: 0
+  p2Rage: 0
 --- !u!1 &822347855 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3637659622623482332, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -7870,6 +7926,14 @@ PrefabInstance:
       value: 10Ball
       objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: cueBall
+      value: 
+      objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: rageManager
+      value: 
+      objectReference: {fileID: 817804650}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 260714266}
@@ -8559,6 +8623,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: 7Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: cueBall
+      value: 
+      objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: rageManager
+      value: 
+      objectReference: {fileID: 817804650}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
@@ -9287,6 +9359,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: 15Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: cueBall
+      value: 
+      objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: rageManager
+      value: 
+      objectReference: {fileID: 817804650}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
@@ -10042,6 +10122,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: 9Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: cueBall
+      value: 
+      objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: rageManager
+      value: 
+      objectReference: {fileID: 817804650}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
@@ -13219,6 +13307,14 @@ PrefabInstance:
       value: 2Ball
       objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: cueBall
+      value: 
+      objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: rageManager
+      value: 
+      objectReference: {fileID: 817804650}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 260714266}
@@ -13397,6 +13493,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: 6Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: cueBall
+      value: 
+      objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: rageManager
+      value: 
+      objectReference: {fileID: 817804650}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
@@ -14652,6 +14756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9562ca4c11d9cd046aed97c269116fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CueBall
+  hasBroken: 0
 --- !u!1 &1587844255 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3112388435808788414, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -15449,6 +15554,14 @@ PrefabInstance:
       value: 1Ball
       objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: cueBall
+      value: 
+      objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: rageManager
+      value: 
+      objectReference: {fileID: 817804650}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 260714266}
@@ -15783,6 +15896,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: 12Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: cueBall
+      value: 
+      objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: rageManager
+      value: 
+      objectReference: {fileID: 817804650}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
@@ -16370,6 +16491,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: 13Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: cueBall
+      value: 
+      objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: rageManager
+      value: 
+      objectReference: {fileID: 817804650}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
@@ -18577,6 +18706,14 @@ PrefabInstance:
       value: 8Ball
       objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: cueBall
+      value: 
+      objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: rageManager
+      value: 
+      objectReference: {fileID: 817804650}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 260714266}
@@ -19183,6 +19320,7 @@ SceneRoots:
   - {fileID: 158641963}
   - {fileID: 143117319}
   - {fileID: 817804649}
+  - {fileID: 260714267}
   - {fileID: 170198565}
   - {fileID: 1818612682}
   - {fileID: 1273620732}
@@ -19212,4 +19350,3 @@ SceneRoots:
   - {fileID: 1589639141}
   - {fileID: 489890793}
   - {fileID: 1541251787}
-  - {fileID: 260714267}

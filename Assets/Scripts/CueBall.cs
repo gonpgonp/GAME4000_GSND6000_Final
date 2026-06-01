@@ -23,6 +23,9 @@ public class CueBall : MonoBehaviour
     bool didScratch;
     float comparisonScore;
 
+    public bool hasBroken;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -36,6 +39,14 @@ public class CueBall : MonoBehaviour
     {
 		CheckAngerInaccuracy();
 		CheckClicking();
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("NumberBall"))
+        {
+            hasBroken = true;
+        }
     }
 
     private void CheckAngerInaccuracy()

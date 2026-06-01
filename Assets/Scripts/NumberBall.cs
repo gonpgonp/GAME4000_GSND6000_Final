@@ -5,7 +5,10 @@ public class NumberBall : MonoBehaviour
     private bool is8Ball;
     private bool isStripe;
 
-    [SerializeField] ScoreManager scoreManager;
+    public ScoreManager scoreManager;
+    public RageManager rageManager;
+
+    public CueBall cueBall;
 
     void Start()
     {
@@ -18,6 +21,7 @@ public class NumberBall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        // number ball goes in pocket
         if (collider.CompareTag("Pocket"))
         {
             gameObject.SetActive(false);
@@ -28,21 +32,32 @@ public class NumberBall : MonoBehaviour
             if (isStripe)
             {
                 scoreManager.p2Score += 1;
-                //p1Rage += 1;
+                rageManager.p1Rage += 1;
             }
             else
             {
                 scoreManager.p1Score += 1;
-                //p2Rage += 1;
+                rageManager.p2Rage += 1;
             }
         }
         else
         {
             checkWin();
         }
+
     }
 
-    private bool checkWin() // only gets called when 8ball is sunk
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // number ball rage checkers
+
+        if (cueBall.hasBroken)
+        {
+            Debug.Log("ya BROKE");
+        }
+    }
+
+    private void checkWin() // only gets called when 8ball is sunk
     {
         if (!scoreManager.billiardsIsP2Turn)
         {
