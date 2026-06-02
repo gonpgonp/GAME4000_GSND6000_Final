@@ -23,7 +23,9 @@ public class CueBall : MonoBehaviour
     bool didScratch;
     float comparisonScore;
 
-    public bool hasBroken;
+    public bool cueHitAnyBall = false;
+    public bool cueHitMyBall = false;
+    public bool hasBroken = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -46,6 +48,7 @@ public class CueBall : MonoBehaviour
         if (collision.gameObject.CompareTag("NumberBall"))
         {
             hasBroken = true;
+            cueHitAnyBall = true;
         }
     }
 

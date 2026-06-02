@@ -2,14 +2,11 @@ using UnityEngine;
 
 public class NumberBall : MonoBehaviour
 {    
-    private bool is8Ball;
-    private bool isStripe;
-
+    public bool is8Ball;
+    public bool isStripe;
     public ScoreManager scoreManager;
     public RageManager rageManager;
-
     public CueBall cueBall;
-
     void Start()
     {
         
@@ -47,13 +44,31 @@ public class NumberBall : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
+    private void OnCollisionEnter2D(Collision2D collision) // still need to add sfx
+    {  
         // number ball rage checkers
-
         if (cueBall.hasBroken)
         {
-            Debug.Log("ya BROKE");
+            if (collision.collider.CompareTag("NumberBall") || collision.collider.CompareTag("Player")) // if this number ball gets hit by any other ball
+            {
+                if (!scoreManager.billiardsIsP2Turn)
+                {
+                    if (!isStripe) // p1's turn, solid got hit
+                    {
+                        cueBall.cueHitMyBall = true;
+                        Debug.Log("**SCRIPT** one of mine got hit p1");
+
+                    }
+                }
+                else // p2's turn, hits a ball
+                {
+                    if (isStripe) // p2's turn, hits a solid
+                    {
+                        cueBall.cueHitMyBall = true;
+                        Debug.Log("**SCRIPT** one of mine got hit p2");
+                    }
+                }
+            }
         }
     }
 

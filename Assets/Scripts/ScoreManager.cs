@@ -6,4 +6,6 @@ public class ScoreManager : MonoBehaviour
     public int p2Score = 0;
     public bool billiardsIsP2Turn = false;
     public int winner;
+    public bool triggerSwapBilliardsTurns = false;
+
 }
