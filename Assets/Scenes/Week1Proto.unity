@@ -1708,12 +1708,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170198562}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.5, y: 1.75, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1818612682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &171068820
 GameObject:
@@ -2334,6 +2334,7 @@ MonoBehaviour:
   p2Score: 0
   billiardsIsP2Turn: 0
   winner: 0
+  triggerSwapBilliardsTurns: 0
 --- !u!4 &260714267
 Transform:
   m_ObjectHideFlags: 0
@@ -6805,6 +6806,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   p1Rage: 0
   p2Rage: 0
+  scoreManager: {fileID: 0}
+  cueBall: {fileID: 0}
 --- !u!1 &822347855 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3637659622623482332, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -14756,6 +14759,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9562ca4c11d9cd046aed97c269116fa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CueBall
+  cueHitAnyBall: 0
+  cueHitMyBall: 0
   hasBroken: 0
 --- !u!1 &1587844255 stripped
 GameObject:
@@ -16185,6 +16190,7 @@ Transform:
   m_Children:
   - {fileID: 22147957}
   - {fileID: 1758406900}
+  - {fileID: 170198565}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1818612683
@@ -19321,7 +19327,6 @@ SceneRoots:
   - {fileID: 143117319}
   - {fileID: 817804649}
   - {fileID: 260714267}
-  - {fileID: 170198565}
   - {fileID: 1818612682}
   - {fileID: 1273620732}
   - {fileID: 850284084}
