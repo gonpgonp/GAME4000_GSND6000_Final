@@ -57,7 +57,6 @@ public class NumberBall : MonoBehaviour
                     {
                         cueBall.cueHitMyBall = true;
                         Debug.Log("**SCRIPT** one of mine got hit p1");
-
                     }
                 }
                 else // p2's turn, hits a ball
@@ -72,6 +71,7 @@ public class NumberBall : MonoBehaviour
         }
     }
 
+    // move this to score manager!!!!
     private void checkWin() // only gets called when 8ball is sunk
     {
         if (!scoreManager.billiardsIsP2Turn)
