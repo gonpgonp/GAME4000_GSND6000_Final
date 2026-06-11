@@ -41,6 +41,87 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Cue1",
+                    "type": "Button",
+                    "id": "ed62c884-6e75-4c82-b071-870bd2176441",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Cue2",
+                    "type": "Button",
+                    "id": "4d5fe84d-ac0c-4c37-9b34-6a4f622fd768",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Cue3",
+                    "type": "Button",
+                    "id": "c286c0ea-5a6f-494e-888d-04f9e672daf7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Ball1",
+                    "type": "Button",
+                    "id": "5f8644e0-141f-4620-8abb-f4cc8d7c912f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Ball2",
+                    "type": "Button",
+                    "id": "ec2fe997-4ea3-422b-ac31-7860c7f9a6b1",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Ball3",
+                    "type": "Button",
+                    "id": "f4cf52b2-ef93-4813-86cb-759429c53414",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Table1",
+                    "type": "Button",
+                    "id": "3dd71a96-37d6-42e2-99b2-4e78e7399b53",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Table2",
+                    "type": "Button",
+                    "id": "a385ec0a-59f5-4c54-82a9-4b863285c376",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Table3",
+                    "type": "Button",
+                    "id": "95736b9e-67b1-4c84-ad54-5a1c0a27acf4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -69,7 +150,7 @@
                 {
                     "name": "",
                     "id": "90e3902e-a686-4c5f-b8be-c86da6bdd544",
-                    "path": "<Keyboard>/0",
+                    "path": "<Keyboard>/leftBracket",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -80,11 +161,110 @@
                 {
                     "name": "",
                     "id": "1df6d32b-733b-4aff-ab69-18efd14490fa",
-                    "path": "<Keyboard>/9",
+                    "path": "<Keyboard>/rightBracket",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "GiveMaxRage",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1f5baa16-bee8-4544-b4cf-b73755099d18",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cue1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "34f8392f-d83a-40a8-8936-46e8ca9618f1",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cue2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5915275e-95a8-4e3c-9326-8a8d664df7d2",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cue3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "23a70d8b-c4ff-4677-b5a7-1fd4a799d4f5",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ball1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "238613fd-1759-4a1d-91f9-07d390c6c80e",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ball2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ba8dffd2-3a8d-4934-a6de-2943de0736a0",
+                    "path": "<Keyboard>/6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Ball3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "96eecac4-ea53-4d74-9d6e-81f989c873c9",
+                    "path": "<Keyboard>/7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Table1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8a72e855-a651-44a6-9468-654d8f615a02",
+                    "path": "<Keyboard>/8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Table2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7306981a-e995-4c29-827c-4ef5c59eb2e0",
+                    "path": "<Keyboard>/9",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Table3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

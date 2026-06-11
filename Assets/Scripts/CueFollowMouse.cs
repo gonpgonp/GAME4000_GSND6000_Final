@@ -3,13 +3,15 @@ using UnityEngine.U2D;
 using UnityEngine.InputSystem;
 public class CueFollowMouse : MonoBehaviour
 {
-   public GameObject cueBall;
-   public float maxCueDistance = 2.5f;
-   float xDiff;
-   float yDiff;
+    public GameObject cueBall;
+    public float maxCueDistance = 2.5f;
+    float xDiff;
+    float yDiff;
 
-   public InputActionReference click;
-   SpriteRenderer spriteRenderer;
+    public InputActionReference click;
+    SpriteRenderer spriteRenderer;
+
+    public PowerUpHandler powerUpHandler;
 
     
     void Start()
@@ -51,16 +53,20 @@ public class CueFollowMouse : MonoBehaviour
         }
 
         // set transparency
-        // need to add if statement for ShopOpen or DoingClickPowerUp (vars don't exist yet)
-       if (click.action.IsPressed())
+        // need to add if statement for ShopOpen or DoingClickPowerUp (vars don't exist yet
+        if (click.action.IsPressed())
         {
             spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
         }
         else
         {
             spriteRenderer.color = new Color(1f, 1f, 1f, .3f);
-
         }
-        
-    }
+
+		if (powerUpHandler.IsAnyActive())
+		{
+			spriteRenderer.color = new Color(1f, 1f, 1f, 0f);
+		}
+
+	}
 }

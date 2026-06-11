@@ -10,9 +10,10 @@ public class CueBall : MonoBehaviour
     private InputAction cancelAction;
     private InputAction pointAction;
 
-    public Camera camera;
+    public Camera camera_;
     public GameObject cue;
 	public GameObject powerUpHandler;
+	bool seePath;
 	bool secondTapAvailable;
     float inaccuracy;
     float angerInaccuracy;
@@ -28,6 +29,7 @@ public class CueBall : MonoBehaviour
     public bool cueHitMyBall = false;
     public bool hasBroken = false;
 
+    private LineRenderer lr;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,6 +38,8 @@ public class CueBall : MonoBehaviour
         clickAction = playerInput.currentActionMap.FindAction("Click");
 		cancelAction = playerInput.currentActionMap.FindAction("Cancel");
 		pointAction = playerInput.currentActionMap.FindAction("Point");
+
+        lr = GetComponent<LineRenderer>();
     }
 
     // Update is called once per frame
@@ -75,7 +79,7 @@ public class CueBall : MonoBehaviour
             if (!hasHit || secondTapAvailable)
             {
                 Vector2 vec = pointAction.ReadValue<Vector2>();
-                Vector2 worldVec = camera.ScreenToWorldPoint(vec);
+                Vector2 worldVec = camera_.ScreenToWorldPoint(vec);
                 if (Vector2.Distance(worldVec, this.transform.position) <= 1.0f)
                 {
                     clickedOnBall = true;
@@ -84,14 +88,17 @@ public class CueBall : MonoBehaviour
                 else
                 {
                     clickedOnBall = false;
-                }
+					Variables.Scene(gameObject.scene).Set("HideButtons", false);
+				}
             }
         }
 
         if (clickedOnBall && cancelAction.WasPressedThisFrame())
         {
             clickedOnBall = false;
-        }
+            lr.enabled = false;
+			Variables.Scene(gameObject.scene).Set("HideButtons", false);
+		}
     }
 
     private void Shoot()
@@ -100,7 +107,7 @@ public class CueBall : MonoBehaviour
         if (rb != null)
         {
 			Vector2 vec = pointAction.ReadValue<Vector2>();
-			Vector3 worldVec = camera.ScreenToWorldPoint(vec);
+			Vector3 worldVec = camera_.ScreenToWorldPoint(vec);
             Vector2 distanceVec = transform.position - worldVec;
             float distance = Mathf.Min(distanceVec.magnitude, Variables.Application.Get<float>("MaxCueDistance"));
             Vector2 force = distanceVec.normalized * distance * forceMult;
@@ -112,11 +119,11 @@ public class CueBall : MonoBehaviour
                 {
                     cue.SetActive(false);
                 }
-
             }
             else
             {
                 secondTapAvailable = false;
+                lr.enabled = false;
 				cue.SetActive(false);
 			}
         }
@@ -126,16 +133,16 @@ public class CueBall : MonoBehaviour
     {
         if (clickedOnBall)
         {
-            LineRenderer lr = GetComponent<LineRenderer>();
-            if (lr != null)
-            {
-                lr.enabled = Variables.Application.Get<bool>("SeePath");
-                lr.SetPosition(0, transform.position);
-				Vector2 vec = pointAction.ReadValue<Vector2>();
-				Vector3 worldVec = camera.ScreenToWorldPoint(vec);
-                Vector2 endPos = (transform.position - worldVec).normalized * 10.0f;
-                lr.SetPosition(1, endPos);
-            }
+            lr.enabled = seePath;
+            lr.SetPosition(0, transform.position);
+			Vector2 vec = pointAction.ReadValue<Vector2>();
+			Vector3 worldVec = camera_.ScreenToWorldPoint(vec);
+            worldVec.z = 0;
+            var thisPos = transform.position;
+			thisPos.z = 0;
+            Vector3 endPos = (thisPos - worldVec).normalized * 10.0f;
+            endPos = endPos + thisPos;
+            lr.SetPosition(1, endPos);
 
 			if (clickAction.WasReleasedThisFrame())
 			{
@@ -166,20 +173,20 @@ public class CueBall : MonoBehaviour
         var numBalls = GameObject.FindGameObjectsWithTag("NumberBall");
         foreach (var ball in numBalls)
         {
-			Rigidbody2D numRB = ball.GetComponent<Rigidbody2D>();
-			if (numRB != null && numRB.linearVelocity.magnitude > 0.1f) allBallsStopped = false;
-		}
+            Rigidbody2D numRB = ball.GetComponent<Rigidbody2D>();
+            if (numRB != null && numRB.linearVelocity.magnitude > 0.1f) allBallsStopped = false;
+        }
         if (allBallsStopped)
         {
             Variables.Scene(gameObject.scene).Get<bool>("TriggerSwapBilliardsTurns");
             hasHit = false;
             Variables.Scene(gameObject.scene).Set("HideButtons", false);
             cue.SetActive(true);
-            // set poweruphandler's newTurn = true
+            powerUpHandler.GetComponent<PowerUpHandler>().ResetPowerUps();
             if (didScratch)
             {
                 transform.position = new Vector3(-4.0f, 0.0f, 0.0f);
-				didScratch = false;
+                didScratch = false;
             }
         }
     }
@@ -198,4 +205,24 @@ public class CueBall : MonoBehaviour
             }
 		}
 	}
+
+	public void SetSeePath(bool seePath_)
+	{
+		seePath = seePath_;
+	}
+
+	public void SetSecondTap(bool secondTapAvailable_)
+    {
+        secondTapAvailable = secondTapAvailable_;
+    }
+
+    public void SetInaccuracy(float inaccuracy_)
+    {
+        inaccuracy = inaccuracy_;
+    }
+
+    public void SetMass(float mass_)
+    {
+        GetComponent<Rigidbody2D>().mass = mass_;
+    }
 }
