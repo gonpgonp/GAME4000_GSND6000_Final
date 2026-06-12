@@ -1482,7 +1482,6 @@ MonoBehaviour:
   camera_: {fileID: 871455059}
   cueBall: {fileID: 1567204595}
   pocketPreview: {fileID: 954100720}
-  seePath: 0
   P1Shop: {fileID: 796020580}
   P2Shop: {fileID: 1051201970}
   PocketPrefab: {fileID: 7856522251055307003, guid: f503daafbbaa64ac2934031aa0daa270, type: 3}
@@ -6138,6 +6137,7 @@ GameObject:
   - component: {fileID: 738578148}
   - component: {fileID: 738578152}
   - component: {fileID: 738578151}
+  - component: {fileID: 738578153}
   m_Layer: 5
   m_Name: BuySkills
   m_TagString: Untagged
@@ -6266,7 +6266,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738578146}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
   m_Name: 
@@ -6294,6 +6294,22 @@ MonoBehaviour:
     _objectReferences:
     - {fileID: 796020580}
     - {fileID: 1051201970}
+--- !u!114 &738578153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738578146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0aed9e0c98e246308b3ec19bdabebfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OpenShop
+  openShopButton: {fileID: 738578148}
+  p1Shop: {fileID: 796020580}
+  p2Shop: {fileID: 1051201970}
+  scoreManager: {fileID: 260714266}
 --- !u!1 &742163108
 GameObject:
   m_ObjectHideFlags: 0
@@ -6595,6 +6611,59 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1879780187785117345, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 2120488451277475718}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &796020587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796020580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcf873bab693470d825ad812ad25d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillTreeUI
+  xButton: {fileID: 1049213700}
+  shopOpen: 0
+  cue1CostObj: {fileID: 1228177752}
+  cue2CostObj: {fileID: 1781499950}
+  cue3CostObj: {fileID: 610055826}
+  ball1CostObj: {fileID: 1075919263}
+  ball2CostObj: {fileID: 2029387408}
+  ball3CostObj: {fileID: 965128481}
+  table1CostObj: {fileID: 925556171}
+  table2CostObj: {fileID: 621607070}
+  table3CostObj: {fileID: 198055834}
+--- !u!114 &796020588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796020580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 7646f9394e2d2944fba66b74ae5319c7, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Billiards
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &801300505 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 566395340625520631, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -9003,6 +9072,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5186856795624478893, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 2120488451277475718}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1049213700 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1935876750586128613, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 2120488451277475718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049213699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1049441746
 GameObject:
   m_ObjectHideFlags: 0
@@ -9083,6 +9163,59 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1879780187785117345, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 1322062540}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1051201977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051201970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcf873bab693470d825ad812ad25d27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillTreeUI
+  xButton: {fileID: 1313656923}
+  shopOpen: 0
+  cue1CostObj: {fileID: 1472811634}
+  cue2CostObj: {fileID: 1680046974}
+  cue3CostObj: {fileID: 453120550}
+  ball1CostObj: {fileID: 755502918}
+  ball2CostObj: {fileID: 143312121}
+  ball3CostObj: {fileID: 880756666}
+  table1CostObj: {fileID: 1528999888}
+  table2CostObj: {fileID: 590548874}
+  table3CostObj: {fileID: 787719881}
+--- !u!114 &1051201978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051201970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 7646f9394e2d2944fba66b74ae5319c7, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Billiards
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!4 &1071698827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1703571981191429202, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
@@ -11697,6 +11830,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5186856795624478893, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 1322062540}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1313656923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1935876750586128613, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 1322062540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313656922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1316397202
 GameObject:
   m_ObjectHideFlags: 0
@@ -12246,10 +12390,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: RichardsTotalSwagger
       objectReference: {fileID: 0}
+    - target: {fileID: 8954650944140687977, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1879780187785117345, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1051201977}
+    - targetCorrespondingSourceObject: {fileID: 1879780187785117345, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1051201978}
   m_SourcePrefab: {fileID: 100100000, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
 --- !u!1 &1340807553
 GameObject:
@@ -19332,10 +19486,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8954650944140687977, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1879780187785117345, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 796020587}
+    - targetCorrespondingSourceObject: {fileID: 1879780187785117345, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 796020588}
   m_SourcePrefab: {fileID: 100100000, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
