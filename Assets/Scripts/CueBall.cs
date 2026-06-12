@@ -62,11 +62,11 @@ public class CueBall : MonoBehaviour
 
     private void CheckAngerInaccuracy()
     {
-		if (Variables.Application.Get<bool>("BilliardsIsP2Turn") && Variables.Application.Get<int>("P2Rage") > Variables.Application.Get<int>("MinimumFightRage"))
+		if (Variables.Application.Get<bool>("BilliardsIsP2Turn") && Variables.Application.Get<float>("P2Rage") > Variables.Application.Get<float>("MinimumFightRage"))
 		{
 			angerInaccuracy = 10.0f * Mathf.Deg2Rad;
 		}
-		else if (Variables.Application.Get<int>("P1Rage") > Variables.Application.Get<int>("MinimumFightRage"))
+		else if (Variables.Application.Get<float>("P1Rage") > Variables.Application.Get<float>("MinimumFightRage"))
 		{
 			angerInaccuracy = 0.0f;
 		}
