@@ -45,7 +45,6 @@ public class SkillTreeUI : MonoBehaviour
             }
         }
 
-
     }
 
     void Update()
@@ -55,7 +54,7 @@ public class SkillTreeUI : MonoBehaviour
 
     void XButtonCloseShop()
     {
-          gameObject.SetActive(false);  
+        gameObject.SetActive(false);  
     }
 
 
