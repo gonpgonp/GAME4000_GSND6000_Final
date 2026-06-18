@@ -7,17 +7,10 @@ public class SkillTreeUI : MonoBehaviour
     public Button xButton;
     public bool shopOpen;
 
-    PowerUpHandler powerUpHandler;
-    
-    int cue1Cost = 1;
-    int cue2Cost = 2;
-    int cue3Cost = 3;
-    int ball1Cost = 1;
-    int ball2Cost = 2;
-    int ball3Cost = 3;
-    int table1Cost = 1;
-    int table2Cost = 2;
-    int table3Cost = 3;
+    public PowerUpHandler powerUpHandler;
+    public ScoreManager scoreManager;
+    public SkillUnlockManager skillUnlockManager;
+
 
     public GameObject cue1CostObj;
     public GameObject cue2CostObj;
@@ -29,19 +22,79 @@ public class SkillTreeUI : MonoBehaviour
     public GameObject table2CostObj;
     public GameObject table3CostObj;
 
+    public Button cue1Btn;
+    public Button cue2Btn;
+    public Button cue3Btn;
+    public Button ball1Btn;
+    public Button ball2Btn;
+    public Button ball3Btn;
+    public Button table1Btn;
+    public Button table2Btn;
+    public Button table3Btn;
+
+    public GameObject p1SwagDisplay;
+    public GameObject p2SwagDisplay;
+
     void Start()
     {
+        // add event listener for close
         xButton.onClick.AddListener(XButtonCloseShop);
 
-        int[] skillCosts = {cue1Cost, cue2Cost, cue3Cost, ball1Cost, ball2Cost, ball3Cost, table1Cost, table2Cost, table3Cost};
-        GameObject[] skillCostObjs = {cue1CostObj, cue2CostObj, cue3CostObj, ball1CostObj, ball2CostObj, ball3CostObj, table1CostObj, table2CostObj, table3CostObj};
+        int[] skillCosts = 
+        {skillUnlockManager.cue1Cost, skillUnlockManager.cue2Cost, skillUnlockManager.cue3Cost, 
+        skillUnlockManager.ball1Cost, skillUnlockManager.ball2Cost, skillUnlockManager.ball3Cost, 
+        skillUnlockManager.table1Cost, skillUnlockManager.table2Cost, skillUnlockManager.table3Cost};
 
+        GameObject[] skillCostObjs = 
+        {cue1CostObj, cue2CostObj, cue3CostObj, 
+        ball1CostObj, ball2CostObj, ball3CostObj, 
+        table1CostObj, table2CostObj, table3CostObj};
+
+        Button[] skillBtns = 
+        {cue1Btn, cue2Btn, cue3Btn,
+        ball1Btn, ball2Btn, ball3Btn,
+        table1Btn, table2Btn, table3Btn};
+
+
+        // set all the costs
         for (int i=0; i<9; i++)
         {
             if (skillCostObjs[i].GetComponent<TMP_Text>() != null)
             {
                 string str = skillCosts[i].ToString();
                 skillCostObjs[i].GetComponent<TMP_Text>().SetText(str);
+            }
+        }
+
+        // set the swagger on loading the shop
+        if (!scoreManager.billiardsIsP2Turn && p1SwagDisplay.GetComponent<TMP_Text>() != null)
+        {
+            string swagStr = scoreManager.p1Swag.ToString();
+            p1SwagDisplay.GetComponent<TMP_Text>().SetText(swagStr);
+        }
+        else if (scoreManager.billiardsIsP2Turn && p2SwagDisplay.GetComponent<TMP_Text>() != null)
+        {
+            string swagStr = scoreManager.p2Swag.ToString();
+            p2SwagDisplay.GetComponent<TMP_Text>().SetText(swagStr);
+        }
+
+        // check availability of skills
+        bool[] skillAvailability = skillUnlockManager.GetSkillAvailability();
+        bool[] canAfford = skillUnlockManager.GetCanAffordSkills();
+        
+        for (int i=0; i<9; i++)
+        {
+            if (skillAvailability[i] && canAfford[i])
+            {
+                skillBtns[i].onClick.AddListener(BuySkill);
+            }
+            else if (skillAvailability[i])
+            {
+                skillBtns[i].onClick.AddListener(CantAfford);
+            }
+            else
+            {
+                skillBtns[i].onClick.AddListener(Unavail);
             }
         }
 
@@ -52,10 +105,24 @@ public class SkillTreeUI : MonoBehaviour
 
     }
 
+    void BuySkill()
+    {
+        Debug.Log("skill buyable yay");
+    }
+
+    void CantAfford()
+    {
+        Debug.Log("this is avail but you can't afford it");
+    }
+
+    void Unavail()
+    {
+        Debug.Log("this isn't available");
+    }
+
     void XButtonCloseShop()
     {
         gameObject.SetActive(false);  
     }
-
 
 }
