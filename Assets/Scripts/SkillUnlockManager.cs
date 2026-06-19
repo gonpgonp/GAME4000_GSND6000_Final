@@ -26,7 +26,7 @@ public class SkillUnlockManager : MonoBehaviour
         
     }
 
-    public bool[] GetSkillAvailability()
+  /*  public bool[] GetSkillAvailability()
     {
         bool[] skillAvailState = new bool[9];
 
@@ -46,7 +46,7 @@ public class SkillUnlockManager : MonoBehaviour
        /*for (int i=0; i<9; i++)
         {
             Debug.Log(skillAvailState[i]);
-        }*/
+        }
 
         return skillAvailState;
     }
@@ -78,8 +78,8 @@ public class SkillUnlockManager : MonoBehaviour
         /*for (int i=0; i<9; i++)
         {
            Debug.Log(canAffordState[i]);
-        }*/
+        }
 
         return canAffordState;
-    }
+    }*/
 }

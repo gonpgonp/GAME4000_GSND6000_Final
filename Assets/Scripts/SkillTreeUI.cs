@@ -22,23 +22,9 @@ public class SkillTreeUI : MonoBehaviour
     public GameObject table2CostObj;
     public GameObject table3CostObj;
 
-    public GameObject cue1BtnObj;
-
-    public Button cue1Btn;
-    public Button cue2Btn;
-    public Button cue3Btn;
-    public Button ball1Btn;
-    public Button ball2Btn;
-    public Button ball3Btn;
-    public Button table1Btn;
-    public Button table2Btn;
-    public Button table3Btn;
-
     public GameObject p1SwagDisplay;
     public GameObject p2SwagDisplay;
-    public Sprite lockedSprite;
-    public Sprite boughtSprite;
-    public Sprite cantAffordSprite;
+  
 
 
 
@@ -54,11 +40,6 @@ public class SkillTreeUI : MonoBehaviour
         {cue1CostObj, cue2CostObj, cue3CostObj, 
         ball1CostObj, ball2CostObj, ball3CostObj, 
         table1CostObj, table2CostObj, table3CostObj};
-
-        Button[] skillBtns = 
-        {cue1Btn, cue2Btn, cue3Btn,
-        ball1Btn, ball2Btn, ball3Btn,
-        table1Btn, table2Btn, table3Btn};
 
         // add event listener for close
         xButton.onClick.AddListener(XButtonCloseShop);
@@ -83,32 +64,7 @@ public class SkillTreeUI : MonoBehaviour
         {
             string swagStr = scoreManager.p2Swag.ToString();
             p2SwagDisplay.GetComponent<TMP_Text>().SetText(swagStr);
-        }        
-        
-        bool[] skillAvailability = skillUnlockManager.GetSkillAvailability();
-        bool[] canAfford = skillUnlockManager.GetCanAffordSkills();
-
-        for (int i=0; i<9; i++)
-        {
-            Button btn = skillBtns[i];
-            int skillCost = skillCosts[i];
-
-            if (skillAvailability[i] && canAfford[i])
-            {
-                btn.onClick.AddListener(() => BuySkill(btn, skillCost, p1SwagDisplay, p2SwagDisplay));
-            }
-            else if (skillAvailability[i])
-            {
-                btn.onClick.AddListener(CantAfford);
-                btn.GetComponent<Image>().sprite = cantAffordSprite;
-            }
-            else
-            {
-                btn.onClick.AddListener(Unavail);
-                btn.GetComponent<Image>().sprite = lockedSprite;
-            }
-        }
-
+        }       
     }
 
     void Update()
@@ -116,7 +72,7 @@ public class SkillTreeUI : MonoBehaviour
 
     }
 
-    void BuySkill(Button btn, int cost, GameObject p1Swag, GameObject p2Swag)
+    /*void BuySkill(Button btn, int cost, GameObject p1Swag, GameObject p2Swag)
     {
         Debug.Log("skill bought yay");
 
@@ -136,21 +92,10 @@ public class SkillTreeUI : MonoBehaviour
             string str = scoreManager.p2Swag.ToString();
             p2Swag.GetComponent<TMP_Text>().SetText(str);
         }
-    }
-
-    void CantAfford()
-    {
-        Debug.Log("this is avail but you can't afford it");
-    }
-
-    void Unavail()
-    {
-        Debug.Log("this isn't available");
-    }
+    }*/
 
     void XButtonCloseShop()
     {
-        gameObject.SetActive(false);  
+        gameObject.SetActive(false);
     }
-
 }
