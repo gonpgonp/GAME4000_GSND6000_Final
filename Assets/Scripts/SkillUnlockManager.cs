@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class SkillUnlockManager : MonoBehaviour
 {
-    int cue = 0;
-    int ball = 1;
-    int table = 2;
+    public int cue = 0;
+    public int ball = 1;
+    public int table = 2;
 
     public int cue1Cost = 1;
     public int cue2Cost = 2;
@@ -43,12 +43,10 @@ public class SkillUnlockManager : MonoBehaviour
             skillAvailState[i+6] = true;
         }
         
-       for (int i=0; i<9; i++)
+       /*for (int i=0; i<9; i++)
         {
             Debug.Log(skillAvailState[i]);
-        }
-
-        Debug.Log("++++++++++++");
+        }*/
 
         return skillAvailState;
     }
@@ -77,10 +75,10 @@ public class SkillUnlockManager : MonoBehaviour
             }
         }
 
-        for (int i=0; i<9; i++)
+        /*for (int i=0; i<9; i++)
         {
            Debug.Log(canAffordState[i]);
-        }
+        }*/
 
         return canAffordState;
     }
