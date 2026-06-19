@@ -1,22 +1,68 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SkillButton : MonoBehaviour
 {
-    // 0 = avail, 1 = unavail, 2 = avail but can't afford, 3 = bought
-    public int state = 0;
-    
+    public int level; // what tier this skill is (1, 2, 3)
+    public int cost; // how much it costs
+    int state;  // 0 = avail, 1 = unavail, 2 = avail but can't afford, 3 = bought
+
+
+    public ScoreManager scoreManager;
+    public SkillUnlockManager skillUnlockManager;
     public Sprite availSprite;
     public Sprite cantAffordSprite;
     public Sprite unavailSprite;
     public Sprite boughtSprite;
+    public GameObject swagDisplay;
+
+    public SkillTreeUI skillTreeUI;
 
     void Start()
     {
-        SetButtons();
+        SetButtonState();
+        SetButtonBehavior();
     }
 
-    void SetButtons()
+    public void SetButtonState()
+    {
+        int swag;
+
+        if (!scoreManager.billiardsIsP2Turn)
+        {
+            swag = scoreManager.p1Swag;
+        }
+        else
+        {
+            swag = scoreManager.p2Swag;
+        }
+
+        if (this.CompareTag("CueSkill"))
+        {
+            if (state == 3)
+            {
+                state = 3;
+            }
+            else if (skillUnlockManager.cue == level-1)
+            {
+                if (cost <= swag)
+                {
+                    state = 0; // has enough to afford it
+                }
+                else
+                {
+                    state = 2; // it's available, but can't afford it
+                }
+            }
+            else
+            {
+                state = 1; // not avail
+            }
+        }
+    }
+
+    public void SetButtonBehavior()
     {
         Button button = this.GetComponent<Button>();
 
@@ -49,8 +95,44 @@ public class SkillButton : MonoBehaviour
     void BuySkill()
     {
         Debug.Log("you bought the skill");
+
+        string str;
+
+        // subtract the cost and update the swag score
+        if (!scoreManager.billiardsIsP2Turn)
+        {
+            scoreManager.p1Swag -= cost;
+            str = scoreManager.p1Swag.ToString();
+        }
+        else
+        {
+            scoreManager.p2Swag -= cost;
+            str = scoreManager.p2Swag.ToString();
+        }
+
+        swagDisplay.GetComponent<TMP_Text>().SetText(str);
+
+        if (this.CompareTag("CueSkill"))
+        {
+            skillUnlockManager.cue++;
+        }
+        else if (this.CompareTag("BallSkill"))
+        {
+            skillUnlockManager.ball++;
+        }
+        else if (this.CompareTag("TableSkill"))
+        {
+            skillUnlockManager.table++;
+        }
+
+        // update everything based on new info
+        skillTreeUI.UpdateAllButtons();
+
+        // set this state to bought
         state = 3;
-        SetButtons();
+
+        SetButtonBehavior();
+        
     }
 
     void Unavail()

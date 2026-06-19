@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &2078021 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 1322062540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1001 &4072865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -667,6 +678,17 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &71509890 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 1322062540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &86328442
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,18 +921,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillUnlockManager
   cue: 0
-  ball: 1
-  table: 2
-  cue1Cost: 1
-  cue2Cost: 2
-  cue3Cost: 3
-  ball1Cost: 1
-  ball2Cost: 2
-  ball3Cost: 3
-  table1Cost: 1
-  table2Cost: 2
-  table3Cost: 3
-  scoreManager: {fileID: 260714266}
+  ball: 0
+  table: 0
 --- !u!1 &143117315
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,7 +2393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   p1Score: 0
   p2Score: 0
-  p1Swag: 2
+  p1Swag: 10
   p2Swag: 0
   billiardsIsP2Turn: 0
   winner: 0
@@ -4003,6 +4015,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3686171879355116671, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 1322062540}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &517546614 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 2120488451277475718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1001 &527010640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4925,6 +4948,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8191640581408338365, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 1322062540}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &594973477 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 2120488451277475718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &595882514
 GameObject:
   m_ObjectHideFlags: 0
@@ -6660,6 +6694,15 @@ MonoBehaviour:
   powerUpHandler: {fileID: 158641964}
   scoreManager: {fileID: 260714266}
   skillUnlockManager: {fileID: 135970091}
+  cue1: {fileID: 1796191364}
+  cue2: {fileID: 1126532353}
+  cue3: {fileID: 1864626676}
+  ball1: {fileID: 1239024456}
+  ball2: {fileID: 1925403992}
+  ball3: {fileID: 1640090112}
+  table1: {fileID: 594973477}
+  table2: {fileID: 1252461552}
+  table3: {fileID: 517546614}
   cue1CostObj: {fileID: 1228177752}
   cue2CostObj: {fileID: 1781499950}
   cue3CostObj: {fileID: 610055826}
@@ -7892,6 +7935,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2353676100289113925, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 1322062540}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &893187048 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 1322062540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &925556171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6341399907920523448, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -7977,6 +8031,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927877429}
   m_CullTransparentMesh: 1
+--- !u!114 &945841103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 1322062540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1001 &951917339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9217,6 +9282,15 @@ MonoBehaviour:
   powerUpHandler: {fileID: 158641964}
   scoreManager: {fileID: 260714266}
   skillUnlockManager: {fileID: 1329900148}
+  cue1: {fileID: 893187048}
+  cue2: {fileID: 1241695259}
+  cue3: {fileID: 71509890}
+  ball1: {fileID: 1769971988}
+  ball2: {fileID: 2078021}
+  ball3: {fileID: 945841103}
+  table1: {fileID: 2050155694}
+  table2: {fileID: 1927885007}
+  table3: {fileID: 2100036471}
   cue1CostObj: {fileID: 1472811634}
   cue2CostObj: {fileID: 1680046974}
   cue3CostObj: {fileID: 453120550}
@@ -9580,6 +9654,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1703571981191429202, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
   m_PrefabInstance: {fileID: 1815641460}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1126532353 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 2120488451277475718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1150891377
 GameObject:
   m_ObjectHideFlags: 0
@@ -10958,6 +11043,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3939476597809795256, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 2120488451277475718}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1239024456 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 2120488451277475718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+--- !u!114 &1241695259 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 1322062540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1243929462
 GameObject:
   m_ObjectHideFlags: 0
@@ -11136,6 +11243,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250908126}
   m_CullTransparentMesh: 1
+--- !u!114 &1252461552 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 2120488451277475718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1257337988 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3637659622623482332, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -11971,6 +12089,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: cost
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 1051201977}
+    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 1322062541}
+    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 1329900148}
+    - target: {fileID: 374226922374414898, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: TableSkill
+      objectReference: {fileID: 0}
     - target: {fileID: 504428808589234734, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Delegates.Array.size
       value: 3
@@ -12039,6 +12181,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 181.9
       objectReference: {fileID: 0}
+    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: cost
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 1051201977}
+    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 1322062541}
+    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 1329900148}
     - target: {fileID: 1757185907717912670, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Camera
       value: 
@@ -12079,13 +12241,65 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 1051201977}
+    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 1322062541}
+    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 1329900148}
     - target: {fileID: 2337841778685229448, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2845155860692471352, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: TableSkill
+      objectReference: {fileID: 0}
+    - target: {fileID: 3215048193029653303, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: TableSkill
+      objectReference: {fileID: 0}
+    - target: {fileID: 3541085861211357863, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: BallSkill
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: cost
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 1051201977}
+    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 1322062541}
+    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 1329900148}
     - target: {fileID: 3982624800636769512, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4770681747739091767, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: CueSkill
       objectReference: {fileID: 0}
     - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: _data._json
@@ -12164,9 +12378,37 @@ PrefabInstance:
       propertyPath: '_data._objectReferences.Array.data[21]'
       value: 
       objectReference: {fileID: 787719881}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: cost
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 1051201977}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 1322062541}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 1329900148}
+    - target: {fileID: 6068291687334567114, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: BallSkill
+      objectReference: {fileID: 0}
     - target: {fileID: 6369878327405293478, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_text
       value: 'Richard''s Total Swagger:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382139386832530233, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: BallSkill
       objectReference: {fileID: 0}
     - target: {fileID: 6530355551241648933, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Delegates.Array.size
@@ -12228,6 +12470,66 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6784033317982227679, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: CueSkill
+      objectReference: {fileID: 0}
+    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: cost
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 1051201977}
+    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 1322062541}
+    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 1329900148}
+    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 1051201977}
+    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 1322062541}
+    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 1329900148}
+    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: cost
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 1051201977}
+    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 1322062541}
+    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 1329900148}
     - target: {fileID: 8158214253246108745, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_UiScaleMode
       value: 1
@@ -12236,6 +12538,22 @@ PrefabInstance:
       propertyPath: m_MatchWidthOrHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 1051201977}
+    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 1322062541}
+    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 1329900148}
     - target: {fileID: 8291087251376093728, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Delegates.Array.size
       value: 3
@@ -12355,6 +12673,10 @@ PrefabInstance:
     - target: {fileID: 8713894147808032559, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8726451574446183417, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: CueSkill
       objectReference: {fileID: 0}
     - target: {fileID: 8848543410597723641, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Pivot.x
@@ -12483,16 +12805,6 @@ MonoBehaviour:
   cue: 0
   ball: 1
   table: 2
-  cue1Cost: 1
-  cue2Cost: 2
-  cue3Cost: 3
-  ball1Cost: 1
-  ball2Cost: 2
-  ball3Cost: 3
-  table1Cost: 1
-  table2Cost: 2
-  table3Cost: 3
-  scoreManager: {fileID: 260714266}
 --- !u!1 &1340807553
 GameObject:
   m_ObjectHideFlags: 0
@@ -15511,6 +15823,17 @@ RectTransform:
   m_AnchoredPosition: {x: -70.529, y: -20}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1640090112 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 2120488451277475718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1655372604 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2506325879930886536, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -15942,6 +16265,17 @@ Transform:
   - {fileID: 52061144}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1769971988 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 1322062540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1781499950 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3078969600729792336, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -15952,6 +16286,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 566395340625520631, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 2120488451277475718}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1796191364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 2120488451277475718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1809450934
 GameObject:
   m_ObjectHideFlags: 0
@@ -16995,6 +17340,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856936925}
   m_CullTransparentMesh: 1
+--- !u!114 &1864626676 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 2120488451277475718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1869149069
 GameObject:
   m_ObjectHideFlags: 0
@@ -17464,6 +17820,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2506325879930886536, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 1322062540}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1925403992 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 2120488451277475718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1926735087
 GameObject:
   m_ObjectHideFlags: 0
@@ -17539,6 +17906,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926735087}
   m_CullTransparentMesh: 1
+--- !u!114 &1927885007 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 1322062540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1928502787
 GameObject:
   m_ObjectHideFlags: 0
@@ -18065,6 +18443,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2050155694 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 1322062540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &2078293396 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6436576612340502067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -18421,6 +18810,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2100036471 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 1322062540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &2128606857
 GameObject:
   m_ObjectHideFlags: 0
@@ -19007,8 +19407,36 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: cost
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: state
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 796020587}
+    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 2120488451277475719}
+    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 135970091}
+    - target: {fileID: 374226922374414898, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: TableSkill
       objectReference: {fileID: 0}
     - target: {fileID: 504428808589234734, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Delegates.Array.size
@@ -19079,9 +19507,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: state
-      value: 1
+      propertyPath: cost
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: state
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 796020587}
+    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 2120488451277475719}
+    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 135970091}
     - target: {fileID: 1757185907717912670, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Camera
       value: 
@@ -19183,9 +19635,33 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: cost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: state
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 796020587}
+    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 2120488451277475719}
+    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 135970091}
     - target: {fileID: 2432597178558804542, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -19198,9 +19674,21 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2845155860692471352, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: TableSkill
+      objectReference: {fileID: 0}
+    - target: {fileID: 3215048193029653303, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: TableSkill
+      objectReference: {fileID: 0}
     - target: {fileID: 3384632872664644757, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3541085861211357863, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: BallSkill
       objectReference: {fileID: 0}
     - target: {fileID: 3631052150610799809, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: _data._json
@@ -19230,9 +19718,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: state
-      value: 1
+      propertyPath: cost
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: state
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 796020587}
+    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 2120488451277475719}
+    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 135970091}
     - target: {fileID: 4080491405499330570, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -19241,6 +19753,14 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -2120858699270524666, guid: 0d2b8e40663a04f8c8d9453a9da66929, type: 2}
+    - target: {fileID: 4770681747739091767, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: CueSkill
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866644290526670642, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5166656601149297518, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: _data._json
       value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"CueSkill1","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
@@ -19319,9 +19839,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 198055834}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: state
-      value: 1
+      propertyPath: cost
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: state
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 796020587}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 2120488451277475719}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 135970091}
     - target: {fileID: 5453993572348367258, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -19330,9 +19874,17 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6068291687334567114, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: BallSkill
+      objectReference: {fileID: 0}
     - target: {fileID: 6314361000187788914, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382139386832530233, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: BallSkill
       objectReference: {fileID: 0}
     - target: {fileID: 6530355551241648933, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Delegates.Array.size
@@ -19398,18 +19950,94 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6784033317982227679, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: CueSkill
+      objectReference: {fileID: 0}
+    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: cost
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: level
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: state
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 796020587}
+    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 2120488451277475719}
+    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 135970091}
+    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: cost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: level
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: state
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 796020587}
+    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 2120488451277475719}
+    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 135970091}
+    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: cost
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: state
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 796020587}
+    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 2120488451277475719}
+    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
+    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 135970091}
     - target: {fileID: 8114979640608055636, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -19423,6 +20051,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: cost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: state
       value: 0
       objectReference: {fileID: 0}
@@ -19431,9 +20067,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5168645406658300347, guid: 215c0c1c9779c46be9ef81ac9885d4e9, type: 3}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillTreeUI
+      value: 
+      objectReference: {fileID: 796020587}
+    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: swagDisplay
+      value: 
+      objectReference: {fileID: 2120488451277475719}
+    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: boughtSprite
       value: 
       objectReference: {fileID: 2617152825401110832, guid: f41d2680275284e65a38104fa61bba27, type: 3}
+    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: scoreManager
+      value: 
+      objectReference: {fileID: 260714266}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
@@ -19442,6 +20090,10 @@ PrefabInstance:
       propertyPath: cantAffordSprite
       value: 
       objectReference: {fileID: -5160979417409147319, guid: ff63600495828974b8cb84e1570ce5dc, type: 3}
+    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 135970091}
     - target: {fileID: 8291087251376093728, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Delegates.Array.size
       value: 3
@@ -19562,6 +20214,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8726451574446183417, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_TagString
+      value: CueSkill
+      objectReference: {fileID: 0}
     - target: {fileID: 8848543410597723641, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -19641,6 +20297,10 @@ PrefabInstance:
     - target: {fileID: 8848543410597723641, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933169287533006602, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8954650944140687977, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Enabled
