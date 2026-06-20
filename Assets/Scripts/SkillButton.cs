@@ -17,6 +17,9 @@ public class SkillButton : MonoBehaviour
     public Sprite boughtSprite;
     public GameObject swagDisplay;
 
+    public GameObject priceBg;
+    public GameObject priceObj;
+
     public SkillTreeUI skillTreeUI;
 
     void Start()
@@ -38,6 +41,7 @@ public class SkillButton : MonoBehaviour
             swag = scoreManager.p2Swag;
         }
 
+        // set button's state based on a) if it's already bought and b) the skillUnlockManager state
         if (this.CompareTag("CueSkill"))
         {
             if (state == 3)
@@ -45,6 +49,50 @@ public class SkillButton : MonoBehaviour
                 state = 3;
             }
             else if (skillUnlockManager.cue == level-1)
+            {
+                if (cost <= swag)
+                {
+                    state = 0; // has enough to afford it
+                }
+                else
+                {
+                    state = 2; // it's available, but can't afford it
+                }
+            }
+            else
+            {
+                state = 1; // not avail
+            }
+        }
+        if (this.CompareTag("BallSkill"))
+        {
+            if (state == 3)
+            {
+                state = 3;
+            }
+            else if (skillUnlockManager.ball == level-1)
+            {
+                if (cost <= swag)
+                {
+                    state = 0; // has enough to afford it
+                }
+                else
+                {
+                    state = 2; // it's available, but can't afford it
+                }
+            }
+            else
+            {
+                state = 1; // not avail
+            }
+        }
+        if (this.CompareTag("TableSkill"))
+        {
+            if (state == 3)
+            {
+                state = 3;
+            }
+            else if (skillUnlockManager.table == level-1)
             {
                 if (cost <= swag)
                 {
@@ -87,6 +135,8 @@ public class SkillButton : MonoBehaviour
         else if (state == 3)
         {
             button.image.sprite = boughtSprite;
+            priceBg.SetActive(false);
+            priceObj.SetActive(false);
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(Bought);
         }
@@ -115,23 +165,26 @@ public class SkillButton : MonoBehaviour
         if (this.CompareTag("CueSkill"))
         {
             skillUnlockManager.cue++;
+            Debug.Log("skillunlockmanager.cue is now" + skillUnlockManager.cue.ToString());
+
         }
-        else if (this.CompareTag("BallSkill"))
+        if (this.CompareTag("BallSkill"))
         {
             skillUnlockManager.ball++;
+            Debug.Log("skillunlockmanager.ball is now" + skillUnlockManager.ball.ToString());
+
         }
-        else if (this.CompareTag("TableSkill"))
+        if (this.CompareTag("TableSkill"))
         {
             skillUnlockManager.table++;
+            Debug.Log("skillunlockmanager.table is now" + skillUnlockManager.table.ToString());
         }
-
-        // update everything based on new info
-        skillTreeUI.UpdateAllButtons();
 
         // set this state to bought
         state = 3;
 
-        SetButtonBehavior();
+        // update everything based on new info
+        skillTreeUI.UpdateAllButtons();
         
     }
 

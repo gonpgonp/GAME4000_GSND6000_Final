@@ -402,11 +402,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  state: 0
+  level: 0
+  cost: 0
+  scoreManager: {fileID: 0}
+  skillUnlockManager: {fileID: 0}
   availSprite: {fileID: 5168645406658300347, guid: 215c0c1c9779c46be9ef81ac9885d4e9, type: 3}
   cantAffordSprite: {fileID: -5160979417409147319, guid: ff63600495828974b8cb84e1570ce5dc, type: 3}
   unavailSprite: {fileID: 5702437699353859115, guid: 56e942444d0284a3a87205133a481f6f, type: 3}
   boughtSprite: {fileID: 2617152825401110832, guid: f41d2680275284e65a38104fa61bba27, type: 3}
+  swagDisplay: {fileID: 0}
+  priceBg: {fileID: 3424744513469131037}
+  priceObj: {fileID: 6786537951031612724}
+  skillTreeUI: {fileID: 0}
 --- !u!1 &3424744513469131037
 GameObject:
   m_ObjectHideFlags: 0
