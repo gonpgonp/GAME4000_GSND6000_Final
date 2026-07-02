@@ -19,6 +19,7 @@ public class Fighter : MonoBehaviour
 	private InputAction guardAction;
 
 	private int playerNum = 0;
+    private bool facingLeft = false;
     private float moveSpeed = 15.0f;
     private float knockBackStrength = 80.0f;
     private float attackKnockback = -30.0f;
@@ -60,21 +61,28 @@ public class Fighter : MonoBehaviour
     void Update()
     {
         FaceOpponent();
-        DoMovement();
         DoAttacks();
         DoGuards();
     }
 
-    void FaceOpponent()
+	private void FixedUpdate()
+	{
+		DoMovement();
+        DecrementTimers();
+	}
+
+	void FaceOpponent()
     {
         if (opponent.transform.position.x < transform.position.x)
         {
             transform.localScale = new Vector3(-2, 2, 2);
-        }
+            facingLeft = true;
+		}
         else if (opponent.transform.position.x > transform.position.x)
         {
             transform.localScale = new Vector3(2, 2, 2);
-        }
+            facingLeft = false;
+		}
     }
 
     void DoMovement()
@@ -85,13 +93,13 @@ public class Fighter : MonoBehaviour
             moveVector = moveAction.ReadValue<Vector2>();
             animator.SetBool("DoRun", true);
         }
-        else if (moveAction.WasReleasedThisFrame())
+        else //if (moveAction.WasReleasedThisFrame())
         {
             moveVector = Vector2.zero;
             animator.SetBool("DoRun", false);
         }
 
-        rb.AddForce(moveVector);
+        rb.AddForce(moveVector * movementForce);
         if (rb.linearVelocity.magnitude > maxSpeed)
         {
             rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
@@ -113,6 +121,18 @@ public class Fighter : MonoBehaviour
         if (guardAction.WasPressedThisFrame())
         {
             animator.Play("Guard");
+        }
+    }
+
+    void DecrementTimers()
+    {
+        if (hitstunTimer > 0)
+        {
+			hitstunTimer -= 1;
+		}
+        if (invulnTimer > 0)
+        {
+            invulnTimer -= 1;
         }
     }
 
@@ -138,19 +158,52 @@ public class Fighter : MonoBehaviour
 		animator.Play("Idle");
 	}
 
+    private void TakeHit(Collider2D collision)
+    {
+        Debug.Log(gameObject.name + " : TakeHit");
+		float facingMult = facingLeft ? 1f : -1f;
+		if (isGuarding)
+		{
+			PlayGuardSound();
+		}
+		if (!isGuarding && invulnTimer == 0)
+		{
+			invulnTimer = invulnDuration;
+			hitstunTimer = hitstunDuration;
+			rb.AddForce(new Vector2(knockBackStrength * facingMult, 0.0f), ForceMode2D.Impulse);
+			animator.Play("GotHit");
+		}
+	}
+
+    private void DoHit(Collider2D collision)
+    {
+		Debug.Log(gameObject.name + " : DoHit");
+		float facingMult = facingLeft ? 1f : -1f;
+        Fighter def = collision.gameObject.GetComponentInParent<Fighter>();
+        if (def == null) return;
+        if (def.isGuarding)
+        {
+            hitstunTimer = 50;
+			rb.AddForce(new Vector2(guardKnockback * facingMult, 0.0f), ForceMode2D.Impulse);
+            animator.Play("GotParried");
+		}
+        else
+        {
+            PlayPunchSound();
+            // add points
+        }
+    }
+
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-        float facingMult = collision.transform.position.x < transform.position.x ? -1f : 1f;
-        if (isGuarding)
+        if (collision.gameObject.layer == 10) //collided with hurtbox (hit opponent)
         {
-            PlayGuardSound();
+            DoHit(collision);
         }
-		if (!isGuarding && invulnTimer == 0)
+        if (collision.gameObject.layer == 11) //collided with hitbox (got hit by opponent)
         {
-            invulnTimer = invulnDuration;
-            hitstunTimer = hitstunDuration;
-            rb.AddForce(new Vector2(knockBackStrength * facingMult, 0.0f), ForceMode2D.Impulse);
-            animator.Play("GotHit");
+            TakeHit(collision);
         }
+        
 	}
 }
