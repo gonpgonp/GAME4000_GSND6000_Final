@@ -1449,6 +1449,7 @@ MonoBehaviour:
   richardsHead: {fileID: 1345256042}
   _dickHead: {fileID: 638396527}
   _richardHead: {fileID: 1345256046}
+  _pissedMessages: {fileID: 603365898}
 --- !u!1 &143264799
 GameObject:
   m_ObjectHideFlags: 0
@@ -6098,6 +6099,7 @@ GameObject:
   - component: {fileID: 638396526}
   - component: {fileID: 638396525}
   - component: {fileID: 638396527}
+  - component: {fileID: 638396528}
   m_Layer: 5
   m_Name: DickHead
   m_TagString: Untagged
@@ -6185,6 +6187,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &638396528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638396523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 260d870edf5c14c42b79336295e835fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  billiardsUI: {fileID: 143117324}
+  rageManager: {fileID: 817804650}
 --- !u!1 &649493900 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4544173843932589644, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -17609,7 +17625,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818612674}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd3166cc918ba4948a1b8cc281ddcd37, type: 3}
   m_Name: 

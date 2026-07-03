@@ -25,6 +25,8 @@ public class BilliardsUI : MonoBehaviour
     public Animator _dickHead;
     public Animator _richardHead;
 
+    public Animator _pissedMessages;
+
     void Start()
     {
         SetRageMeter();
@@ -40,34 +42,33 @@ public class BilliardsUI : MonoBehaviour
         p2RageBar.rectTransform.localScale = new Vector3(.4f, p2Rage/25, .4f);
         // want to fine-tune this behavior to look a little nicer later
 
-        if (rageManager.p1Rage >= rageManager.minimumFightRage)
+        if (p1Rage >= rageManager.minimumFightRage)
         {
             p1RageBar.color = rageColor;
-            //_dickHead.Play("DickHeadPissed");
-            // play pissed message anim
+            _dickHead.Play("DickHeadPissed");
             startFightButton.SetActive(true);
         }
         else
         {
             p1RageBar.color = calmColor;
-            //_dickHead.Play("DickCalm");
-            //play pissed messages no one anim and dickheadcalm anim
+            _dickHead.Play("DickCalm");
             startFightButton.SetActive(false);
         }
     
     
-        if (rageManager.p2Rage >= rageManager.minimumFightRage)
+        if (p2Rage >= rageManager.minimumFightRage)
         {
             p2RageBar.color = rageColor;
-            // play pissed message anim and dickheadpissed anim
+            _richardHead.Play("RichardHeadPissed");
             startFightButton.SetActive(true);
         }
         else
         {
             p2RageBar.color = calmColor;
-            //play pissed messages no one anim and dickheadcalm anim
+            _richardHead.Play("RichardCalm");
             startFightButton.SetActive(false);
         }
+        
     }
 
     public void UpdateBilliardsScoreUI()
@@ -82,6 +83,7 @@ public class BilliardsUI : MonoBehaviour
         {
             dicksTurnObj.SetActive(true);
             dicksHead.SetActive(true);
+            SetRageMeter();
 
             richardsTurnObj.SetActive(false);
             richardsHead.SetActive(false);
@@ -90,9 +92,26 @@ public class BilliardsUI : MonoBehaviour
         {
             richardsTurnObj.SetActive(true);
             richardsHead.SetActive(true);
+            SetRageMeter();
 
             dicksTurnObj.SetActive(false);
             dicksHead.SetActive(false);
+        }
+    }
+
+    public void SetPissedMessages()
+    {
+        if (!scoreManager.billiardsIsP2Turn && rageManager.p1Rage >= rageManager.minimumFightRage)
+        {
+            _pissedMessages.Play("DickPissed");
+        }
+        else if (scoreManager.billiardsIsP2Turn && rageManager.p2Rage >= rageManager.minimumFightRage)
+        {
+            _pissedMessages.Play("RichardPissed");
+        }
+        else
+        {
+            _pissedMessages.Play("NoOnePissed");
         }
     }
 }

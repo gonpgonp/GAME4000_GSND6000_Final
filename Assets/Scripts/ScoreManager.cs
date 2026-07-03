@@ -67,6 +67,7 @@ public class ScoreManager : MonoBehaviour
         billiardsIsP2Turn = !billiardsIsP2Turn; // swap the active player
         Debug.Log("turn change");
         billiardsUI.SetTurnUI();
+        billiardsUI.SetPissedMessages();
 
         // anything else that would need to happen on a turn change; UI is handled in BilliardsUI.SetTurnUI()
     }
