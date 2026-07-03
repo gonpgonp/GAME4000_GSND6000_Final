@@ -14,13 +14,13 @@ public class CueBall : MonoBehaviour
     public GameObject cue;
 	public GameObject powerUpHandler;
 	bool seePath;
-	bool secondTapAvailable;
+	public bool secondTapAvailable;
     float inaccuracy;
     float angerInaccuracy;
 
     float forceMult = 8.0f;
     bool clickedOnBall;
-    bool hasHit;
+    public bool hasHit;
     bool allBallsStopped;
     bool didScratch;
     float comparisonScore;

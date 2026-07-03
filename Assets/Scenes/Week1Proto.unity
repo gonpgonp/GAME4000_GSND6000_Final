@@ -213,6 +213,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1567204605}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: isStripe
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: billiardsUI
+      value: 
+      objectReference: {fileID: 143117324}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
       objectReference: {fileID: 817804650}
@@ -1121,6 +1129,7 @@ GameObject:
   - component: {fileID: 143117320}
   - component: {fileID: 143117322}
   - component: {fileID: 143117323}
+  - component: {fileID: 143117324}
   m_Layer: 5
   m_Name: BilliardsUI
   m_TagString: Untagged
@@ -1231,7 +1240,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143117315}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
   m_Name: 
@@ -1415,6 +1424,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &143117324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143117315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c03f4c1f7e4d34cc98ff04adca5c0613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  scoreManager: {fileID: 260714266}
+  rageManager: {fileID: 817804650}
+  p1RageBar: {fileID: 1316397203}
+  p2RageBar: {fileID: 742163109}
+  startFightButton: {fileID: 870304771}
+  p1ScoreTMP: {fileID: 780306837}
+  p2ScoreTMP: {fileID: 143264800}
 --- !u!1 &143264799
 GameObject:
   m_ObjectHideFlags: 0
@@ -2389,6 +2417,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1567204605}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: isStripe
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: billiardsUI
+      value: 
+      objectReference: {fileID: 143117324}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
       objectReference: {fileID: 817804650}
@@ -2579,7 +2615,8 @@ MonoBehaviour:
   p2Swag: 0
   billiardsIsP2Turn: 0
   winner: 0
-  triggerSwapBilliardsTurns: 0
+  cueBall: {fileID: 1567204595}
+  rageManager: {fileID: 817804650}
 --- !u!4 &260714267
 Transform:
   m_ObjectHideFlags: 0
@@ -2751,6 +2788,10 @@ PrefabInstance:
       propertyPath: cueBall
       value: 
       objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: billiardsUI
+      value: 
+      objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
@@ -4507,6 +4548,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1567204605}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: billiardsUI
+      value: 
+      objectReference: {fileID: 143117324}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
       objectReference: {fileID: 817804650}
@@ -4983,6 +5028,10 @@ PrefabInstance:
       propertyPath: cueBall
       value: 
       objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: billiardsUI
+      value: 
+      objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
@@ -7321,7 +7370,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817804646}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
   m_Name: 
@@ -7380,8 +7429,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   p1Rage: 0
   p2Rage: 0
-  scoreManager: {fileID: 0}
-  cueBall: {fileID: 0}
+  minimumFightRage: 3
+  scoreManager: {fileID: 260714266}
+  cueBall: {fileID: 1567204605}
+  billiardsUI: {fileID: 143117324}
 --- !u!1 &822347855 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3637659622623482332, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -8529,6 +8580,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1567204605}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: isStripe
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: billiardsUI
+      value: 
+      objectReference: {fileID: 143117324}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
       objectReference: {fileID: 817804650}
@@ -9226,6 +9285,10 @@ PrefabInstance:
       propertyPath: cueBall
       value: 
       objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: billiardsUI
+      value: 
+      objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
@@ -10132,6 +10195,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1567204605}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: isStripe
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: billiardsUI
+      value: 
+      objectReference: {fileID: 143117324}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
       objectReference: {fileID: 817804650}
@@ -10905,6 +10976,14 @@ PrefabInstance:
       propertyPath: cueBall
       value: 
       objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: isStripe
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: billiardsUI
+      value: 
+      objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
@@ -14475,6 +14554,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1567204605}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: billiardsUI
+      value: 
+      objectReference: {fileID: 143117324}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
       objectReference: {fileID: 817804650}
@@ -14661,6 +14744,10 @@ PrefabInstance:
       propertyPath: cueBall
       value: 
       objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: billiardsUI
+      value: 
+      objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
@@ -16014,6 +16101,8 @@ MonoBehaviour:
   camera_: {fileID: 871455059}
   cue: {fileID: 633192779}
   powerUpHandler: {fileID: 158641959}
+  secondTapAvailable: 0
+  hasHit: 0
   cueHitAnyBall: 0
   cueHitMyBall: 0
   hasBroken: 0
@@ -16829,6 +16918,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1567204605}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: billiardsUI
+      value: 
+      objectReference: {fileID: 143117324}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
       objectReference: {fileID: 817804650}
@@ -17193,6 +17286,14 @@ PrefabInstance:
       propertyPath: cueBall
       value: 
       objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: isStripe
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: billiardsUI
+      value: 
+      objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
@@ -17586,7 +17687,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818612674}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd3166cc918ba4948a1b8cc281ddcd37, type: 3}
   m_Name: 
@@ -17804,6 +17905,14 @@ PrefabInstance:
       propertyPath: cueBall
       value: 
       objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: isStripe
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: billiardsUI
+      value: 
+      objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
@@ -20255,6 +20364,14 @@ PrefabInstance:
       propertyPath: cueBall
       value: 
       objectReference: {fileID: 1567204605}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: is8Ball
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: billiardsUI
+      value: 
+      objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 

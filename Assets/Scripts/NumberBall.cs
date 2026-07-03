@@ -7,6 +7,8 @@ public class NumberBall : MonoBehaviour
     public ScoreManager scoreManager;
     public RageManager rageManager;
     public CueBall cueBall;
+    public BilliardsUI billiardsUI;
+
     void Start()
     {
         
@@ -29,17 +31,21 @@ public class NumberBall : MonoBehaviour
             if (isStripe)
             {
                 scoreManager.p2Score += 1;
+                billiardsUI.UpdateBilliardsScoreUI();
                 rageManager.p1Rage += 1;
+                billiardsUI.SetRageMeter();
             }
             else
             {
                 scoreManager.p1Score += 1;
+                billiardsUI.UpdateBilliardsScoreUI();
                 rageManager.p2Rage += 1;
+                billiardsUI.SetRageMeter();
             }
         }
         else
         {
-            checkWin();
+            scoreManager.CheckWin();
         }
 
     }
@@ -56,7 +62,6 @@ public class NumberBall : MonoBehaviour
                     if (!isStripe) // p1's turn, solid got hit
                     {
                         cueBall.cueHitMyBall = true;
-                        Debug.Log("**SCRIPT** one of mine got hit p1");
                     }
                 }
                 else // p2's turn, hits a ball
@@ -64,38 +69,9 @@ public class NumberBall : MonoBehaviour
                     if (isStripe) // p2's turn, hits a solid
                     {
                         cueBall.cueHitMyBall = true;
-                        Debug.Log("**SCRIPT** one of mine got hit p2");
                     }
                 }
             }
         }
-    }
-
-    // move this to score manager!!!!
-    private void checkWin() // only gets called when 8ball is sunk
-    {
-        if (!scoreManager.billiardsIsP2Turn)
-        {
-            if (scoreManager.p1Score >= 7) // p1 is the winner
-            {
-                scoreManager.winner = 1;
-            }
-            else // p1 sunk the 8ball early
-            {
-                scoreManager.winner = 2;
-            }
-
-        }
-        else
-        {
-            if (scoreManager.p2Score >= 7) // p2 is the winner
-            {
-                scoreManager.winner = 2;
-            }
-            else // p2 sunk the 8ball early
-            {
-                scoreManager.winner = 1;
-            }
-        }
-    }
+    }    
 }
