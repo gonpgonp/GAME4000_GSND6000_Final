@@ -5,7 +5,6 @@ using TMPro;
 public class BilliardsUI : MonoBehaviour
 {
     public ScoreManager scoreManager;
-
     public RageManager rageManager;
     public Image p1RageBar;
     public Image p2RageBar;
@@ -17,9 +16,19 @@ public class BilliardsUI : MonoBehaviour
     public TextMeshProUGUI p1ScoreTMP;
     public TextMeshProUGUI p2ScoreTMP;
 
+    public GameObject dicksTurnObj;
+    public GameObject richardsTurnObj;
+
+    public GameObject dicksHead;
+    public GameObject richardsHead;
+
+    public Animator _dickHead;
+    public Animator _richardHead;
+
     void Start()
     {
         SetRageMeter();
+        SetTurnUI();
     }
 
     public void SetRageMeter()
@@ -31,35 +40,33 @@ public class BilliardsUI : MonoBehaviour
         p2RageBar.rectTransform.localScale = new Vector3(.4f, p2Rage/25, .4f);
         // want to fine-tune this behavior to look a little nicer later
 
-        if (!scoreManager.billiardsIsP2Turn) // set p1 rage UI
+        if (rageManager.p1Rage >= rageManager.minimumFightRage)
         {
-            if (rageManager.p1Rage >= rageManager.minimumFightRage)
-            {
-                p1RageBar.color = rageColor;
-                // play pissed message anim and dickheadpissed anim
-                startFightButton.SetActive(true);
-            }
-            else
-            {
-                p1RageBar.color = calmColor;
-                //play pissed messages no one anim and dickheadcalm anim
-                startFightButton.SetActive(false);
-            }
+            p1RageBar.color = rageColor;
+            //_dickHead.Play("DickHeadPissed");
+            // play pissed message anim
+            startFightButton.SetActive(true);
         }
-        else // set p2 rage UI
+        else
         {
-            if (rageManager.p2Rage >= rageManager.minimumFightRage)
-            {
-                p2RageBar.color = rageColor;
-                // play pissed message anim and dickheadpissed anim
-                startFightButton.SetActive(true);
-            }
-            else
-            {
-                p2RageBar.color = calmColor;
-                //play pissed messages no one anim and dickheadcalm anim
-                startFightButton.SetActive(false);
-            }
+            p1RageBar.color = calmColor;
+            //_dickHead.Play("DickCalm");
+            //play pissed messages no one anim and dickheadcalm anim
+            startFightButton.SetActive(false);
+        }
+    
+    
+        if (rageManager.p2Rage >= rageManager.minimumFightRage)
+        {
+            p2RageBar.color = rageColor;
+            // play pissed message anim and dickheadpissed anim
+            startFightButton.SetActive(true);
+        }
+        else
+        {
+            p2RageBar.color = calmColor;
+            //play pissed messages no one anim and dickheadcalm anim
+            startFightButton.SetActive(false);
         }
     }
 
@@ -67,5 +74,25 @@ public class BilliardsUI : MonoBehaviour
     {
         p1ScoreTMP.text = scoreManager.p1Score.ToString();
         p2ScoreTMP.text = scoreManager.p2Score.ToString();
+    }
+
+    public void SetTurnUI()
+    {
+        if (!scoreManager.billiardsIsP2Turn)
+        {
+            dicksTurnObj.SetActive(true);
+            dicksHead.SetActive(true);
+
+            richardsTurnObj.SetActive(false);
+            richardsHead.SetActive(false);
+        }
+        else
+        {
+            richardsTurnObj.SetActive(true);
+            richardsHead.SetActive(true);
+
+            dicksTurnObj.SetActive(false);
+            dicksHead.SetActive(false);
+        }
     }
 }

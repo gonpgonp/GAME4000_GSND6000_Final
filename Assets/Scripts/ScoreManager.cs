@@ -15,6 +15,8 @@ public class ScoreManager : MonoBehaviour
 
     public RageManager rageManager;
 
+    public BilliardsUI billiardsUI;
+
     void Update()
     {
         if (CheckAllBallsStopped())
@@ -64,8 +66,9 @@ public class ScoreManager : MonoBehaviour
         rageManager.AddRageEndOfTurn();
         billiardsIsP2Turn = !billiardsIsP2Turn; // swap the active player
         Debug.Log("turn change");
+        billiardsUI.SetTurnUI();
 
-        // anything else that would need to happen on a turn change; UI is handled in BilliardsUI
+        // anything else that would need to happen on a turn change; UI is handled in BilliardsUI.SetTurnUI()
     }
 
     public void CheckWin() // only gets called when 8ball is sunk in NumberBall script

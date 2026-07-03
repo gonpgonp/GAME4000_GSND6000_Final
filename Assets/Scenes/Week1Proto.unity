@@ -1443,6 +1443,12 @@ MonoBehaviour:
   startFightButton: {fileID: 870304771}
   p1ScoreTMP: {fileID: 780306837}
   p2ScoreTMP: {fileID: 143264800}
+  dicksTurnObj: {fileID: 299360601}
+  richardsTurnObj: {fileID: 1032366001}
+  dicksHead: {fileID: 638396523}
+  richardsHead: {fileID: 1345256042}
+  _dickHead: {fileID: 638396527}
+  _richardHead: {fileID: 1345256046}
 --- !u!1 &143264799
 GameObject:
   m_ObjectHideFlags: 0
@@ -2617,6 +2623,7 @@ MonoBehaviour:
   winner: 0
   cueBall: {fileID: 1567204595}
   rageManager: {fileID: 817804650}
+  billiardsUI: {fileID: 143117324}
 --- !u!4 &260714267
 Transform:
   m_ObjectHideFlags: 0
