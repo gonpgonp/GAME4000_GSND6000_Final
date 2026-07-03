@@ -10,26 +10,23 @@ public class Fighter : MonoBehaviour
 	private Rigidbody2D rb;
     private Animator animator;
     private AudioSource audioSource;
-    private AudioClip punchClip;
-    private AudioClip guardClip;
+    public AudioClip punchClip;
+    public AudioClip guardClip;
 
 	private PlayerInput playerInput;
 	private InputAction moveAction;
 	private InputAction attackAction;
 	private InputAction guardAction;
 
-	private int playerNum = 0;
     private bool facingLeft = false;
-    private float moveSpeed = 15.0f;
     private float knockBackStrength = 80.0f;
-    private float attackKnockback = -30.0f;
-    private float guardKnockback = -40.0f;
+    private float guardKnockback = 40.0f;
     private int invulnTimer = 0;
     private int invulnDuration = 25;
     private int hitstunTimer = 0;
     private int hitstunDuration = 20;
     private Vector2 moveVector = Vector2.zero;
-    private bool isAttacking = false;
+    private bool inactionable = false;
 	private bool isGuarding = false;
 	private float movementForce = 80.0f;
     private float maxSpeed = 20.0f;
@@ -40,21 +37,13 @@ public class Fighter : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        punchClip = Resources.Load<AudioClip>("Assets/Sounds/SFX/punch_2.wav");
-        guardClip = Resources.Load<AudioClip>("Assets/Sounds/SFX/wood.wav");
+        //punchClip = Resources.Load<AudioClip>("Assets/Sounds/SFX/punch_2.wav");
+        //guardClip = Resources.Load<AudioClip>("Assets/Sounds/SFX/wood.wav");
 
 		playerInput = GetComponent<PlayerInput>();
 		moveAction = playerInput.currentActionMap.FindAction("Move");
 		attackAction = playerInput.currentActionMap.FindAction("Attack");
 		guardAction = playerInput.currentActionMap.FindAction("Guard");
-		if (gameObject.name == "Player1")
-        {
-            playerNum = 1;
-		}
-        else
-        {
-            playerNum = 2;
-        }
     }
 
     // Update is called once per frame
@@ -73,6 +62,7 @@ public class Fighter : MonoBehaviour
 
 	void FaceOpponent()
     {
+        if (hitstunTimer != 0 || inactionable) return;
         if (opponent.transform.position.x < transform.position.x)
         {
             transform.localScale = new Vector3(-2, 2, 2);
@@ -87,7 +77,7 @@ public class Fighter : MonoBehaviour
 
     void DoMovement()
     {
-        if (hitstunTimer != 0) return;
+        if (hitstunTimer != 0 || isGuarding) return;
         if (moveAction.IsPressed()) 
         {
             moveVector = moveAction.ReadValue<Vector2>();
@@ -108,7 +98,7 @@ public class Fighter : MonoBehaviour
 
     void DoAttacks()
     {
-        if (hitstunTimer != 0) return;
+        if (hitstunTimer != 0 || inactionable) return;
         if (attackAction.WasPressedThisFrame())
         {
             animator.Play("Attack");
@@ -117,7 +107,7 @@ public class Fighter : MonoBehaviour
 
     void DoGuards()
     {
-        if (hitstunTimer != 0) return;
+        if (hitstunTimer != 0 || inactionable) return;
         if (guardAction.WasPressedThisFrame())
         {
             animator.Play("Guard");
@@ -172,6 +162,7 @@ public class Fighter : MonoBehaviour
 			hitstunTimer = hitstunDuration;
 			rb.AddForce(new Vector2(knockBackStrength * facingMult, 0.0f), ForceMode2D.Impulse);
 			animator.Play("GotHit");
+            inactionable = false;
 		}
 	}
 
@@ -193,6 +184,15 @@ public class Fighter : MonoBehaviour
             // add points
         }
     }
+    public void SetGuarding(int input)
+    {
+        isGuarding = input != 0;
+    }
+
+    public void SetInaction(int input)
+    {
+        inactionable = input != 0;
+	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
