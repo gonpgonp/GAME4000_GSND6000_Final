@@ -4,7 +4,7 @@ public class SkillUnlockManager : MonoBehaviour
 {
     public int cue;
     public int ball;
-    public int table = 0;
+    public int table;
 
     void Start()
     {

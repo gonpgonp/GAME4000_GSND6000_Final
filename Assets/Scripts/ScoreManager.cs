@@ -65,7 +65,6 @@ public class ScoreManager : MonoBehaviour
     {
         rageManager.AddRageEndOfTurn();
         billiardsIsP2Turn = !billiardsIsP2Turn; // swap the active player
-        Debug.Log("turn change");
         billiardsUI.SetTurnUI();
         billiardsUI.SetPissedMessages();
 

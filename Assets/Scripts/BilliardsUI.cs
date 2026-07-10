@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class BilliardsUI : MonoBehaviour
 {
@@ -24,9 +25,11 @@ public class BilliardsUI : MonoBehaviour
 
     public Animator _dickHead;
     public Animator _richardHead;
-
     public Animator _pissedMessages;
 
+    public Animator _p1TurnSwap;
+
+    public Animator _p2TurnSwap;
     void Start()
     {
         SetRageMeter();
@@ -81,15 +84,21 @@ public class BilliardsUI : MonoBehaviour
     {
         if (!scoreManager.billiardsIsP2Turn)
         {
+            _p1TurnSwap.Play("P1Turn");
+            
             dicksTurnObj.SetActive(true);
             dicksHead.SetActive(true);
             SetRageMeter();
-
+    
             richardsTurnObj.SetActive(false);
             richardsHead.SetActive(false);
+
+            
         }
         else
         {
+            _p2TurnSwap.Play("P2Turn");
+            
             richardsTurnObj.SetActive(true);
             richardsHead.SetActive(true);
             SetRageMeter();
