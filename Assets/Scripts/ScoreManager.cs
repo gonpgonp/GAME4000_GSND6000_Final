@@ -17,6 +17,8 @@ public class ScoreManager : MonoBehaviour
 
     public BilliardsUI billiardsUI;
 
+    public GameObject winOverlay;
+
     void Update()
     {
         if (CheckAllBallsStopped())
@@ -78,10 +80,12 @@ public class ScoreManager : MonoBehaviour
             if (p1Score >= 7) // p1 is the winner
             {
                 winner = 1;
+                winOverlay.SetActive(true);
             }
             else // p1 sunk the 8ball early
             {
                 winner = 2;
+                winOverlay.SetActive(true);
             }
 
         }
@@ -90,10 +94,12 @@ public class ScoreManager : MonoBehaviour
             if (p2Score >= 7) // p2 is the winner
             {
                 winner = 2;
+                winOverlay.SetActive(true);
             }
             else // p2 sunk the 8ball early
             {
                 winner = 1;
+                winOverlay.SetActive(true);
             }
         }
     }
