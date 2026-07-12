@@ -5804,6 +5804,94 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 45.48}
   m_SizeDelta: {x: 800, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &735090283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 735090286}
+  - component: {fileID: 735090285}
+  - component: {fileID: 735090284}
+  m_Layer: 0
+  m_Name: GameState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &735090284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735090283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 292c14b1d8e69914fa56b63403d93996, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: GameState
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &735090285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735090283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a710844b55dbbb746b94690c90af81c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameState
+  cameraHandler: {fileID: 871455063}
+  cue: {fileID: 633192779}
+  billiardsUI: {fileID: 143117315}
+  fightUI: {fileID: 850284078}
+  player1: {fileID: 1818612674}
+  player2: {fileID: 1273620724}
+  scoreOverlay: {fileID: 1763878440}
+  dickHeadAnimator: {fileID: 1393175000}
+  richardHeadAnimator: {fileID: 1987258367}
+  p1ScoreText: {fileID: 1836922722}
+  p2ScoreText: {fileID: 809421621}
+  billiardsMusic: {fileID: 489890792}
+  fightMusic: {fileID: 1541251786}
+--- !u!4 &735090286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735090283}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &738578146
 GameObject:
   m_ObjectHideFlags: 0
@@ -7166,6 +7254,7 @@ GameObject:
   - component: {fileID: 871455057}
   - component: {fileID: 871455062}
   - component: {fileID: 871455061}
+  - component: {fileID: 871455063}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7298,7 +7387,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871455056}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
   m_Name: 
@@ -7314,7 +7403,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871455056}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
   m_Name: 
@@ -7350,6 +7439,18 @@ MonoBehaviour:
     - {fileID: 809421619}
     - {fileID: 489890791}
     - {fileID: 1541251785}
+--- !u!114 &871455063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871455056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82e5793167c31e4e88f23368a8dde94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraHandler
 --- !u!1 &879928212
 GameObject:
   m_ObjectHideFlags: 0
@@ -18262,6 +18363,7 @@ SceneRoots:
   - {fileID: 973076421553178350}
   - {fileID: 158641963}
   - {fileID: 143117319}
+  - {fileID: 735090286}
   - {fileID: 817804649}
   - {fileID: 260714267}
   - {fileID: 1818612682}

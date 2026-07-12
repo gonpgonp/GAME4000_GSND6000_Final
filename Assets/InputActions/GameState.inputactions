@@ -1,0 +1,75 @@
+{
+    "version": 1,
+    "name": "GameState",
+    "maps": [
+        {
+            "name": "GameState",
+            "id": "8a89d2fe-85cd-432b-86c0-ef448d6c260a",
+            "actions": [
+                {
+                    "name": "StartBilliards",
+                    "type": "Button",
+                    "id": "96180e06-255c-4826-9947-b3c5ca44fa74",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "StartFight",
+                    "type": "Button",
+                    "id": "c9d8288e-4f73-496c-b34e-beb27c951952",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ScoreFight",
+                    "type": "Button",
+                    "id": "38a07a54-ce06-434c-98ce-d59d217d6b9d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b33064e4-4115-4551-a94a-393b7e1f349b",
+                    "path": "<Keyboard>/numpad1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StartBilliards",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "38492555-dcff-4694-9199-bba7dbdeb393",
+                    "path": "<Keyboard>/numpad2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StartFight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "43c98d7c-edc8-491c-8540-f2d60e125aae",
+                    "path": "<Keyboard>/numpad3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ScoreFight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
