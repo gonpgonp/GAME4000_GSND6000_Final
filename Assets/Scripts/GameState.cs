@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class GameState : MonoBehaviour
 {
-    int gameState = 0; //0 = title, 1 = billiards, 2 = fight, 3 = fight score counting, 10 = game over
+    private int gameState = 0; //0 = title, 1 = billiards, 2 = fight, 3 = fight score counting, 10 = game over
 	int gameWinner = -1;
 	int fightWinner = -1;
 	float fightTimer = 0.0f;
@@ -24,6 +24,7 @@ public class GameState : MonoBehaviour
 	private InputAction startBilliardsAction;
 	private InputAction startFightAction;
 	private InputAction scoreFightAction;
+    private InputAction gameOverAction;
 
 	public CameraHandler cameraHandler;
 	//public ScoreManager scoreManager;
@@ -34,6 +35,7 @@ public class GameState : MonoBehaviour
     public GameObject player1;
     public GameObject player2;
     public GameObject scoreOverlay;
+    public GameObject winOverlay;
     public Animator dickHeadAnimator;
     public Animator richardHeadAnimator;
     public TextMeshProUGUI p1ScoreText;
@@ -48,6 +50,7 @@ public class GameState : MonoBehaviour
         startBilliardsAction = playerInput.currentActionMap.FindAction("StartBilliards");
 		startFightAction = playerInput.currentActionMap.FindAction("StartFight");
 		scoreFightAction = playerInput.currentActionMap.FindAction("ScoreFight");
+        gameOverAction = playerInput.currentActionMap.FindAction("GameOver");
 		StartBilliards();
     }
 
@@ -73,6 +76,11 @@ public class GameState : MonoBehaviour
         {
             StartCoroutine(ScoreFight());
 		}
+
+        if (gameOverAction.WasPerformedThisFrame())
+        {
+            GameOver();
+        }
     }
 
     void StartBilliards()
@@ -90,8 +98,8 @@ public class GameState : MonoBehaviour
     {
 		gameState = 2;
 		cue.SetActive(true);
-		billiardsUI.SetActive(true);
-		fightUI.SetActive(false);
+		billiardsUI.SetActive(false);
+		fightUI.SetActive(true);
 		fightMusic.volume = 0.2f;
 		billiardsMusic.volume = 0.0f;
 		cameraHandler.SetTarget(new Vector3(0, -10, -10), 17.0f);
@@ -103,6 +111,7 @@ public class GameState : MonoBehaviour
 		cue.SetActive(false);
         billiardsUI.SetActive(false);
         fightUI.SetActive(false);
+        winOverlay.SetActive(true);
 	}
 
     IEnumerator ScoreFight()
@@ -164,5 +173,10 @@ public class GameState : MonoBehaviour
         StartBilliards();
 
         yield return null;
+    }
+
+    public int GetGameState()
+    {
+        return gameState;
     }
 }
