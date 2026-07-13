@@ -298,6 +298,7 @@ GameObject:
   - component: {fileID: 7226588290694960494}
   - component: {fileID: 5256282642547611274}
   - component: {fileID: 5694337930821206790}
+  - component: {fileID: 7680990920917947076}
   m_Layer: 0
   m_Name: Pocket
   m_TagString: Pocket
@@ -451,7 +452,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7856522251055307003}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
   m_Name: 
@@ -472,7 +473,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7856522251055307003}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
   m_Name: 
@@ -481,3 +482,17 @@ MonoBehaviour:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
     - {fileID: 11400000, guid: 66111cd6b0ce5465087aca9e52708a3a, type: 2}
+--- !u!114 &7680990920917947076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7856522251055307003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c402296c90889e4f90cbc7528abcd58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pocket
+  gravity: {fileID: 1768879196763772878}
+  blocker: {fileID: 6133237822161598197}

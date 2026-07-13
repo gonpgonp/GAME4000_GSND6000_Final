@@ -259,7 +259,8 @@ public class PowerUpHandler : MonoBehaviour
 		if (clickAction.WasPressedThisFrame() && hoveredPocket != null)
         {
             //give pocket gravity
-            hoveredPocket.GetComponent<SpriteRenderer>().color = Color.black;
+            hoveredPocket.GetComponent<Pocket>().SetGravity(true);
+			hoveredPocket.GetComponent<SpriteRenderer>().color = Color.black;
             tableActive[0] = false;
         }
     }
@@ -287,6 +288,7 @@ public class PowerUpHandler : MonoBehaviour
 		if (clickAction.WasPressedThisFrame() && hoveredPocket != null)
 		{
 			//give pocket blocker
+			hoveredPocket.GetComponent<Pocket>().SetBlocker(true);
 			hoveredPocket.GetComponent<SpriteRenderer>().color = Color.black;
 			tableActive[1] = false;
 		}
