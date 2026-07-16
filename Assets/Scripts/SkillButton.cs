@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class SkillButton : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class SkillButton : MonoBehaviour
     public GameObject priceObj;
 
     public SkillTreeUI skillTreeUI;
+
+    public Hotbar hotbar;
 
     void Start()
     {
@@ -165,23 +168,22 @@ public class SkillButton : MonoBehaviour
         if (this.CompareTag("CueSkill"))
         {
             skillUnlockManager.cue++;
-            Debug.Log("skillunlockmanager.cue is now" + skillUnlockManager.cue.ToString());
-
         }
         if (this.CompareTag("BallSkill"))
         {
             skillUnlockManager.ball++;
-            Debug.Log("skillunlockmanager.ball is now" + skillUnlockManager.ball.ToString());
-
         }
         if (this.CompareTag("TableSkill"))
         {
             skillUnlockManager.table++;
-            Debug.Log("skillunlockmanager.table is now" + skillUnlockManager.table.ToString());
         }
 
         // set this state to bought
         state = 3;
+
+        // add bought skill to hotbar
+        hotbar.hotbarSkills.Add(this);
+        hotbar.OrganizeHotbarSkills();
 
         // update everything based on new info
         skillTreeUI.UpdateAllButtons();

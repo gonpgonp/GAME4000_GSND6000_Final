@@ -103,7 +103,6 @@ public class SkillTreeUI : MonoBehaviour
             btn.SetButtonBehavior();
         }
 
-        Debug.Log("UpdateAllButtons() ran!!!!!");
     }
 
     void XButtonCloseShop()
