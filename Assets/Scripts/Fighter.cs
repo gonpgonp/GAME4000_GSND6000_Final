@@ -6,6 +6,9 @@ public class Fighter : MonoBehaviour
 {
     public Vector2 startPosition;
     public GameObject opponent;
+    public GameState gameState;
+    public FightUI fightUI;
+    public int index;
 
 	private Rigidbody2D rb;
     private Animator animator;
@@ -182,7 +185,18 @@ public class Fighter : MonoBehaviour
         {
             PlayPunchSound();
             // add points
-        }
+            if (index == 1)
+            {
+                gameState.p1FightScore = Mathf.Min(5, gameState.p1FightScore + 1);
+                gameState.p2FightScore = Mathf.Max(0, gameState.p2FightScore - 1);
+            }
+            else if (index == 2)
+            {
+				gameState.p2FightScore = Mathf.Min(5, gameState.p2FightScore + 1);
+				gameState.p1FightScore = Mathf.Max(0, gameState.p1FightScore - 1);
+			}
+			fightUI.SetScoreUI();
+		}
     }
     public void SetGuarding(int input)
     {

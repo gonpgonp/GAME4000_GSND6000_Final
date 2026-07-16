@@ -7,6 +7,12 @@ using UnityEngine.InputSystem;
 
 public class PowerUpHandler : MonoBehaviour
 {
+	public Camera camera_;
+
+	public CueBall cueBall;
+	public GameObject pocketPreview;
+	public GameObject pocketPrefab;
+
 	private PlayerInput playerInput;
 	private InputAction clickAction;
 	private InputAction pointAction;
@@ -21,21 +27,14 @@ public class PowerUpHandler : MonoBehaviour
 	private InputAction table2Action;
 	private InputAction table3Action;
 
-	public Camera camera_;
-
-    public GameObject cueBall;
-    public GameObject pocketPreview;
-
-    private GameObject swapBall = null;
+	private GameObject swapBall = null;
 
     private bool[] cueActive = new bool[3];
     private bool[] ballActive = new bool[3];
     private bool[] tableActive = new bool[3];
 
-    public GameObject P1Shop;
-    public GameObject P2Shop;
-
-    public GameObject PocketPrefab;
+    //public GameObject p1Shop;
+    //public GameObject p2Shop;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -145,30 +144,29 @@ public class PowerUpHandler : MonoBehaviour
             tableActive[i] = false;
         }
 
-        CueBall cb = cueBall.GetComponent<CueBall>();
-		cb.SetSeePath(true);
-        cb.SetInaccuracy(0.0f);
-        cb.SetSecondTap(false);
-        cb.SetMass(1.0f);
+		cueBall.SetSeePath(false);
+		cueBall.SetInaccuracy(0.0f);
+		cueBall.SetSecondTap(false);
+		cueBall.SetMass(1.0f);
 
 		//reset shop activations (probably will get rewritten to hotbar activations that need to be reset
 	}
 
     private void SeePath()
     {
-		cueBall.GetComponent<CueBall>().SetSeePath(true);
+		cueBall.SetSeePath(true);
 		cueActive[0] = false;
     }
 
     private void SecondTap()
     {
-        cueBall.GetComponent<CueBall>().SetSecondTap(true);
+        cueBall.SetSecondTap(true);
 		cueActive[1] = false;
 	}
 
     private void InaccurateShot()
     {
-        cueBall.GetComponent<CueBall>().SetInaccuracy(10.0f);
+        cueBall.SetInaccuracy(10.0f);
 		cueActive[2] = false;
 	}
 
@@ -231,7 +229,7 @@ public class PowerUpHandler : MonoBehaviour
 
     private void HeavyBall()
     {
-		cueBall.GetComponent<CueBall>().SetMass(10.0f);
+		cueBall.SetMass(10.0f);
 		ballActive[2] = false;
 	}
 
@@ -258,7 +256,6 @@ public class PowerUpHandler : MonoBehaviour
 
 		if (clickAction.WasPressedThisFrame() && hoveredPocket != null)
         {
-            //give pocket gravity
             hoveredPocket.GetComponent<Pocket>().SetGravity(true);
 			hoveredPocket.GetComponent<SpriteRenderer>().color = Color.black;
             tableActive[0] = false;
@@ -287,7 +284,6 @@ public class PowerUpHandler : MonoBehaviour
 
 		if (clickAction.WasPressedThisFrame() && hoveredPocket != null)
 		{
-			//give pocket blocker
 			hoveredPocket.GetComponent<Pocket>().SetBlocker(true);
 			hoveredPocket.GetComponent<SpriteRenderer>().color = Color.black;
 			tableActive[1] = false;
@@ -305,7 +301,7 @@ public class PowerUpHandler : MonoBehaviour
 
 		if (clickAction.WasPressedThisFrame())
 		{
-            Instantiate(PocketPrefab, worldVec, Quaternion.identity);
+            Instantiate(pocketPrefab, worldVec, Quaternion.identity);
             pocketPreview.transform.position = new Vector3(100, 0, 0);
 			tableActive[2] = false;
 		}

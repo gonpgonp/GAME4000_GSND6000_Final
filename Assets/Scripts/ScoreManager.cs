@@ -13,19 +13,21 @@ public class ScoreManager : MonoBehaviour
     public GameObject cueBall;
     bool allBallsStopped;
 
+    public GameState gameState;
     public RageManager rageManager;
-
     public BilliardsUI billiardsUI;
-
     public GameObject winOverlay;
 
     void Update()
     {
-        if (CheckAllBallsStopped())
+        if (gameState.state == GameState.States.BILLIARDS)
         {
-            ChangeTurns();
-            allBallsStopped = false;
-        }        
+			if (CheckAllBallsStopped())
+			{
+				ChangeTurns();
+				allBallsStopped = false;
+			}
+		}
     }
 
     public bool CheckAllBallsStopped()
@@ -56,6 +58,11 @@ public class ScoreManager : MonoBehaviour
                             allBallsStopped = false;
                         }
                     }
+                }
+
+                if (allBallsStopped)
+                {
+                    cueBall.GetComponent<CueBall>().ReadyForNextTurn();
                 }
 
             }

@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using Unity.VisualScripting;
 using Unity.VisualScripting.InputSystem;
 using UnityEngine;
@@ -5,31 +6,32 @@ using UnityEngine.InputSystem;
 
 public class CueBall : MonoBehaviour
 {
-    private PlayerInput playerInput;
+    const float MAX_POWER_DISTANCE = 2.5f;
+
+	public Camera camera_;
+	public GameState gameState;
+	public GameObject cue;
+	public GameObject powerUpHandler;
+	public bool hasHit;
+	public bool secondTapAvailable;
+	public bool cueHitAnyBall = false;
+	public bool cueHitMyBall = false;
+	public bool hasBroken = false;
+
+	private PlayerInput playerInput;
     private InputAction clickAction;
     private InputAction cancelAction;
     private InputAction pointAction;
+	private LineRenderer lr;
 
-    public Camera camera_;
-    public GameObject cue;
-	public GameObject powerUpHandler;
 	bool seePath;
-	public bool secondTapAvailable;
     float inaccuracy;
     float angerInaccuracy;
-
     float forceMult = 8.0f;
     bool clickedOnBall;
-    public bool hasHit;
     bool allBallsStopped;
     bool didScratch;
     float comparisonScore;
-
-    public bool cueHitAnyBall = false;
-    public bool cueHitMyBall = false;
-    public bool hasBroken = false;
-
-    private LineRenderer lr;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -45,10 +47,13 @@ public class CueBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		CheckAngerInaccuracy();
-		CheckClicking();
-        Aim();
-        CheckStopped();
+        if (gameState.state == GameState.States.BILLIARDS)
+        {
+			CheckAngerInaccuracy();
+			CheckClicking();
+			Aim();
+			//CheckStopped();
+		}
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -62,19 +67,29 @@ public class CueBall : MonoBehaviour
 
     private void CheckAngerInaccuracy()
     {
-		if (Variables.Application.Get<bool>("BilliardsIsP2Turn") && Variables.Application.Get<float>("P2Rage") > Variables.Application.Get<float>("MinimumFightRage"))
-		{
-			angerInaccuracy = 10.0f * Mathf.Deg2Rad;
+        float rage = 0.0f;
+        if (gameState.isBilliardsP1Turn)
+        {
+			rage = gameState.p1Rage;
 		}
-		else if (Variables.Application.Get<float>("P1Rage") > Variables.Application.Get<float>("MinimumFightRage"))
-		{
-			angerInaccuracy = 0.0f;
+        else
+        {
+			rage = gameState.p2Rage;
 		}
+
+		if (rage > GameState.MINIMUM_FIGHT_RAGE)
+		{
+			angerInaccuracy = 20.0f * Mathf.Deg2Rad;
+		}
+        else
+        {
+            angerInaccuracy = 0.0f;
+        }
 	}
 
     private void CheckClicking()
     {
-        if (!Variables.Scene(gameObject.scene).Get<bool>("ShopOpen") && !Variables.Scene(gameObject.scene).Get<bool>("isFight") && clickAction.WasPressedThisFrame())
+        if (!gameState.isShopOpen && clickAction.WasPressedThisFrame())
         {
             if (!hasHit || secondTapAvailable)
             {
@@ -83,12 +98,12 @@ public class CueBall : MonoBehaviour
                 if (Vector2.Distance(worldVec, this.transform.position) <= 1.0f)
                 {
                     clickedOnBall = true;
-                    Variables.Scene(gameObject.scene).Set("HideButtons", true);
+                    //Variables.Scene(gameObject.scene).Set("HideButtons", true);
                 }
                 else
                 {
                     clickedOnBall = false;
-					Variables.Scene(gameObject.scene).Set("HideButtons", false);
+					//Variables.Scene(gameObject.scene).Set("HideButtons", false);
 				}
             }
         }
@@ -97,7 +112,7 @@ public class CueBall : MonoBehaviour
         {
             clickedOnBall = false;
             lr.enabled = false;
-			Variables.Scene(gameObject.scene).Set("HideButtons", false);
+			//Variables.Scene(gameObject.scene).Set("HideButtons", false);
 		}
     }
 
@@ -109,9 +124,15 @@ public class CueBall : MonoBehaviour
 			Vector2 vec = pointAction.ReadValue<Vector2>();
 			Vector3 worldVec = camera_.ScreenToWorldPoint(vec);
             Vector2 distanceVec = transform.position - worldVec;
-            float distance = Mathf.Min(distanceVec.magnitude, Variables.Application.Get<float>("MaxCueDistance"));
-            Vector2 force = distanceVec.normalized * distance * forceMult;
-            rb.AddForce(force, ForceMode2D.Impulse);
+            float distance = Mathf.Min(distanceVec.magnitude, MAX_POWER_DISTANCE);
+            float randomAngle = (inaccuracy + angerInaccuracy) * Random.Range(-1, 1);
+            float shotAngle = Mathf.Atan2(distanceVec.y, distanceVec.x);
+			float x = Mathf.Cos(shotAngle + randomAngle);
+            float y = Mathf.Sin(shotAngle + randomAngle);
+            Vector2 f = new Vector2(x, y);
+            f = f.normalized * distance * forceMult;
+            //Vector2 force = distanceVec.normalized * distance * forceMult;
+            rb.AddForce(f, ForceMode2D.Impulse);
             if (!hasHit)
             {
                 hasHit = true;
@@ -152,13 +173,13 @@ public class CueBall : MonoBehaviour
                     lr.enabled = false;
                 }
                 Shoot();
-                if (Variables.Application.Get<bool>("BilliardsIsP2Turn"))
+                if (gameState.isBilliardsP1Turn)
                 {
-                    comparisonScore = Variables.Application.Get<int>("P2_Score");
+                    comparisonScore = gameState.p1BilliardsScore;
                 }
                 else
                 {
-					comparisonScore = Variables.Application.Get<int>("P1_Score");
+					comparisonScore = gameState.p2BilliardsScore;
 				}
 			}
 		}
@@ -178,9 +199,7 @@ public class CueBall : MonoBehaviour
         }
         if (allBallsStopped)
         {
-            Variables.Scene(gameObject.scene).Get<bool>("TriggerSwapBilliardsTurns");
             hasHit = false;
-            Variables.Scene(gameObject.scene).Set("HideButtons", false);
             cue.SetActive(true);
             powerUpHandler.GetComponent<PowerUpHandler>().ResetPowerUps();
             if (didScratch)
@@ -203,6 +222,18 @@ public class CueBall : MonoBehaviour
                 Variables.Application.Set("JustScratched", true);
                 didScratch = true;
             }
+		}
+	}
+
+    public void ReadyForNextTurn()
+    {
+		hasHit = false;
+		cue.SetActive(true);
+		powerUpHandler.GetComponent<PowerUpHandler>().ResetPowerUps();
+		if (didScratch)
+		{
+			transform.position = new Vector3(-4.0f, 0.0f, 0.0f);
+			didScratch = false;
 		}
 	}
 
