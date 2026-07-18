@@ -12,9 +12,8 @@ public class Hotbar : MonoBehaviour
     // hotbarSkillOrganized takes hotbarSkills and organizes them to display correctly
     List<SkillButton> hotbarSkillsOrganized = new List<SkillButton>();
 
-    /* hotbarSkillsUsable takes each SkillButton in hotbarSkillOrganized and adds the
-    corresponding hotbarSkillButton */
-    List<Button> hotbarSkillsUsable;
+    // hotbar[] is the array of child slot objects (Slot1, Slot2, Slot3...)
+    public Transform[] hotbar;
 
     void Start()
     {
@@ -55,4 +54,35 @@ public class Hotbar : MonoBehaviour
             }
         }
     }
+
+    public void DisplayHotbarSkills()
+    {
+        ClearHotbar();
+
+        for (int i=0; i<hotbarSkillsOrganized.Count; i++)
+        {
+            SkillButton sb = Instantiate(hotbarSkillsOrganized[i], hotbar[i], false);
+
+            sb.state = 4;
+            sb.SetButtonBehavior();
+            
+            sb.GetComponent<RectTransform>().anchoredPosition = new Vector2(0f, 0f);
+            sb.GetComponent<RectTransform>().sizeDelta = new Vector2(50f, 50f);
+            
+        }
+    }
+
+    public void ClearHotbar()
+    {
+        for (int i=0; i<transform.childCount; i++)
+        {
+            Transform child = transform.GetChild(i);
+            for (int j=child.childCount-1; j>=0; j--)
+            {
+                GameObject grandchild = child.GetChild(j).gameObject;
+                Destroy(grandchild);
+            }
+        }        
+    }
+
 }

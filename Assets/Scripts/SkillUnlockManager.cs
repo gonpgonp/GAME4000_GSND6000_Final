@@ -6,13 +6,4 @@ public class SkillUnlockManager : MonoBehaviour
     public int ball;
     public int table;
 
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
-
 }

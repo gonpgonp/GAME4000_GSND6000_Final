@@ -7,7 +7,7 @@ public class SkillButton : MonoBehaviour
 {
     public int level; // what tier this skill is (1, 2, 3)
     public int cost; // how much it costs
-    int state;  // 0 = avail, 1 = unavail, 2 = avail but can't afford, 3 = bought
+    public int state;  // 0 = avail, 1 = unavail, 2 = avail but can't afford, 3 = bought, 4 = usable state in hotbar, 5 = hotbar timeout
 
 
     public ScoreManager scoreManager;
@@ -33,6 +33,12 @@ public class SkillButton : MonoBehaviour
 
     public void SetButtonState()
     {
+        // state 4 and 5 get set externally in hotbar code
+        if (state == 4 || state == 5)
+        {
+            return;
+        }
+
         int swag;
 
         if (!scoreManager.billiardsIsP2Turn)
@@ -143,6 +149,22 @@ public class SkillButton : MonoBehaviour
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(Bought);
         }
+        else if (state == 4)
+        {
+            button.image.sprite = availSprite;
+            priceBg.SetActive(false);
+            priceObj.SetActive(false);
+            button.onClick.RemoveAllListeners();
+            button.onClick.AddListener(UseSkillFromHotbar);
+        }
+        else if (state == 5)
+        {
+            priceBg.SetActive(false);
+            priceObj.SetActive(false);
+            button.image.sprite = unavailSprite;
+            button.onClick.RemoveAllListeners();
+            button.onClick.AddListener(SkillTimeout);
+        }
     }
 
     void BuySkill()
@@ -184,6 +206,7 @@ public class SkillButton : MonoBehaviour
         // add bought skill to hotbar
         hotbar.hotbarSkills.Add(this);
         hotbar.OrganizeHotbarSkills();
+        hotbar.DisplayHotbarSkills();
 
         // update everything based on new info
         skillTreeUI.UpdateAllButtons();
@@ -203,5 +226,17 @@ public class SkillButton : MonoBehaviour
     void Bought()
     {
         Debug.Log("you already bought this");
+    }
+
+    void UseSkillFromHotbar()
+    {
+        Debug.Log("you clicked on this skill in the hotbar");
+        state = 5;
+        SetButtonBehavior();
+    }
+
+    void SkillTimeout()
+    {
+        Debug.Log("you already used this skill");
     }
 }
