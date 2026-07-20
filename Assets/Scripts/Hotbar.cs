@@ -15,6 +15,8 @@ public class Hotbar : MonoBehaviour
     // hotbar[] is the array of child slot objects (Slot1, Slot2, Slot3...)
     public Transform[] hotbar;
 
+    public ScoreManager scoreManager;
+
     void Start()
     {
         
@@ -84,5 +86,4 @@ public class Hotbar : MonoBehaviour
             }
         }        
     }
-
 }

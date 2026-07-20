@@ -30,6 +30,10 @@ public class BilliardsUI : MonoBehaviour
     public Animator _p1TurnSwap;
 
     public Animator _p2TurnSwap;
+
+    public GameObject p1Hotbar;
+    public GameObject p2Hotbar;
+
     void Start()
     {
         SetRageMeter();
@@ -89,11 +93,13 @@ public class BilliardsUI : MonoBehaviour
             dicksTurnObj.SetActive(true);
             dicksHead.SetActive(true);
             SetRageMeter();
+            p1Hotbar.SetActive(true);
+
     
             richardsTurnObj.SetActive(false);
             richardsHead.SetActive(false);
+            p2Hotbar.SetActive(false);
 
-            
         }
         else
         {
@@ -102,9 +108,11 @@ public class BilliardsUI : MonoBehaviour
             richardsTurnObj.SetActive(true);
             richardsHead.SetActive(true);
             SetRageMeter();
+            p2Hotbar.SetActive(true);
 
             dicksTurnObj.SetActive(false);
             dicksHead.SetActive(false);
+            p1Hotbar.SetActive(false);
         }
     }
 
