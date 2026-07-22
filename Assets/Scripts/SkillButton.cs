@@ -230,6 +230,7 @@ public class SkillButton : MonoBehaviour
 
     void UseSkillFromHotbar()
     {
+        // grab the skill's category from name, then inside poweruphandler do the correct ActivateXXXAbility(level-1)
         Debug.Log("you clicked on this skill in the hotbar");
         state = 5;
         SetButtonBehavior();
