@@ -42,51 +42,69 @@ public class BilliardsUI : MonoBehaviour
 
     public void SetRageMeter()
     {
-        float p1Rage = rageManager.p1Rage;
-        float p2Rage = rageManager.p2Rage;
+        float p1Rage = GameState.p1Rage;
+        float p2Rage = GameState.p2Rage;
 
         p1RageBar.rectTransform.localScale = new Vector3(.4f, p1Rage/25, .4f);
         p2RageBar.rectTransform.localScale = new Vector3(.4f, p2Rage/25, .4f);
         // want to fine-tune this behavior to look a little nicer later
 
-        if (p1Rage >= rageManager.minimumFightRage)
+        if (p1Rage >= GameState.MINIMUM_FIGHT_RAGE)
         {
             p1RageBar.color = rageColor;
             _dickHead.Play("DickHeadPissed");
-            startFightButton.SetActive(true);
+            //startFightButton.SetActive(true);
         }
         else
         {
             p1RageBar.color = calmColor;
             _dickHead.Play("DickCalm");
-            startFightButton.SetActive(false);
+            //startFightButton.SetActive(false);
         }
     
     
-        if (p2Rage >= rageManager.minimumFightRage)
+        if (p2Rage >= GameState.MINIMUM_FIGHT_RAGE)
         {
             p2RageBar.color = rageColor;
             _richardHead.Play("RichardHeadPissed");
-            startFightButton.SetActive(true);
+            //startFightButton.SetActive(true);
         }
         else
         {
             p2RageBar.color = calmColor;
             _richardHead.Play("RichardCalm");
-            startFightButton.SetActive(false);
+            //startFightButton.SetActive(false);
         }
         
     }
 
+    public void SetFightButton()
+    {
+        if (GameState.isBilliardsP1Turn && GameState.p1Rage >= GameState.MINIMUM_FIGHT_RAGE)
+        {
+			startFightButton.SetActive(true);
+		}
+        else if (!GameState.isBilliardsP1Turn && GameState.p2Rage >= GameState.MINIMUM_FIGHT_RAGE)
+        {
+			startFightButton.SetActive(true);
+		}
+        else
+        {
+			startFightButton.SetActive(false);
+		}
+	}
+
     public void UpdateBilliardsScoreUI()
     {
-        p1ScoreTMP.text = scoreManager.p1Score.ToString();
-        p2ScoreTMP.text = scoreManager.p2Score.ToString();
-    }
+        //p1ScoreTMP.text = scoreManager.p1Score.ToString();
+		p1ScoreTMP.text = GameState.p1BilliardsScore.ToString();
+		//p2ScoreTMP.text = scoreManager.p2Score.ToString();
+		p2ScoreTMP.text = GameState.p2BilliardsScore.ToString();
+	}
 
     public void SetTurnUI()
     {
-        if (!scoreManager.billiardsIsP2Turn)
+        if (GameState.isBilliardsP1Turn)
         {
             _p1TurnSwap.Play("P1Turn");
             
@@ -118,11 +136,11 @@ public class BilliardsUI : MonoBehaviour
 
     public void SetPissedMessages()
     {
-        if (!scoreManager.billiardsIsP2Turn && rageManager.p1Rage >= rageManager.minimumFightRage)
+        if (GameState.isBilliardsP1Turn && GameState.p1Rage >= GameState.MINIMUM_FIGHT_RAGE)
         {
             _pissedMessages.Play("DickPissed");
         }
-        else if (scoreManager.billiardsIsP2Turn && rageManager.p2Rage >= rageManager.minimumFightRage)
+        else if (!GameState.isBilliardsP1Turn && GameState.p2Rage >= GameState.MINIMUM_FIGHT_RAGE)
         {
             _pissedMessages.Play("RichardPissed");
         }

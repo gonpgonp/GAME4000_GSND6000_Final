@@ -29,9 +29,7 @@ public class CueBall : MonoBehaviour
     float angerInaccuracy;
     float forceMult = 8.0f;
     bool clickedOnBall;
-    bool allBallsStopped;
     bool didScratch;
-    float comparisonScore;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,12 +45,11 @@ public class CueBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameState.state == GameState.States.BILLIARDS)
+        if (GameState.state == GameState.States.BILLIARDS)
         {
 			CheckAngerInaccuracy();
 			CheckClicking();
 			Aim();
-			//CheckStopped();
 		}
     }
 
@@ -68,13 +65,13 @@ public class CueBall : MonoBehaviour
     private void CheckAngerInaccuracy()
     {
         float rage = 0.0f;
-        if (gameState.isBilliardsP1Turn)
+        if (GameState.isBilliardsP1Turn)
         {
-			rage = gameState.p1Rage;
+			rage = GameState.p1Rage;
 		}
         else
         {
-			rage = gameState.p2Rage;
+			rage = GameState.p2Rage;
 		}
 
 		if (rage > GameState.MINIMUM_FIGHT_RAGE)
@@ -89,7 +86,7 @@ public class CueBall : MonoBehaviour
 
     private void CheckClicking()
     {
-        if (!gameState.isShopOpen && clickAction.WasPressedThisFrame())
+        if (!GameState.isShopOpen && clickAction.WasPressedThisFrame())
         {
             if (!hasHit || secondTapAvailable)
             {
@@ -173,41 +170,8 @@ public class CueBall : MonoBehaviour
                     lr.enabled = false;
                 }
                 Shoot();
-                if (gameState.isBilliardsP1Turn)
-                {
-                    comparisonScore = gameState.p1BilliardsScore;
-                }
-                else
-                {
-					comparisonScore = gameState.p2BilliardsScore;
-				}
 			}
 		}
-    }
-
-    private void CheckStopped()
-    {
-        if (!hasHit || secondTapAvailable) return;
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        if (rb != null && rb.linearVelocity.magnitude > 0.1f) return;
-        allBallsStopped = true;
-        var numBalls = GameObject.FindGameObjectsWithTag("NumberBall");
-        foreach (var ball in numBalls)
-        {
-            Rigidbody2D numRB = ball.GetComponent<Rigidbody2D>();
-            if (numRB != null && numRB.linearVelocity.magnitude > 0.1f) allBallsStopped = false;
-        }
-        if (allBallsStopped)
-        {
-            hasHit = false;
-            cue.SetActive(true);
-            powerUpHandler.GetComponent<PowerUpHandler>().ResetPowerUps();
-            if (didScratch)
-            {
-                transform.position = new Vector3(-4.0f, 0.0f, 0.0f);
-                didScratch = false;
-            }
-        }
     }
 
 	private void OnTriggerEnter2D(Collider2D collision)

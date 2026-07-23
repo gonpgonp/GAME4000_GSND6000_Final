@@ -5,11 +5,10 @@ public class FightUI : MonoBehaviour
 {
     public Animator p1Score;
     public Animator p2Score;
-    public GameState gameState;
 
     public void SetScoreUI()
     {
-        int score = gameState.p1FightScore;
+        int score = GameState.p1FightScore;
 		if (score < 0 || score > 5)
         {
 			score = 0;
@@ -17,7 +16,7 @@ public class FightUI : MonoBehaviour
 		string anim = "DickSwag" + score.ToString();
 		p1Score.Play(anim);
 
-		score = gameState.p2FightScore;
+		score = GameState.p2FightScore;
 		if (score < 0 || score > 5)
 		{
 			score = 0;

@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &2078021 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 1322062540}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1001 &4072865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -138,12 +127,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1306921659}
     m_Modifications:
-    - target: {fileID: -935038603407597467, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"isStripe","value":{"$content":true,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"is8Ball","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
     - target: {fileID: 1703571981191429202, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.063
@@ -217,17 +200,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 735090285}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: billiardsUI
       value: 
       objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
-      objectReference: {fileID: 817804650}
+      objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -807,17 +794,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &71509890 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 1322062540}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &86328442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,26 +1095,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134971264}
   m_CullTransparentMesh: 1
---- !u!1 &135970087 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6863610941670177900, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+--- !u!114 &135970091 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6327330997067917488, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 2120488451277475718}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &135970091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135970087}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34b2087c072a44e03b60b8db63067063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillUnlockManager
-  cue: 0
-  ball: 0
-  table: 0
 --- !u!1 &138364327
 GameObject:
   m_ObjectHideFlags: 0
@@ -1457,7 +1424,7 @@ MonoBehaviour:
     - {fileID: 603365896}
     - {fileID: 638396523}
     - {fileID: 1345256042}
-    - {fileID: 817804646}
+    - {fileID: 0}
 --- !u!114 &143117322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1597,8 +1564,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c03f4c1f7e4d34cc98ff04adca5c0613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  scoreManager: {fileID: 260714266}
-  rageManager: {fileID: 817804650}
+  scoreManager: {fileID: 0}
+  rageManager: {fileID: 0}
   p1RageBar: {fileID: 1316397203}
   p2RageBar: {fileID: 742163109}
   startFightButton: {fileID: 870304771}
@@ -2382,12 +2349,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1306921659}
     m_Modifications:
-    - target: {fileID: -935038603407597467, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"isStripe","value":{"$content":true,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"is8Ball","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
     - target: {fileID: 1703571981191429202, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.354
@@ -2461,17 +2422,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 735090285}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: billiardsUI
       value: 
       objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
-      objectReference: {fileID: 817804650}
+      objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2695,61 +2660,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218250730}
   m_CullTransparentMesh: 1
---- !u!1 &260714265
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 260714267}
-  - component: {fileID: 260714266}
-  m_Layer: 0
-  m_Name: ScoreManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &260714266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260714265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7a39faba32a24591addc9c18e6476a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  p1Score: 0
-  p2Score: 0
-  p1Swag: 10
-  p2Swag: 10
-  billiardsIsP2Turn: 0
-  winner: 0
-  cueBall: {fileID: 1567204595}
-  gameState: {fileID: 735090285}
-  rageManager: {fileID: 817804650}
-  billiardsUI: {fileID: 143117324}
-  winOverlay: {fileID: 2137618488}
---- !u!4 &260714267
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260714265}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.58983, y: -4.31825, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &281700222 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4544173843932589644, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -2832,17 +2742,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1567204605}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 735090285}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: billiardsUI
       value: 
       objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
-      objectReference: {fileID: 817804650}
+      objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3624,17 +3538,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3686171879355116671, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 1322062540}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &517546614 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 2120488451277475718}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1001 &527010640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3712,17 +3615,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1567204605}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 735090285}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: billiardsUI
       value: 
       objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
-      objectReference: {fileID: 817804650}
+      objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4115,17 +4022,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1567204605}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 735090285}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: billiardsUI
       value: 
       objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
-      objectReference: {fileID: 817804650}
+      objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4510,17 +4421,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8191640581408338365, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 1322062540}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &594973477 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 2120488451277475718}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &595882514
 GameObject:
   m_ObjectHideFlags: 0
@@ -5899,21 +5799,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a710844b55dbbb746b94690c90af81c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameState
-  gameWinner: -1
-  fightWinner: -1
-  fightTimer: 0
-  isBilliardsP1Turn: 1
-  p1BilliardsScore: 0
-  p2BilliardsScore: 0
-  p1Rage: 0
-  p2Rage: 0
-  p1FightScore: 0
-  p2FightScore: 0
-  p1SkillPoints: 0
-  p2SkillPoints: 0
-  isShopOpen: 0
   cameraHandler: {fileID: 871455063}
   cue: {fileID: 633192779}
+  cueBall: {fileID: 1567204595}
   billiardsUI: {fileID: 143117315}
   fightUI: {fileID: 850284078}
   player1: {fileID: 1818612684}
@@ -6127,7 +6015,6 @@ MonoBehaviour:
   openShopButton: {fileID: 738578148}
   p1Shop: {fileID: 796020580}
   p2Shop: {fileID: 1051201970}
-  scoreManager: {fileID: 260714266}
 --- !u!1 &742163108
 GameObject:
   m_ObjectHideFlags: 0
@@ -6429,11 +6316,10 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1879780187785117345, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 2120488451277475718}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &796020587
+--- !u!114 &796020587 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3761028609245810165, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+  m_PrefabInstance: {fileID: 2120488451277475718}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796020580}
   m_Enabled: 1
@@ -6441,61 +6327,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbcf873bab693470d825ad812ad25d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillTreeUI
-  xButton: {fileID: 1049213700}
-  shopOpen: 0
-  powerUpHandler: {fileID: 158641964}
-  scoreManager: {fileID: 260714266}
-  skillUnlockManager: {fileID: 135970091}
-  cue1: {fileID: 1796191364}
-  cue2: {fileID: 1126532353}
-  cue3: {fileID: 1864626676}
-  ball1: {fileID: 1239024456}
-  ball2: {fileID: 1925403992}
-  ball3: {fileID: 1640090112}
-  table1: {fileID: 594973477}
-  table2: {fileID: 1252461552}
-  table3: {fileID: 517546614}
-  cue1CostObj: {fileID: 1228177752}
-  cue2CostObj: {fileID: 1781499950}
-  cue3CostObj: {fileID: 610055826}
-  ball1CostObj: {fileID: 1075919263}
-  ball2CostObj: {fileID: 2029387408}
-  ball3CostObj: {fileID: 965128481}
-  table1CostObj: {fileID: 925556171}
-  table2CostObj: {fileID: 621607070}
-  table3CostObj: {fileID: 198055834}
-  p1SwagDisplay: {fileID: 2120488451277475719}
-  p2SwagDisplay: {fileID: 1322062541}
---- !u!114 &796020588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796020580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 7646f9394e2d2944fba66b74ae5319c7, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Billiards
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1 &801300505 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 566395340625520631, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -6643,95 +6474,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1703571981191429202, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
   m_PrefabInstance: {fileID: 1428365488}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &817804646
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 817804649}
-  - component: {fileID: 817804648}
-  - component: {fileID: 817804647}
-  - component: {fileID: 817804650}
-  m_Layer: 5
-  m_Name: RageManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &817804647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817804646}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.VisualScripting.Flow::Unity.VisualScripting.ScriptMachine
-  _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: 01b181a8d67aa41f0be4a52bcc754a9e, type: 2}
---- !u!114 &817804648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817804646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.VisualScripting.Core::Unity.VisualScripting.Variables
-  _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"CueBallObj","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences:
-    - {fileID: 1567204595}
---- !u!224 &817804649
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817804646}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &817804650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817804646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0123d5c64e7e84567ac6d0fd3fcb7062, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  p1Rage: 0
-  p2Rage: 0
-  minimumFightRage: 3
-  scoreManager: {fileID: 260714266}
-  cueBall: {fileID: 1567204605}
-  billiardsUI: {fileID: 143117324}
 --- !u!1 &822347855 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3637659622623482332, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -7034,7 +6776,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   p1Score: {fileID: 1510564763}
   p2Score: {fileID: 176930954}
-  gameState: {fileID: 735090285}
 --- !u!1 &865586876
 GameObject:
   m_ObjectHideFlags: 0
@@ -7485,17 +7226,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2353676100289113925, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 1322062540}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &893187048 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 1322062540}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &925556171 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6341399907920523448, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -7506,17 +7236,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3686171879355116671, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 2120488451277475718}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &945841103 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 1322062540}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1001 &951917339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7525,12 +7244,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1306921659}
     m_Modifications:
-    - target: {fileID: -935038603407597467, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"isStripe","value":{"$content":true,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"is8Ball","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
     - target: {fileID: 1703571981191429202, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.417
@@ -7604,17 +7317,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 735090285}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: billiardsUI
       value: 
       objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
-      objectReference: {fileID: 817804650}
+      objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8013,17 +7730,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1567204605}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 735090285}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: billiardsUI
       value: 
       objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
-      objectReference: {fileID: 817804650}
+      objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8109,17 +7830,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5186856795624478893, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 2120488451277475718}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1049213700 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1935876750586128613, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 2120488451277475718}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049213699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1049441746
 GameObject:
   m_ObjectHideFlags: 0
@@ -8200,73 +7910,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1879780187785117345, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 1322062540}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1051201977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051201970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbcf873bab693470d825ad812ad25d27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SkillTreeUI
-  xButton: {fileID: 1313656923}
-  shopOpen: 0
-  powerUpHandler: {fileID: 158641964}
-  scoreManager: {fileID: 260714266}
-  skillUnlockManager: {fileID: 1329900148}
-  cue1: {fileID: 893187048}
-  cue2: {fileID: 1241695259}
-  cue3: {fileID: 71509890}
-  ball1: {fileID: 1769971988}
-  ball2: {fileID: 2078021}
-  ball3: {fileID: 945841103}
-  table1: {fileID: 2050155694}
-  table2: {fileID: 1927885007}
-  table3: {fileID: 2100036471}
-  cue1CostObj: {fileID: 1472811634}
-  cue2CostObj: {fileID: 1680046974}
-  cue3CostObj: {fileID: 453120550}
-  ball1CostObj: {fileID: 755502918}
-  ball2CostObj: {fileID: 143312121}
-  ball3CostObj: {fileID: 880756666}
-  table1CostObj: {fileID: 1528999888}
-  table2CostObj: {fileID: 590548874}
-  table3CostObj: {fileID: 787719881}
-  p1SwagDisplay: {fileID: 2120488451277475719}
-  p2SwagDisplay: {fileID: 1322062541}
---- !u!114 &1051201978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051201970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 7646f9394e2d2944fba66b74ae5319c7, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Billiards
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!4 &1071698827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1703571981191429202, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
@@ -8497,12 +8140,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1306921659}
     m_Modifications:
-    - target: {fileID: -935038603407597467, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"isStripe","value":{"$content":true,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"is8Ball","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
     - target: {fileID: 1703571981191429202, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.354
@@ -8576,17 +8213,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 735090285}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: billiardsUI
       value: 
       objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
-      objectReference: {fileID: 817804650}
+      objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8597,17 +8238,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1703571981191429202, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
   m_PrefabInstance: {fileID: 1815641460}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1126532353 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 2120488451277475718}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1156862130
 GameObject:
   m_ObjectHideFlags: 0
@@ -9080,12 +8710,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1306921659}
     m_Modifications:
-    - target: {fileID: -935038603407597467, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"isStripe","value":{"$content":true,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"is8Ball","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
     - target: {fileID: 1703571981191429202, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.417
@@ -9159,17 +8783,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 735090285}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: billiardsUI
       value: 
       objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
-      objectReference: {fileID: 817804650}
+      objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9547,28 +9175,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3939476597809795256, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 2120488451277475718}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1239024456 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 2120488451277475718}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
---- !u!114 &1241695259 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 1322062540}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1243929462
 GameObject:
   m_ObjectHideFlags: 0
@@ -9747,17 +9353,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250908126}
   m_CullTransparentMesh: 1
---- !u!114 &1252461552 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 2120488451277475718}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1257337988 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3637659622623482332, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -10325,17 +9920,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5186856795624478893, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 1322062540}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1313656923 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1935876750586128613, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 1322062540}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313656922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1316397202
 GameObject:
   m_ObjectHideFlags: 0
@@ -10439,7 +10023,7 @@ PrefabInstance:
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
-      objectReference: {fileID: 1051201977}
+      objectReference: {fileID: 0}
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: swagDisplay
       value: 
@@ -10447,7 +10031,7 @@ PrefabInstance:
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -10539,7 +10123,7 @@ PrefabInstance:
     - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
-      objectReference: {fileID: 1051201977}
+      objectReference: {fileID: 0}
     - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: swagDisplay
       value: 
@@ -10547,7 +10131,7 @@ PrefabInstance:
     - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -10607,7 +10191,7 @@ PrefabInstance:
     - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
-      objectReference: {fileID: 1051201977}
+      objectReference: {fileID: 0}
     - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: swagDisplay
       value: 
@@ -10615,7 +10199,7 @@ PrefabInstance:
     - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -10636,6 +10220,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: BallSkill
       objectReference: {fileID: 0}
+    - target: {fileID: 3761028609245810165, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: powerUpHandler
+      value: 
+      objectReference: {fileID: 158641964}
+    - target: {fileID: 3761028609245810165, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 1329900148}
     - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: cost
       value: 2
@@ -10651,7 +10243,7 @@ PrefabInstance:
     - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
-      objectReference: {fileID: 1051201977}
+      objectReference: {fileID: 0}
     - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: swagDisplay
       value: 
@@ -10659,7 +10251,7 @@ PrefabInstance:
     - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -10764,7 +10356,7 @@ PrefabInstance:
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
-      objectReference: {fileID: 1051201977}
+      objectReference: {fileID: 0}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: swagDisplay
       value: 
@@ -10772,7 +10364,7 @@ PrefabInstance:
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -10868,7 +10460,7 @@ PrefabInstance:
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
-      objectReference: {fileID: 1051201977}
+      objectReference: {fileID: 0}
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: swagDisplay
       value: 
@@ -10876,7 +10468,7 @@ PrefabInstance:
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -10896,7 +10488,7 @@ PrefabInstance:
     - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
-      objectReference: {fileID: 1051201977}
+      objectReference: {fileID: 0}
     - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: swagDisplay
       value: 
@@ -10904,7 +10496,7 @@ PrefabInstance:
     - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -10924,7 +10516,7 @@ PrefabInstance:
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
-      objectReference: {fileID: 1051201977}
+      objectReference: {fileID: 0}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: swagDisplay
       value: 
@@ -10932,7 +10524,7 @@ PrefabInstance:
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -10960,7 +10552,7 @@ PrefabInstance:
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
-      objectReference: {fileID: 1051201977}
+      objectReference: {fileID: 0}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: swagDisplay
       value: 
@@ -10968,7 +10560,7 @@ PrefabInstance:
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -11189,12 +10781,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1879780187785117345, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1051201977}
-    - targetCorrespondingSourceObject: {fileID: 1879780187785117345, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1051201978}
     - targetCorrespondingSourceObject: {fileID: 6863610941670177900, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1329900148}
@@ -11890,17 +11476,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1567204605}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 735090285}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: billiardsUI
       value: 
       objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
-      objectReference: {fileID: 817804650}
+      objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12081,17 +11671,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1567204605}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 735090285}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: billiardsUI
       value: 
       objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
-      objectReference: {fileID: 817804650}
+      objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12680,11 +12274,9 @@ GameObject:
   - component: {fileID: 1567204600}
   - component: {fileID: 1567204599}
   - component: {fileID: 1567204602}
-  - component: {fileID: 1567204598}
-  - component: {fileID: 1567204597}
+  - component: {fileID: 1567204605}
   - component: {fileID: 1567204596}
   - component: {fileID: 1567204603}
-  - component: {fileID: 1567204605}
   m_Layer: 0
   m_Name: CueBall
   m_TagString: Player
@@ -12722,46 +12314,6 @@ MonoBehaviour:
   m_DefaultActionMap: CueBall
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1567204597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567204595}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.VisualScripting.Flow::Unity.VisualScripting.ScriptMachine
-  _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: 6b534c3b4ecc94f86abd390c045f2d3a, type: 2}
---- !u!114 &1567204598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567204595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.VisualScripting.Core::Unity.VisualScripting.Variables
-  _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"CameraGameObj","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Cue","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"SecondTapAvailable","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Inaccuracy","value":{"$content":0.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"AngerInaccuracy","value":{"$content":0.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"PowerUpHandler","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences:
-    - {fileID: 871455056}
-    - {fileID: 633192779}
-    - {fileID: 158641959}
 --- !u!50 &1567204599
 Rigidbody2D:
   serializedVersion: 5
@@ -13526,17 +13078,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1615609061}
   m_CullTransparentMesh: 1
---- !u!114 &1640090112 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 2120488451277475718}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1655372604 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2506325879930886536, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -13855,17 +13396,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1567204605}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 735090285}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: billiardsUI
       value: 
       objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
-      objectReference: {fileID: 817804650}
+      objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13972,17 +13517,6 @@ Transform:
   - {fileID: 52061144}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1769971988 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 1322062540}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1781499950 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3078969600729792336, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -13993,17 +13527,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 566395340625520631, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 2120488451277475718}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1796191364 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 2120488451277475718}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1809450934
 GameObject:
   m_ObjectHideFlags: 0
@@ -14149,12 +13672,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1306921659}
     m_Modifications:
-    - target: {fileID: -935038603407597467, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"isStripe","value":{"$content":true,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"is8Ball","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
     - target: {fileID: 1703571981191429202, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.063
@@ -14228,17 +13745,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 735090285}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: billiardsUI
       value: 
       objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
-      objectReference: {fileID: 817804650}
+      objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14722,12 +14243,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1306921659}
     m_Modifications:
-    - target: {fileID: -935038603407597467, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"isStripe","value":{"$content":true,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"is8Ball","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
     - target: {fileID: 1703571981191429202, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.063
@@ -14801,17 +14316,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 735090285}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: billiardsUI
       value: 
       objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
-      objectReference: {fileID: 817804650}
+      objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15107,17 +14626,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856936925}
   m_CullTransparentMesh: 1
---- !u!114 &1864626676 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 2120488451277475718}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1869149069
 GameObject:
   m_ObjectHideFlags: 0
@@ -15525,17 +15033,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2506325879930886536, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 1322062540}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1925403992 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 2120488451277475718}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1926735087
 GameObject:
   m_ObjectHideFlags: 0
@@ -15611,17 +15108,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926735087}
   m_CullTransparentMesh: 1
---- !u!114 &1927885007 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 1322062540}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &1928502787
 GameObject:
   m_ObjectHideFlags: 0
@@ -16149,17 +15635,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 31510554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2050155694 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 1322062540}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &2078293396 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6436576612340502067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -16516,17 +15991,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 31510554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2100036471 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 1322062540}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1 &2128606857
 GameObject:
   m_ObjectHideFlags: 0
@@ -16702,8 +16166,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2137618491}
-  - component: {fileID: 2137618490}
-  - component: {fileID: 2137618489}
   - component: {fileID: 2137618492}
   m_Layer: 0
   m_Name: WinOverlay
@@ -16712,45 +16174,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &2137618489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137618488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.VisualScripting.Flow::Unity.VisualScripting.ScriptMachine
-  _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: 9f6bb6cd037f5ef44920382916c56d59, type: 2}
---- !u!114 &2137618490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137618488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.VisualScripting.Core::Unity.VisualScripting.Variables
-  _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"DickWin","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"RichardWin","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Darken","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"RestartButton","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences:
-    - {fileID: 1740525277}
-    - {fileID: 733323118}
-    - {fileID: 615596490}
-    - {fileID: 432548618}
 --- !u!4 &2137618491
 Transform:
   m_ObjectHideFlags: 0
@@ -16780,7 +16203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6672c48c3d67459ca7bea5e92c0b1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  scoreManager: {fileID: 260714266}
+  scoreManager: {fileID: 0}
   dickWin: {fileID: 1740525277}
   richardWin: {fileID: 733323118}
   restartButton: {fileID: 432548618}
@@ -16926,12 +16349,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1306921659}
     m_Modifications:
-    - target: {fileID: -935038603407597467, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
-      propertyPath: _data._json
-      value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"isStripe","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"is8Ball","value":{"$content":true,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-      objectReference: {fileID: 0}
     - target: {fileID: 1703571981191429202, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.708
@@ -17005,17 +16422,21 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: gameState
+      value: 
+      objectReference: {fileID: 735090285}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: billiardsUI
       value: 
       objectReference: {fileID: 143117324}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: rageManager
       value: 
-      objectReference: {fileID: 817804650}
+      objectReference: {fileID: 0}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17060,7 +16481,7 @@ PrefabInstance:
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -17164,7 +16585,7 @@ PrefabInstance:
     - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -17296,11 +16717,15 @@ PrefabInstance:
     - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
       objectReference: {fileID: 135970091}
+    - target: {fileID: 2337841778685229448, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2432597178558804542, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -17330,6 +16755,10 @@ PrefabInstance:
       value: BallSkill
       objectReference: {fileID: 0}
     - target: {fileID: 3631052150610799809, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631052150610799809, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: _data._json
       value: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Locked","value":{"$content":true,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Used","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
@@ -17348,6 +16777,18 @@ PrefabInstance:
       propertyPath: '_data._objectReferences.Array.data[3]'
       value: 
       objectReference: {fileID: 1175322157}
+    - target: {fileID: 3761028609245810165, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: p2SwagDisplay
+      value: 
+      objectReference: {fileID: 1322062541}
+    - target: {fileID: 3761028609245810165, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: powerUpHandler
+      value: 
+      objectReference: {fileID: 158641964}
+    - target: {fileID: 3761028609245810165, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: skillUnlockManager
+      value: 
+      objectReference: {fileID: 135970091}
     - target: {fileID: 3879357923667381946, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -17383,7 +16824,7 @@ PrefabInstance:
     - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -17508,7 +16949,7 @@ PrefabInstance:
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -17628,7 +17069,7 @@ PrefabInstance:
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -17660,7 +17101,7 @@ PrefabInstance:
     - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -17692,7 +17133,7 @@ PrefabInstance:
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -17744,7 +17185,7 @@ PrefabInstance:
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 260714266}
+      objectReference: {fileID: 0}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
@@ -17972,16 +17413,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1879780187785117345, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 796020587}
-    - targetCorrespondingSourceObject: {fileID: 1879780187785117345, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 796020588}
-    - targetCorrespondingSourceObject: {fileID: 6863610941670177900, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 135970091}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
 --- !u!1 &2120488451277475719 stripped
 GameObject:
@@ -18001,8 +17433,6 @@ SceneRoots:
   - {fileID: 973076421553178350}
   - {fileID: 158641963}
   - {fileID: 143117319}
-  - {fileID: 817804649}
-  - {fileID: 260714267}
   - {fileID: 1818612682}
   - {fileID: 1273620732}
   - {fileID: 850284084}

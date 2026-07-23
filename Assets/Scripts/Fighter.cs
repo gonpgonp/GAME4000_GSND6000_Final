@@ -187,13 +187,13 @@ public class Fighter : MonoBehaviour
             // add points
             if (index == 1)
             {
-                gameState.p1FightScore = Mathf.Min(5, gameState.p1FightScore + 1);
-                gameState.p2FightScore = Mathf.Max(0, gameState.p2FightScore - 1);
+                GameState.p1FightScore = Mathf.Min(5, GameState.p1FightScore + 1);
+				GameState.p2FightScore = Mathf.Max(0, GameState.p2FightScore - 1);
             }
             else if (index == 2)
             {
-				gameState.p2FightScore = Mathf.Min(5, gameState.p2FightScore + 1);
-				gameState.p1FightScore = Mathf.Max(0, gameState.p1FightScore - 1);
+				GameState.p2FightScore = Mathf.Min(5, GameState.p2FightScore + 1);
+				GameState.p1FightScore = Mathf.Max(0, GameState.p1FightScore - 1);
 			}
 			fightUI.SetScoreUI();
 		}

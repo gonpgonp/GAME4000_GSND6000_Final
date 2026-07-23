@@ -21,11 +21,11 @@ public class WinOverlay : MonoBehaviour
         darken.SetActive(true);
         SetRestartButton();
 
-        if (scoreManager.winner == 1)
+        if (GameState.gameWinner == 1)
         {
             dickWin.SetActive(true);
         }
-        else if (scoreManager.winner == 2)
+        else if (GameState.gameWinner == 2)
         {
             richardWin.SetActive(true);
         }

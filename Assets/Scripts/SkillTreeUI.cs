@@ -8,7 +8,6 @@ public class SkillTreeUI : MonoBehaviour
     public bool shopOpen;
 
     public PowerUpHandler powerUpHandler;
-    public ScoreManager scoreManager;
     public SkillUnlockManager skillUnlockManager;
     public SkillButton cue1;
     public SkillButton cue2;
@@ -43,14 +42,14 @@ public class SkillTreeUI : MonoBehaviour
         xButton.onClick.AddListener(XButtonCloseShop);
 
         // set the swagger on loading the shop
-        if (!scoreManager.billiardsIsP2Turn && p1SwagDisplay.GetComponent<TMP_Text>() != null)
+        if (GameState.isBilliardsP1Turn && p1SwagDisplay.GetComponent<TMP_Text>() != null)
         {
-            string swagStr = scoreManager.p1Swag.ToString();
+            string swagStr = GameState.p1SkillPoints.ToString();
             p1SwagDisplay.GetComponent<TMP_Text>().SetText(swagStr);
         }
-        else if (scoreManager.billiardsIsP2Turn && p2SwagDisplay.GetComponent<TMP_Text>() != null)
+        else if (!GameState.isBilliardsP1Turn && p2SwagDisplay.GetComponent<TMP_Text>() != null)
         {
-            string swagStr = scoreManager.p2Swag.ToString();
+            string swagStr = GameState.p2SkillPoints.ToString();
             p2SwagDisplay.GetComponent<TMP_Text>().SetText(swagStr);
         }  
         
@@ -108,5 +107,6 @@ public class SkillTreeUI : MonoBehaviour
     void XButtonCloseShop()
     {
         gameObject.SetActive(false);
+        GameState.isShopOpen = false;
     }
 }

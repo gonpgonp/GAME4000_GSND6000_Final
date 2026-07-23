@@ -565,8 +565,8 @@ GameObject:
   - component: {fileID: 1757185907717912670}
   - component: {fileID: 8158214253246108745}
   - component: {fileID: 2888486502368424383}
-  - component: {fileID: 5166656601149297518}
-  - component: {fileID: 8954650944140687977}
+  - component: {fileID: 3761028609245810165}
+  - component: {fileID: 4161680127607356784}
   m_Layer: 5
   m_Name: SkillTree
   m_TagString: Untagged
@@ -688,7 +688,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5166656601149297518
+--- !u!114 &3761028609245810165
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -697,40 +697,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1879780187785117345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Script: {fileID: 11500000, guid: bbcf873bab693470d825ad812ad25d27, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.VisualScripting.Core::Unity.VisualScripting.Variables
-  _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"CueSkill1","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"CueSkill2","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"CueSkill3","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BallSkill1","value":{"$content":3,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BallSkill2","value":{"$content":4,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"BallSkill3","value":{"$content":5,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TableSkill1","value":{"$content":6,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TableSkill2","value":{"$content":7,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TableSkill3","value":{"$content":8,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"PointsDisplay","value":{"$content":9,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"SkillUnlockManager","value":{"$content":10,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"SkillActivateManager","value":null,"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"TotalPoints","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"PointsThisRound","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"X_close","value":{"$content":11,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences:
-    - {fileID: 4770681747739091767}
-    - {fileID: 6784033317982227679}
-    - {fileID: 8726451574446183417}
-    - {fileID: 6382139386832530233}
-    - {fileID: 3541085861211357863}
-    - {fileID: 6068291687334567114}
-    - {fileID: 3215048193029653303}
-    - {fileID: 374226922374414898}
-    - {fileID: 2845155860692471352}
-    - {fileID: 4866644290526670642}
-    - {fileID: 6863610941670177900}
-    - {fileID: 5186856795624478893}
---- !u!114 &8954650944140687977
+  m_EditorClassIdentifier: Assembly-CSharp::SkillTreeUI
+  xButton: {fileID: 1935876750586128613}
+  shopOpen: 0
+  powerUpHandler: {fileID: 0}
+  scoreManager: {fileID: 0}
+  skillUnlockManager: {fileID: 6327330997067917488}
+  cue1: {fileID: 8183149586722954236}
+  cue2: {fileID: 7890593173478765588}
+  cue3: {fileID: 5385790086798338866}
+  ball1: {fileID: 7725176401015510002}
+  ball2: {fileID: 180364028454206060}
+  ball3: {fileID: 7463126316416787457}
+  table1: {fileID: 2250282181415369724}
+  table2: {fileID: 3933115355067579129}
+  table3: {fileID: 1502153725624334067}
+  cue1CostObj: {fileID: 3939476597809795256}
+  cue2CostObj: {fileID: 3078969600729792336}
+  cue3CostObj: {fileID: 974358252018212982}
+  ball1CostObj: {fileID: 3174722346039236790}
+  ball2CostObj: {fileID: 5024748375102075176}
+  ball3CostObj: {fileID: 2353676100289113925}
+  table1CostObj: {fileID: 6341399907920523448}
+  table2CostObj: {fileID: 8191640581408338365}
+  table3CostObj: {fileID: 6044691601500241335}
+  p1SwagDisplay: {fileID: 4866644290526670642}
+  p2SwagDisplay: {fileID: 0}
+--- !u!114 &4161680127607356784
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -739,13 +734,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1879780187785117345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.VisualScripting.Flow::Unity.VisualScripting.ScriptMachine
-  _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: a69f40d208bcc46aa91354d1e4de06a4, type: 2}
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 7646f9394e2d2944fba66b74ae5319c7, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Billiards
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &2506325879930886536
 GameObject:
   m_ObjectHideFlags: 0
@@ -2775,8 +2784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 23636044635395786}
-  - component: {fileID: 2337841778685229448}
-  - component: {fileID: 581824721635564622}
+  - component: {fileID: 6327330997067917488}
   m_Layer: 0
   m_Name: SkillUnlockManager
   m_TagString: Untagged
@@ -2799,7 +2807,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8848543410597723641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2337841778685229448
+--- !u!114 &6327330997067917488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2808,31 +2816,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6863610941670177900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Script: {fileID: 11500000, guid: 34b2087c072a44e03b60b8db63067063, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.VisualScripting.Core::Unity.VisualScripting.Variables
-  _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Cue","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Table","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Ball","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
---- !u!114 &581824721635564622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6863610941670177900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.VisualScripting.Flow::Unity.VisualScripting.ScriptMachine
-  _data:
-    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
-    _objectReferences:
-    - {fileID: 11400000, guid: ca3174a489bd7c14eb7811c26a640d40, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::SkillUnlockManager
+  cue: 0
+  ball: 0
+  table: 0
 --- !u!1 &6934463845374743210
 GameObject:
   m_ObjectHideFlags: 0
@@ -4095,9 +4084,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
---- !u!1 &3215048193029653303 stripped
+--- !u!114 &2250282181415369724 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1807375469312024176, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+  m_PrefabInstance: {fileID: 445730818728289676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+--- !u!1 &6341399907920523448 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6786537951031612724, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
   m_PrefabInstance: {fileID: 445730818728289676}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &8871573753267799847 stripped
@@ -4295,9 +4295,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
---- !u!1 &2845155860692471352 stripped
+--- !u!114 &1502153725624334067 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1807375469312024176, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+  m_PrefabInstance: {fileID: 994643176906500227}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+--- !u!1 &6044691601500241335 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6786537951031612724, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
   m_PrefabInstance: {fileID: 994643176906500227}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &8141393433228839464 stripped
@@ -4504,9 +4515,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
---- !u!1 &3541085861211357863 stripped
+--- !u!114 &180364028454206060 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1807375469312024176, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+  m_PrefabInstance: {fileID: 1987739215908856860}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+--- !u!1 &5024748375102075176 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6786537951031612724, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
   m_PrefabInstance: {fileID: 1987739215908856860}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &7396171501819840183 stripped
@@ -4710,14 +4732,25 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
---- !u!1 &374226922374414898 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+--- !u!114 &3933115355067579129 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1807375469312024176, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
   m_PrefabInstance: {fileID: 3422786270570931337}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!224 &5958694931265242658 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9021172408354775723, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+  m_PrefabInstance: {fileID: 3422786270570931337}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8191640581408338365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6786537951031612724, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
   m_PrefabInstance: {fileID: 3422786270570931337}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6028980582715127106
@@ -4909,16 +4942,27 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+--- !u!1 &974358252018212982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6786537951031612724, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+  m_PrefabInstance: {fileID: 6028980582715127106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &3358165144113567721 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9021172408354775723, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
   m_PrefabInstance: {fileID: 6028980582715127106}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8726451574446183417 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+--- !u!114 &5385790086798338866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1807375469312024176, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
   m_PrefabInstance: {fileID: 6028980582715127106}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1001 &7531554975828706700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5088,11 +5132,22 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9021172408354775723, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
   m_PrefabInstance: {fileID: 7531554975828706700}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4770681747739091767 stripped
+--- !u!1 &3939476597809795256 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6786537951031612724, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
   m_PrefabInstance: {fileID: 7531554975828706700}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8183149586722954236 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1807375469312024176, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+  m_PrefabInstance: {fileID: 7531554975828706700}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1001 &8223644834810531202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5288,11 +5343,22 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9021172408354775723, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
   m_PrefabInstance: {fileID: 8223644834810531202}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6382139386832530233 stripped
+--- !u!1 &3174722346039236790 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6786537951031612724, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
   m_PrefabInstance: {fileID: 8223644834810531202}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7725176401015510002 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1807375469312024176, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+  m_PrefabInstance: {fileID: 8223644834810531202}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1001 &8400359849724734052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5473,11 +5539,22 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9021172408354775723, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
   m_PrefabInstance: {fileID: 8400359849724734052}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6784033317982227679 stripped
+--- !u!1 &3078969600729792336 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6786537951031612724, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
   m_PrefabInstance: {fileID: 8400359849724734052}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7890593173478765588 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1807375469312024176, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+  m_PrefabInstance: {fileID: 8400359849724734052}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
 --- !u!1001 &9117343648969489009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5679,8 +5756,19 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 9021172408354775723, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
   m_PrefabInstance: {fileID: 9117343648969489009}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6068291687334567114 stripped
+--- !u!1 &2353676100289113925 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3076425413857453755, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6786537951031612724, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
   m_PrefabInstance: {fileID: 9117343648969489009}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7463126316416787457 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1807375469312024176, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+  m_PrefabInstance: {fileID: 9117343648969489009}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29aa820a1d97e448088f0d88f882b8be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript

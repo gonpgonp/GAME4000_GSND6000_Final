@@ -4,8 +4,7 @@ public class NumberBall : MonoBehaviour
 {    
     public bool is8Ball;
     public bool isStripe;
-    public ScoreManager scoreManager;
-    public RageManager rageManager;
+    public GameState gameState;
     public CueBall cueBall;
     public BilliardsUI billiardsUI;
 
@@ -30,22 +29,33 @@ public class NumberBall : MonoBehaviour
         {
             if (isStripe)
             {
-                scoreManager.p2Score += 1;
+                //scoreManager.p2Score += 1;
+                GameState.p2BilliardsScore += 1;
                 billiardsUI.UpdateBilliardsScoreUI();
-                rageManager.p1Rage += 1;
+                GameState.p1Rage += 1;
                 billiardsUI.SetRageMeter();
-            }
+				if (!GameState.isBilliardsP1Turn)
+				{
+					GameState.billiardsScoredThisTurn = true;
+				}
+			}
             else
             {
-                scoreManager.p1Score += 1;
+                //scoreManager.p1Score += 1;
+                GameState.p1BilliardsScore += 1;
                 billiardsUI.UpdateBilliardsScoreUI();
-                rageManager.p2Rage += 1;
+				GameState.p2Rage += 1;
                 billiardsUI.SetRageMeter();
-            }
+				if (GameState.isBilliardsP1Turn)
+                {
+                    GameState.billiardsScoredThisTurn = true;
+                }
+			}
         }
         else
         {
-            scoreManager.CheckWin();
+            gameState.CheckBilliardsWinner();
+            //scoreManager.CheckWin();
         }
 
     }
@@ -57,7 +67,7 @@ public class NumberBall : MonoBehaviour
         {
             if (collision.collider.CompareTag("NumberBall") || collision.collider.CompareTag("Player")) // if this number ball gets hit by any other ball
             {
-                if (!scoreManager.billiardsIsP2Turn)
+                if (GameState.isBilliardsP1Turn)
                 {
                     if (!isStripe) // p1's turn, solid got hit
                     {

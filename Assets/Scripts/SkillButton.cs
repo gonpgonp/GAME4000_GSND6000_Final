@@ -9,8 +9,6 @@ public class SkillButton : MonoBehaviour
     public int cost; // how much it costs
     public int state;  // 0 = avail, 1 = unavail, 2 = avail but can't afford, 3 = bought, 4 = usable state in hotbar, 5 = hotbar timeout
 
-
-    public ScoreManager scoreManager;
     public SkillUnlockManager skillUnlockManager;
     public Sprite availSprite;
     public Sprite cantAffordSprite;
@@ -41,13 +39,13 @@ public class SkillButton : MonoBehaviour
 
         int swag;
 
-        if (!scoreManager.billiardsIsP2Turn)
+        if (GameState.isBilliardsP1Turn)
         {
-            swag = scoreManager.p1Swag;
+            swag = GameState.p1SkillPoints;
         }
         else
         {
-            swag = scoreManager.p2Swag;
+            swag = GameState.p2SkillPoints;
         }
 
         // set button's state based on a) if it's already bought and b) the skillUnlockManager state
@@ -174,15 +172,15 @@ public class SkillButton : MonoBehaviour
         string str;
 
         // subtract the cost and update the swag score
-        if (!scoreManager.billiardsIsP2Turn)
+        if (GameState.isBilliardsP1Turn)
         {
-            scoreManager.p1Swag -= cost;
-            str = scoreManager.p1Swag.ToString();
+			GameState.p1SkillPoints -= cost;
+            str = GameState.p1SkillPoints.ToString();
         }
         else
         {
-            scoreManager.p2Swag -= cost;
-            str = scoreManager.p2Swag.ToString();
+			GameState.p2SkillPoints -= cost;
+            str = GameState.p2SkillPoints.ToString();
         }
 
         swagDisplay.GetComponent<TMP_Text>().SetText(str);

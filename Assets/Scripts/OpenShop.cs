@@ -10,8 +10,6 @@ public class OpenShop : MonoBehaviour
     public GameObject p1Shop;
     public GameObject p2Shop;
 
-    public ScoreManager scoreManager;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,7 +24,7 @@ public class OpenShop : MonoBehaviour
 
     void ButtonOpenShop()
     {
-        if (!scoreManager.billiardsIsP2Turn)
+        if (GameState.isBilliardsP1Turn)
         {
             p1Shop.SetActive(true);
         }
