@@ -11,9 +11,12 @@ public class SkillButton : MonoBehaviour
 
     public SkillUnlockManager skillUnlockManager;
     public Sprite availSprite;
-    public Sprite cantAffordSprite;
     public Sprite unavailSprite;
-    public Sprite boughtSprite;
+    public Sprite timeoutSprite;
+    public Sprite boughtCheckmark;
+    public Sprite unavailBg;
+    public Sprite normalCostBg;
+
     public GameObject swagDisplay;
 
     public GameObject priceBg;
@@ -120,34 +123,38 @@ public class SkillButton : MonoBehaviour
     public void SetButtonBehavior()
     {
         Button button = this.GetComponent<Button>();
+        Image bg = priceBg.GetComponent<Image>();
 
-        if (state == 0)
+        if (state == 0) // avail to buy
         {
             button.image.sprite = availSprite;
+            bg.sprite = normalCostBg;
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(BuySkill);
         }
-        else if (state == 1)
+        else if (state == 1) // unavail to buy
         {
             button.image.sprite = unavailSprite;
+            bg.sprite = normalCostBg;
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(Unavail);
         }
-        else if (state == 2)
+        else if (state == 2) // avail to buy but can't afford
         {
-            button.image.sprite = cantAffordSprite;
+            button.image.sprite = availSprite;
+            bg.sprite = unavailBg;
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(CantAfford);
         }
-        else if (state == 3)
+        else if (state == 3) // bought
         {
-            button.image.sprite = boughtSprite;
-            priceBg.SetActive(false);
+            button.image.sprite = availSprite;
             priceObj.SetActive(false);
+            bg.sprite = boughtCheckmark;
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(Bought);
         }
-        else if (state == 4)
+        else if (state == 4) // usable in the hotbar
         {
             button.image.sprite = availSprite;
             priceBg.SetActive(false);
@@ -155,11 +162,11 @@ public class SkillButton : MonoBehaviour
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(UseSkillFromHotbar);
         }
-        else if (state == 5)
+        else if (state == 5) // timeout in the hotbar
         {
             priceBg.SetActive(false);
             priceObj.SetActive(false);
-            button.image.sprite = unavailSprite;
+            button.image.sprite = timeoutSprite;
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(SkillTimeout);
         }

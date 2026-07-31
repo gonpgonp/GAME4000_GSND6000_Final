@@ -361,12 +361,15 @@ MonoBehaviour:
   level: 0
   cost: 0
   state: 0
-  scoreManager: {fileID: 0}
   skillUnlockManager: {fileID: 0}
-  availSprite: {fileID: 5168645406658300347, guid: 215c0c1c9779c46be9ef81ac9885d4e9, type: 3}
-  cantAffordSprite: {fileID: -5160979417409147319, guid: ff63600495828974b8cb84e1570ce5dc, type: 3}
-  unavailSprite: {fileID: 5702437699353859115, guid: 56e942444d0284a3a87205133a481f6f, type: 3}
-  boughtSprite: {fileID: 2617152825401110832, guid: f41d2680275284e65a38104fa61bba27, type: 3}
+  availSprite: {fileID: 0}
+  cantAffordSprite: {fileID: 0}
+  unavailSprite: {fileID: 0}
+  boughtSprite: {fileID: 0}
+  timeoutSprite: {fileID: 0}
+  boughtCheckmark: {fileID: 5744904054898057027, guid: f24dc007c71bf46318f8a98034ad6b1a, type: 3}
+  unavailBg: {fileID: -4103568293071658852, guid: 2cdb3f302bbd944a193b0641abbb0301, type: 3}
+  normalCostBg: {fileID: 5679285013959723179, guid: d59939fa9251b425091051a803e74823, type: 3}
   swagDisplay: {fileID: 0}
   priceBg: {fileID: 3424744513469131037}
   priceObj: {fileID: 6786537951031612724}

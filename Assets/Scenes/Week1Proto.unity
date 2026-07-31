@@ -10034,7 +10034,7 @@ PrefabInstance:
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: availSprite
       value: 
-      objectReference: {fileID: 7283174425786427449, guid: 59b0a6792b0f44474b6d52b58d76cc82, type: 3}
+      objectReference: {fileID: 4192739883567050303, guid: 0bcd11e25caa04d699bc6f016a6c480a, type: 3}
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
@@ -10048,9 +10048,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: 5994936225738930646, guid: 99f162ddc57e14ccc8f55b14aa014b45, type: 3}
+    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
-      objectReference: {fileID: -8396187760878558759, guid: 08243161b0b5646ce8469d227c10bbcd, type: 3}
+      objectReference: {fileID: 8747313028104095379, guid: 5f119d87074084673b12df2d662e0342, type: 3}
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -10156,6 +10160,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: 7868631071848657768, guid: 04811e58b47514d68b9def02d360a252, type: 3}
+    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: -5053339429613149898, guid: d5451f0d64ef9404ca286e9bb927b44b, type: 3}
@@ -10203,6 +10211,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1939954692913332976, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1915246252562531041, guid: 86295abe2d0784ec09e7e24db7cb34b1, type: 3}
     - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: cost
       value: 1
@@ -10232,6 +10244,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: -3043826193313197003, guid: ed543a66237f34684a7f3c1aecea6da0, type: 3}
+    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: -9016307610996349934, guid: 61cba243573a44bf0b4e9fe66b6e2ed0, type: 3}
@@ -10243,6 +10259,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2432597178558804542, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1991252620400956941, guid: 56d199075c09340e6bd301abb39941b6, type: 3}
     - target: {fileID: 2845155860692471352, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_TagString
       value: TableSkill
@@ -10296,6 +10316,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: -4763661769877095387, guid: 5a41ac2bc1a3649818071be0d75df7af, type: 3}
+    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: 4328197327421766996, guid: 379505d26d0d24ea4b2eacfa5e2141b7, type: 3}
@@ -10307,6 +10331,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 4017326146062945731, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4448715427215634006, guid: a784a9ed40af1491b813bcfc2ed3ba32, type: 3}
+    - target: {fileID: 4454963421289258454, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3561148701943319872, guid: 0970a9f220bd84af488f71d324d35988, type: 3}
     - target: {fileID: 4770681747739091767, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_TagString
       value: CueSkill
@@ -10401,6 +10433,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1950804374}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: availSprite
+      value: 
+      objectReference: {fileID: -1915246252562531041, guid: 86295abe2d0784ec09e7e24db7cb34b1, type: 3}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
       objectReference: {fileID: 1051201972}
@@ -10413,13 +10449,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: 3805244151691379624, guid: 9541a57c967ac443e9b99f83ac85f7ad, type: 3}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
-      objectReference: {fileID: 3234084266278803563, guid: e61460ea01acb438fbb596376cfc6269, type: 3}
+      objectReference: {fileID: -21140220519260757, guid: 9c0ba96d0fb224281bd7a459a3db5ac7, type: 3}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
       objectReference: {fileID: 1329900148}
+    - target: {fileID: 5968106438212031406, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4192739883567050303, guid: 0bcd11e25caa04d699bc6f016a6c480a, type: 3}
     - target: {fileID: 6068291687334567114, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_TagString
       value: BallSkill
@@ -10511,7 +10555,7 @@ PrefabInstance:
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: availSprite
       value: 
-      objectReference: {fileID: 2316819536790688417, guid: dc0e421f87a9a435b8870568c2667e89, type: 3}
+      objectReference: {fileID: 4448715427215634006, guid: a784a9ed40af1491b813bcfc2ed3ba32, type: 3}
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
@@ -10525,9 +10569,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: -5654948648722341658, guid: 75b51fec953ed4a53bc0d3da2e7e7174, type: 3}
+    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
-      objectReference: {fileID: 5223020679914280143, guid: e8e83e34899884190b45a29ddebd6881, type: 3}
+      objectReference: {fileID: -8049553959062295312, guid: 8669a2535fb8c4bef8c8379af7f6a48f, type: 3}
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -10561,6 +10609,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: -7726801503603884367, guid: 4db97c85f97fb47148de60dd5524f647, type: 3}
+    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: -5894539002436463840, guid: b828feeb9b28e46ca82c46f70b1ca647, type: 3}
@@ -10583,7 +10635,7 @@ PrefabInstance:
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: availSprite
       value: 
-      objectReference: {fileID: -373691578625994236, guid: 95a6776a5e8d04085965f31b0aa42915, type: 3}
+      objectReference: {fileID: -3561148701943319872, guid: 0970a9f220bd84af488f71d324d35988, type: 3}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
@@ -10597,9 +10649,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: -4657516567308884863, guid: 711fbd0c982e14bce9f8639519d4e536, type: 3}
+    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
-      objectReference: {fileID: -7306562240101536574, guid: e4fe93293bc004ad9823145777e88491, type: 3}
+      objectReference: {fileID: 2716542253071600219, guid: 47d2c428732324a588aa5c1d88148d8b, type: 3}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -10627,7 +10683,7 @@ PrefabInstance:
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: availSprite
       value: 
-      objectReference: {fileID: -6144037818551438066, guid: 617a24ef355824bb19eb12faa84a44f9, type: 3}
+      objectReference: {fileID: -1991252620400956941, guid: 56d199075c09340e6bd301abb39941b6, type: 3}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
@@ -10641,9 +10697,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: -4767976907732727430, guid: 74d24d0e1937e4c0bbb1ec7c893d8800, type: 3}
+    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
-      objectReference: {fileID: -801947715779045055, guid: 076b0476563704588a0d6e3d123b69ed, type: 3}
+      objectReference: {fileID: -6376801022481762830, guid: 9c1722fa3c64f42edb35c2849a3ef3c6, type: 3}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -16556,7 +16616,7 @@ PrefabInstance:
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: availSprite
       value: 
-      objectReference: {fileID: 7283174425786427449, guid: 59b0a6792b0f44474b6d52b58d76cc82, type: 3}
+      objectReference: {fileID: 4192739883567050303, guid: 0bcd11e25caa04d699bc6f016a6c480a, type: 3}
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
@@ -16570,9 +16630,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: 5994936225738930646, guid: 99f162ddc57e14ccc8f55b14aa014b45, type: 3}
+    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
-      objectReference: {fileID: -8396187760878558759, guid: 08243161b0b5646ce8469d227c10bbcd, type: 3}
+      objectReference: {fileID: 8747313028104095379, guid: 5f119d87074084673b12df2d662e0342, type: 3}
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -16682,6 +16746,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: 7868631071848657768, guid: 04811e58b47514d68b9def02d360a252, type: 3}
+    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: -5053339429613149898, guid: d5451f0d64ef9404ca286e9bb927b44b, type: 3}
@@ -16729,6 +16797,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1939954692913332976, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1915246252562531041, guid: 86295abe2d0784ec09e7e24db7cb34b1, type: 3}
     - target: {fileID: 2136152512861592096, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Delegates.Array.size
       value: 2
@@ -16822,6 +16894,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: -3043826193313197003, guid: ed543a66237f34684a7f3c1aecea6da0, type: 3}
+    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: -9016307610996349934, guid: 61cba243573a44bf0b4e9fe66b6e2ed0, type: 3}
@@ -16836,7 +16912,7 @@ PrefabInstance:
     - target: {fileID: 2432597178558804542, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6144037818551438066, guid: 617a24ef355824bb19eb12faa84a44f9, type: 3}
+      objectReference: {fileID: -1991252620400956941, guid: 56d199075c09340e6bd301abb39941b6, type: 3}
     - target: {fileID: 2432597178558804542, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -16937,6 +17013,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: -4763661769877095387, guid: 5a41ac2bc1a3649818071be0d75df7af, type: 3}
+    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: 4328197327421766996, guid: 379505d26d0d24ea4b2eacfa5e2141b7, type: 3}
@@ -16944,6 +17024,10 @@ PrefabInstance:
       propertyPath: skillUnlockManager
       value: 
       objectReference: {fileID: 135970091}
+    - target: {fileID: 4017326146062945731, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4448715427215634006, guid: a784a9ed40af1491b813bcfc2ed3ba32, type: 3}
     - target: {fileID: 4080491405499330570, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -16952,6 +17036,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -2120858699270524666, guid: 0d2b8e40663a04f8c8d9453a9da66929, type: 2}
+    - target: {fileID: 4454963421289258454, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3561148701943319872, guid: 0970a9f220bd84af488f71d324d35988, type: 3}
     - target: {fileID: 4770681747739091767, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_TagString
       value: CueSkill
@@ -17054,6 +17142,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 138364328}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: availSprite
+      value: 
+      objectReference: {fileID: -1915246252562531041, guid: 86295abe2d0784ec09e7e24db7cb34b1, type: 3}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
       objectReference: {fileID: 796020587}
@@ -17062,13 +17154,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2120488451277475719}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: boughtSprite
+      value: 
+      objectReference: {fileID: 5744904054898057027, guid: f24dc007c71bf46318f8a98034ad6b1a, type: 3}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: 3805244151691379624, guid: 9541a57c967ac443e9b99f83ac85f7ad, type: 3}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
-      objectReference: {fileID: 3234084266278803563, guid: e61460ea01acb438fbb596376cfc6269, type: 3}
+      objectReference: {fileID: 2716542253071600219, guid: 47d2c428732324a588aa5c1d88148d8b, type: 3}
+    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: cantAffordSprite
+      value: 
+      objectReference: {fileID: -4103568293071658852, guid: 2cdb3f302bbd944a193b0641abbb0301, type: 3}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -17081,6 +17185,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5968106438212031406, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4192739883567050303, guid: 0bcd11e25caa04d699bc6f016a6c480a, type: 3}
     - target: {fileID: 6068291687334567114, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_TagString
       value: BallSkill
@@ -17180,7 +17288,7 @@ PrefabInstance:
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: availSprite
       value: 
-      objectReference: {fileID: 2316819536790688417, guid: dc0e421f87a9a435b8870568c2667e89, type: 3}
+      objectReference: {fileID: 4448715427215634006, guid: a784a9ed40af1491b813bcfc2ed3ba32, type: 3}
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
@@ -17194,9 +17302,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: -8049553959062295312, guid: 8669a2535fb8c4bef8c8379af7f6a48f, type: 3}
+    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
-      objectReference: {fileID: 5223020679914280143, guid: e8e83e34899884190b45a29ddebd6881, type: 3}
+      objectReference: {fileID: -8049553959062295312, guid: 8669a2535fb8c4bef8c8379af7f6a48f, type: 3}
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -17234,6 +17346,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: -7726801503603884367, guid: 4db97c85f97fb47148de60dd5524f647, type: 3}
+    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: -5894539002436463840, guid: b828feeb9b28e46ca82c46f70b1ca647, type: 3}
@@ -17260,7 +17376,7 @@ PrefabInstance:
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: availSprite
       value: 
-      objectReference: {fileID: -373691578625994236, guid: 95a6776a5e8d04085965f31b0aa42915, type: 3}
+      objectReference: {fileID: -3561148701943319872, guid: 0970a9f220bd84af488f71d324d35988, type: 3}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
@@ -17270,13 +17386,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2120488451277475719}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: boughtSprite
+      value: 
+      objectReference: {fileID: 5744904054898057027, guid: f24dc007c71bf46318f8a98034ad6b1a, type: 3}
+    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: -4657516567308884863, guid: 711fbd0c982e14bce9f8639519d4e536, type: 3}
+    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
-      objectReference: {fileID: -7306562240101536574, guid: e4fe93293bc004ad9823145777e88491, type: 3}
+      objectReference: {fileID: 2716542253071600219, guid: 47d2c428732324a588aa5c1d88148d8b, type: 3}
+    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: cantAffordSprite
+      value: 
+      objectReference: {fileID: -4103568293071658852, guid: 2cdb3f302bbd944a193b0641abbb0301, type: 3}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillUnlockManager
       value: 
@@ -17312,7 +17440,7 @@ PrefabInstance:
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: availSprite
       value: 
-      objectReference: {fileID: -6144037818551438066, guid: 617a24ef355824bb19eb12faa84a44f9, type: 3}
+      objectReference: {fileID: -1991252620400956941, guid: 56d199075c09340e6bd301abb39941b6, type: 3}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: skillTreeUI
       value: 
@@ -17330,9 +17458,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: timeoutSprite
+      value: 
+      objectReference: {fileID: -4767976907732727430, guid: 74d24d0e1937e4c0bbb1ec7c893d8800, type: 3}
+    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: unavailSprite
       value: 
-      objectReference: {fileID: -801947715779045055, guid: 076b0476563704588a0d6e3d123b69ed, type: 3}
+      objectReference: {fileID: -6376801022481762830, guid: 9c1722fa3c64f42edb35c2849a3ef3c6, type: 3}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: cantAffordSprite
       value: 
