@@ -5702,6 +5702,8 @@ MonoBehaviour:
   cue: {fileID: 633192779}
   cueBall: {fileID: 1567204595}
   billiardsUI: {fileID: 143117315}
+  p1Shop: {fileID: 796020587}
+  p2Shop: {fileID: 1051201972}
   fightUI: {fileID: 850284078}
   player1: {fileID: 1818612684}
   player2: {fileID: 1273620734}
@@ -16822,6 +16824,10 @@ PrefabInstance:
       propertyPath: '_data._objectReferences.Array.data[3]'
       value: 
       objectReference: {fileID: 1175322157}
+    - target: {fileID: 3761028609245810165, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
+      propertyPath: isP1Shop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3761028609245810165, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: p2SwagDisplay
       value: 

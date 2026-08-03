@@ -32,11 +32,15 @@ public class GameState : MonoBehaviour
 	private InputAction startFightAction;
 	private InputAction scoreFightAction;
     private InputAction gameOverAction;
+	private InputAction debugPointsAction;
+	private InputAction debugRageAction;
 
 	public CameraHandler cameraHandler;
     public GameObject cue;
     public GameObject cueBall;
     public GameObject billiardsUI;
+	public SkillTreeUI p1Shop;
+	public SkillTreeUI p2Shop;
     public GameObject fightUI;
     public Fighter player1;
     public Fighter player2;
@@ -74,7 +78,9 @@ public class GameState : MonoBehaviour
 		startFightAction = playerInput.currentActionMap.FindAction("StartFight");
 		scoreFightAction = playerInput.currentActionMap.FindAction("ScoreFight");
         gameOverAction = playerInput.currentActionMap.FindAction("GameOver");
-        cue.SetActive(false);
+		debugPointsAction = playerInput.currentActionMap.FindAction("Give10Points");
+		debugRageAction = playerInput.currentActionMap.FindAction("Give1Rage");
+		cue.SetActive(false);
         billiardsUI.SetActive(false);
         fightUI.SetActive(false);
 		fightMusic.volume = 0.0f;
@@ -109,6 +115,16 @@ public class GameState : MonoBehaviour
             GameOver();
         }
 
+		if (debugPointsAction.WasPerformedThisFrame())
+		{
+			GivePoints(10);
+		}
+
+		if (debugRageAction.WasPerformedThisFrame())
+		{
+			GiveRage(1.0f);
+		}
+
         switch(state)
         {
 			case States.BILLIARDS:
@@ -127,6 +143,38 @@ public class GameState : MonoBehaviour
                 break;
         }
     }
+
+	private void GivePoints(int points)
+	{
+		if (isBilliardsP1Turn)
+		{
+			p1SkillPoints += points;
+			p1Shop.UpdateSwaggerDisplay();
+			p1Shop.UpdateAllButtons();
+		}
+		else
+		{
+			p2SkillPoints += points;
+			p2Shop.UpdateSwaggerDisplay();
+			p2Shop.UpdateAllButtons();
+		}
+		Debug.Log("Added points");
+	}
+
+	private void GiveRage(float rage)
+	{
+		if (isBilliardsP1Turn)
+		{
+			p1Rage += rage;
+		}
+		else
+		{
+			p2Rage += rage;
+		}
+		BilliardsUI BUI = billiardsUI.GetComponent<BilliardsUI>();
+		BUI.SetRageMeter();
+		Debug.Log("Added rage");
+	}
 
     public void StartBilliards()
     {

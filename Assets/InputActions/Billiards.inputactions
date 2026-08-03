@@ -25,24 +25,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Give10Points",
-                    "type": "Button",
-                    "id": "3ec17103-abbd-4c1c-b049-37ef398bd351",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "GiveMaxRage",
-                    "type": "Button",
-                    "id": "d2050394-363f-4ec6-ac66-aeba6aeed340",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Cue1",
                     "type": "Button",
                     "id": "ed62c884-6e75-4c82-b071-870bd2176441",
@@ -144,28 +126,6 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Click",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "90e3902e-a686-4c5f-b8be-c86da6bdd544",
-                    "path": "<Keyboard>/leftBracket",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Give10Points",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1df6d32b-733b-4aff-ab69-18efd14490fa",
-                    "path": "<Keyboard>/rightBracket",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "GiveMaxRage",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

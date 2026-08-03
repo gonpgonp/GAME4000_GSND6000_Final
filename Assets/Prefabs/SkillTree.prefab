@@ -700,10 +700,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbcf873bab693470d825ad812ad25d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillTreeUI
+  isP1Shop: 0
   xButton: {fileID: 1935876750586128613}
   shopOpen: 0
   powerUpHandler: {fileID: 0}
-  scoreManager: {fileID: 0}
   skillUnlockManager: {fileID: 6327330997067917488}
   cue1: {fileID: 8183149586722954236}
   cue2: {fileID: 7890593173478765588}
@@ -723,8 +723,7 @@ MonoBehaviour:
   table1CostObj: {fileID: 6341399907920523448}
   table2CostObj: {fileID: 8191640581408338365}
   table3CostObj: {fileID: 6044691601500241335}
-  p1SwagDisplay: {fileID: 4866644290526670642}
-  p2SwagDisplay: {fileID: 0}
+  swagDisplay: {fileID: 4866644290526670642}
 --- !u!114 &4161680127607356784
 MonoBehaviour:
   m_ObjectHideFlags: 0

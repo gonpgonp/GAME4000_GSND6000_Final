@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using TMPro;
 public class SkillTreeUI : MonoBehaviour
 {
+    public bool isP1Shop;
+
     public Button xButton;
     public bool shopOpen;
 
@@ -19,7 +21,6 @@ public class SkillTreeUI : MonoBehaviour
     public SkillButton table2;
     public SkillButton table3;
 
-
     public GameObject cue1CostObj;
     public GameObject cue2CostObj;
     public GameObject cue3CostObj;
@@ -30,11 +31,7 @@ public class SkillTreeUI : MonoBehaviour
     public GameObject table2CostObj;
     public GameObject table3CostObj;
 
-    public GameObject p1SwagDisplay;
-    public GameObject p2SwagDisplay;
-  
-
-
+    public GameObject swagDisplay;
 
     void Start()
     {
@@ -42,19 +39,10 @@ public class SkillTreeUI : MonoBehaviour
         xButton.onClick.AddListener(XButtonCloseShop);
 
         // set the swagger on loading the shop
-        if (GameState.isBilliardsP1Turn && p1SwagDisplay.GetComponent<TMP_Text>() != null)
-        {
-            string swagStr = GameState.p1SkillPoints.ToString();
-            p1SwagDisplay.GetComponent<TMP_Text>().SetText(swagStr);
-        }
-        else if (!GameState.isBilliardsP1Turn && p2SwagDisplay.GetComponent<TMP_Text>() != null)
-        {
-            string swagStr = GameState.p2SkillPoints.ToString();
-            p2SwagDisplay.GetComponent<TMP_Text>().SetText(swagStr);
-        }  
-        
-        // initialize arrays
-        int[] skillCosts =
+        UpdateSwaggerDisplay();
+
+		// initialize arrays
+		int[] skillCosts =
         {
             cue1.cost, cue2.cost, cue3.cost,
             ball1.cost, ball2.cost, ball3.cost,
@@ -83,6 +71,23 @@ public class SkillTreeUI : MonoBehaviour
     {
 
     }
+
+    public void UpdateSwaggerDisplay()
+    {
+		if (swagDisplay.GetComponent<TMP_Text>() != null)
+		{
+            string swagStr;
+			if (isP1Shop)
+            {
+				swagStr = GameState.p1SkillPoints.ToString();
+			}
+            else
+            {
+				swagStr = GameState.p2SkillPoints.ToString();
+			}
+            swagDisplay.GetComponent<TMP_Text>().SetText(swagStr);
+		}
+	}
 
     public void UpdateAllButtons()
     {
