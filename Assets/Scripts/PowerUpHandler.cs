@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Net.Sockets;
 using Unity.VisualScripting;
+using UnityEditor.Sprites;
 using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -28,13 +29,11 @@ public class PowerUpHandler : MonoBehaviour
 	private InputAction table3Action;
 
 	private GameObject swapBall = null;
+    private GameObject moveBall = null;
 
     private bool[] cueActive = new bool[3];
     private bool[] ballActive = new bool[3];
     private bool[] tableActive = new bool[3];
-
-    //public GameObject p1Shop;
-    //public GameObject p2Shop;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -115,11 +114,13 @@ public class PowerUpHandler : MonoBehaviour
         }
         else if (ballActive[1])
         {
-            ShuffleBalls();
+            //ShuffleBalls();
+            MoveBall();
         }
         else if (ballActive[2])
         {
-            HeavyBall();
+            //HeavyBall();
+            IgnoreEnemyBalls();
         }
         else if (tableActive[0])
         {
@@ -143,6 +144,14 @@ public class PowerUpHandler : MonoBehaviour
             ballActive[i] = false;
             tableActive[i] = false;
         }
+
+		var numBalls = GameObject.FindGameObjectsWithTag("NumberBall");
+
+		foreach (var ball in numBalls)
+		{
+			ball.GetComponent<Collider2D>().enabled = true;
+			ball.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+		}
 
 		cueBall.SetSeePath(false);
 		cueBall.SetInaccuracy(0.0f);
@@ -226,14 +235,114 @@ public class PowerUpHandler : MonoBehaviour
 
 		ballActive[1] = false;
 	}
+    
+    private void MoveBall()
+    {
+		Vector2 vec = pointAction.ReadValue<Vector2>();
+		Vector3 worldVec = camera_.ScreenToWorldPoint(vec);
+		var numBalls = GameObject.FindGameObjectsWithTag("NumberBall");
+		if (moveBall == null)
+        {
+			GameObject hoveredBall = null;
 
-    private void HeavyBall()
+			foreach (var ball in numBalls)
+			{
+				if (ball.GetComponent<Collider2D>().OverlapPoint(worldVec))
+				{
+					ball.GetComponent<SpriteRenderer>().color = Color.red;
+					hoveredBall = ball;
+				}
+				else
+				{
+					ball.GetComponent<SpriteRenderer>().color = Color.white;
+				}
+			}
+
+			if (clickAction.WasPressedThisFrame() && hoveredBall != null)
+			{
+				moveBall = hoveredBall;
+				moveBall.GetComponent<SpriteRenderer>().color = Color.white;
+			}
+		}
+        else
+        {
+            var pockets = GameObject.FindGameObjectsWithTag("Pocket");
+            bool tooClose = false;
+
+            foreach (var pocket in pockets)
+            {
+                if (Vector2.Distance(worldVec, pocket.transform.position) < 1.0f)
+                {
+                    tooClose = true;
+                    break;
+				}
+            }
+
+			foreach (var ball in numBalls)
+			{
+				if (ball != moveBall && Vector2.Distance(worldVec, ball.transform.position) < 0.5f)
+				{
+					tooClose = true;
+					break;
+				}
+			}
+
+			if (Vector2.Distance(worldVec, cueBall.transform.position) < 0.5f)
+			{
+				tooClose = true;
+			}
+
+            if (worldVec.x > 7.5 || worldVec.x < -7.5 || worldVec.y > 3.5 || worldVec.y < -3.5)
+            {
+                tooClose = true;
+            }
+
+			if (!tooClose)
+            {
+				moveBall.transform.position = new Vector3(worldVec.x, worldVec.y);
+			}
+
+			if (clickAction.WasPressedThisFrame())
+			{
+				moveBall.GetComponent<SpriteRenderer>().color = Color.white;
+				moveBall = null;
+				ballActive[1] = false;
+			}
+		}
+	}
+
+	private void HeavyBall()
     {
 		cueBall.SetMass(10.0f);
 		ballActive[2] = false;
 	}
 
-    private void MagneticPocket()
+    private void IgnoreEnemyBalls()
+    {
+		var numBalls = GameObject.FindGameObjectsWithTag("NumberBall");
+
+		foreach (var ball in numBalls)
+		{
+            var numberBall = ball.GetComponent<NumberBall>();
+            if (numberBall.is8Ball)
+            {
+                continue;
+            }
+			else if (numberBall.isStripe && GameState.isBilliardsP1Turn )
+            {
+                ball.GetComponent<Collider2D>().enabled = false;
+                ball.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
+            }
+            else if (!numberBall.isStripe && !GameState.isBilliardsP1Turn)
+			{
+				ball.GetComponent<Collider2D>().enabled = false;
+				ball.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.25f);
+			}
+		}
+		ballActive[2] = false;
+    }
+
+	private void MagneticPocket()
     {
 		Vector2 vec = pointAction.ReadValue<Vector2>();
 		Vector3 worldVec = camera_.ScreenToWorldPoint(vec);
