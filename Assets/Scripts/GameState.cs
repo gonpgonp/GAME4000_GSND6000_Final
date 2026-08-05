@@ -211,7 +211,7 @@ public class GameState : MonoBehaviour
 		fightMusic.volume = 0.2f;
 		billiardsMusic.volume = 0.0f;
 		cameraHandler.SetTarget(new Vector3(0, -10, -10), 17.0f);
-        fightTimer = 10.0f;
+        fightTimer = 20.0f;
 	}
 
     public void GameOver()
