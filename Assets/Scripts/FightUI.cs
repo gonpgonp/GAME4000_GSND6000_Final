@@ -8,10 +8,7 @@ public class FightUI : MonoBehaviour
 
 	public Image dial;
 
-	void Awake()
-	{
-		dial.fillAmount = .5f;
-	}
+	public Image dialArrow;
 
     public void SetScoreUI()
     {
@@ -44,6 +41,18 @@ public class FightUI : MonoBehaviour
 			dial.fillAmount = .5f;
 		}
 
+		float dialAngle = 90 - (dial.fillAmount * 180);
+		
+		if (dialAngle == 90) // adjusting full angles so they don't get cut off
+		{
+			dialAngle = 80;
+		}
+		else if (dialAngle == -90)
+		{
+			dialAngle = -80;
+		}
 
+		RectTransform rt = dialArrow.rectTransform;
+		rt.localRotation = Quaternion.Euler(0, 0, dialAngle);
 	}
 }

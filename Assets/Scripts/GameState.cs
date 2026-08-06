@@ -196,6 +196,14 @@ public class GameState : MonoBehaviour
 
     public void StartFight()
     {
+		p1FightScore = 0;
+		p2FightScore = 0;
+		FightUI ui = fightUI.GetComponent<FightUI>();
+		if (ui != null)
+		{
+			ui.SetScoreUI();
+		}
+
 		if (isBilliardsP1Turn)
 		{
 			p1Rage = 0.0f;
