@@ -10,6 +10,8 @@ public class Fighter : MonoBehaviour
     public FightUI fightUI;
     public int index;
 
+    public Crowd crowd;
+
 	private Rigidbody2D rb;
     private Animator animator;
     private AudioSource audioSource;
@@ -198,6 +200,8 @@ public class Fighter : MonoBehaviour
                 GameState.p2FightScore++;
 			}
 			fightUI.SetScoreUI();
+            crowd.UpdateCrowd();
+            
 		}
     }
     public void SetGuarding(int input)

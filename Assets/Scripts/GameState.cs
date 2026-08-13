@@ -42,6 +42,7 @@ public class GameState : MonoBehaviour
 	public SkillTreeUI p1Shop;
 	public SkillTreeUI p2Shop;
     public GameObject fightUI;
+
     public Fighter player1;
     public Fighter player2;
     public GameObject scoreOverlay;
@@ -219,7 +220,7 @@ public class GameState : MonoBehaviour
 		fightMusic.volume = 0.2f;
 		billiardsMusic.volume = 0.0f;
 		cameraHandler.SetTarget(new Vector3(0, -10, -10), 17.0f);
-        fightTimer = 20.0f;
+        fightTimer = 60.0f;
 	}
 
     public void GameOver()

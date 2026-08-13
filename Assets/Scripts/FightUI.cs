@@ -10,25 +10,10 @@ public class FightUI : MonoBehaviour
 
 	public Image dialArrow;
 
+
     public void SetScoreUI()
     {
-        /*int score = GameState.p1FightScore;
-		if (score < 0 || score > 5)
-        {
-			score = 0;
-        }
-		string anim = "DickSwag" + score.ToString();
-		p1Score.Play(anim);
-
-		score = GameState.p2FightScore;
-		if (score < 0 || score > 5)
-		{
-			score = 0;
-		}
-		anim = "RichardSwag" + score.ToString();
-		p2Score.Play(anim);*/
-
-		float p1Score = GameState.p1FightScore;
+    	float p1Score = GameState.p1FightScore;
 		float totalScore = GameState.p1FightScore + GameState.p2FightScore;
 
 		if (totalScore != 0)
@@ -43,7 +28,7 @@ public class FightUI : MonoBehaviour
 
 		float dialAngle = 90 - (dial.fillAmount * 180);
 		
-		if (dialAngle == 90) // adjusting full angles so they don't get cut off
+		if (dialAngle == 90) // visually adjusting full angles so they don't get cut off at the bottom
 		{
 			dialAngle = 80;
 		}
