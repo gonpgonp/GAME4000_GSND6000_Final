@@ -199,9 +199,9 @@ public class Fighter : MonoBehaviour
 				//GameState.p1FightScore = Mathf.Max(0, GameState.p1FightScore - 1);
                 GameState.p2FightScore++;
 			}
-			fightUI.SetScoreUI();
-            crowd.UpdateCrowd();
             
+			fightUI.SetScoreUI();   
+            crowd.UpdateCrowdAnims();        
 		}
     }
     public void SetGuarding(int input)
