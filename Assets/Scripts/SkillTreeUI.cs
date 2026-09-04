@@ -7,7 +7,6 @@ public class SkillTreeUI : MonoBehaviour
     public bool isP1Shop;
 
     public Button xButton;
-    public bool shopOpen;
 
     public PowerUpHandler powerUpHandler;
     public SkillUnlockManager skillUnlockManager;

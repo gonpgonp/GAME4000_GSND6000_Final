@@ -53,13 +53,11 @@ public class BilliardsUI : MonoBehaviour
         {
             p1RageBar.color = rageColor;
             _dickHead.Play("DickHeadPissed");
-            //startFightButton.SetActive(true);
         }
         else
         {
             p1RageBar.color = calmColor;
             _dickHead.Play("DickCalm");
-            //startFightButton.SetActive(false);
         }
     
     
@@ -67,13 +65,11 @@ public class BilliardsUI : MonoBehaviour
         {
             p2RageBar.color = rageColor;
             _richardHead.Play("RichardHeadPissed");
-            //startFightButton.SetActive(true);
         }
         else
         {
             p2RageBar.color = calmColor;
             _richardHead.Play("RichardCalm");
-            //startFightButton.SetActive(false);
         }
         
     }

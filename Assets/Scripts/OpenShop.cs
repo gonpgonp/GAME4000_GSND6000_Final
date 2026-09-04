@@ -13,7 +13,7 @@ public class OpenShop : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        openShopButton.onClick.AddListener(ButtonOpenShop);
+        openShopButton.onClick.AddListener(ButtonOpenCloseShop);
 
     }
     // Update is called once per frame
@@ -22,15 +22,27 @@ public class OpenShop : MonoBehaviour
         
     }
 
-    void ButtonOpenShop()
+    void ButtonOpenCloseShop()
     {
-        if (GameState.isBilliardsP1Turn)
+        if (GameState.isBilliardsP1Turn && !GameState.isShopOpen)
         {
             p1Shop.SetActive(true);
+            GameState.isShopOpen = true;
         }
-        else
+        else if (GameState.isBilliardsP1Turn && GameState.isShopOpen)
+        {
+            p1Shop.SetActive(false);
+            GameState.isShopOpen = false;
+        }
+        else if (!GameState.isBilliardsP1Turn && !GameState.isShopOpen)
         {
             p2Shop.SetActive(true);
+            GameState.isShopOpen = true;
+        }
+        else if (!GameState.isBilliardsP1Turn && GameState.isShopOpen)
+        {
+            p2Shop.SetActive(false);
+            GameState.isShopOpen = false;
         }
     }
 }
