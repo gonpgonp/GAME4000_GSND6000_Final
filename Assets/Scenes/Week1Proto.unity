@@ -1905,7 +1905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &162516236
 Transform:
   m_ObjectHideFlags: 0
@@ -6682,13 +6682,14 @@ GameObject:
   - component: {fileID: 850284082}
   - component: {fileID: 850284081}
   - component: {fileID: 850284085}
+  - component: {fileID: 850284086}
   m_Layer: 5
   m_Name: FightUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &850284081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6795,6 +6796,20 @@ MonoBehaviour:
   p2Score: {fileID: 176930954}
   dial: {fileID: 14446871}
   dialArrow: {fileID: 1805385696}
+--- !u!114 &850284086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850284078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f6b0217b788424c899c6ba10f2a558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Crowd
+  CrowdLeft: {fileID: 2089454014}
+  CrowdRight: {fileID: 1769299795}
 --- !u!1 &865586876
 GameObject:
   m_ObjectHideFlags: 0
@@ -10031,7 +10046,7 @@ MonoBehaviour:
   gameState: {fileID: 735090285}
   fightUI: {fileID: 850284085}
   index: 2
-  crowd: {fileID: 2089454013}
+  crowd: {fileID: 850284086}
   punchClip: {fileID: 8300000, guid: ceb8b7bf99ee147c9b63c117f0e049c1, type: 3}
   guardClip: {fileID: 8300000, guid: 493386a64ff068547b61d9aab1993d59, type: 3}
 --- !u!1 &1281112259
@@ -14216,7 +14231,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1769299793}
-  - component: {fileID: 1769299794}
   - component: {fileID: 1769299795}
   m_Layer: 5
   m_Name: CrowdRight
@@ -14249,18 +14263,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -250.5}
   m_SizeDelta: {x: 1000, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1769299794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769299792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04f6b0217b788424c899c6ba10f2a558, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Crowd
 --- !u!95 &1769299795
 Animator:
   serializedVersion: 7
@@ -14945,7 +14947,7 @@ MonoBehaviour:
   gameState: {fileID: 735090285}
   fightUI: {fileID: 850284085}
   index: 1
-  crowd: {fileID: 2089454013}
+  crowd: {fileID: 850284086}
   punchClip: {fileID: 8300000, guid: ceb8b7bf99ee147c9b63c117f0e049c1, type: 3}
   guardClip: {fileID: 8300000, guid: 493386a64ff068547b61d9aab1993d59, type: 3}
 --- !u!1 &1821770653
@@ -16854,7 +16856,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2089454012}
-  - component: {fileID: 2089454013}
   - component: {fileID: 2089454014}
   m_Layer: 5
   m_Name: CrowdLeft
@@ -16887,18 +16888,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -250.5}
   m_SizeDelta: {x: 1000, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2089454013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089454011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04f6b0217b788424c899c6ba10f2a558, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Crowd
 --- !u!95 &2089454014
 Animator:
   serializedVersion: 7
