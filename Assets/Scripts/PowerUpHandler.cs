@@ -11,7 +11,7 @@ public class PowerUpHandler : MonoBehaviour
 	public Camera camera_;
 
 	public CueBall cueBall;
-    public CueFollowMouse cue;
+    public Cue cue;
 	public GameObject pocketPreview;
 	public GameObject pocketPrefab;
 

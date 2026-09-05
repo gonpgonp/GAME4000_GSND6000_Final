@@ -2,7 +2,7 @@ using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.U2D;
-public class CueFollowMouse : MonoBehaviour
+public class Cue : MonoBehaviour
 {
 	const float MAX_POWER_DISTANCE = 2.5f;
 
