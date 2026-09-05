@@ -11,6 +11,7 @@ public class PowerUpHandler : MonoBehaviour
 	public Camera camera_;
 
 	public CueBall cueBall;
+    public CueFollowMouse cue;
 	public GameObject pocketPreview;
 	public GameObject pocketPrefab;
 
@@ -153,29 +154,29 @@ public class PowerUpHandler : MonoBehaviour
 			ball.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 		}
 
-		cueBall.SetSeePath(false);
-		cueBall.SetInaccuracy(0.0f);
-		cueBall.SetSecondTap(false);
-		cueBall.SetMass(1.0f);
+		cue.SetSeePath(false);
+		cue.SetInaccuracy(0.0f);
+		cue.SetSecondTap(false);
+		cue.SetMass(1.0f);
 
 		//reset shop activations (probably will get rewritten to hotbar activations that need to be reset
 	}
 
     private void SeePath()
     {
-		cueBall.SetSeePath(true);
+		cue.SetSeePath(true);
 		cueActive[0] = false;
     }
 
     private void SecondTap()
     {
-        cueBall.SetSecondTap(true);
+		cue.SetSecondTap(true);
 		cueActive[1] = false;
 	}
 
     private void InaccurateShot()
     {
-        cueBall.SetInaccuracy(10.0f);
+		cue.SetInaccuracy(10.0f);
 		cueActive[2] = false;
 	}
 
@@ -313,7 +314,7 @@ public class PowerUpHandler : MonoBehaviour
 
 	private void HeavyBall()
     {
-		cueBall.SetMass(10.0f);
+		cue.SetMass(10.0f);
 		ballActive[2] = false;
 	}
 

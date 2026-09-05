@@ -25,6 +25,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Cancel",
+                    "type": "Button",
+                    "id": "192b6802-7476-4db8-84f2-be19b170fee5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Cue1",
                     "type": "Button",
                     "id": "ed62c884-6e75-4c82-b071-870bd2176441",
@@ -225,6 +234,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Table3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "11011e5b-e2a3-46f9-b7c0-ec2b5180e5c2",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

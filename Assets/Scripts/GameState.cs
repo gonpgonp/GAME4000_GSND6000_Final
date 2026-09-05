@@ -398,9 +398,10 @@ public class GameState : MonoBehaviour
     public void CheckEndBilliardsTurn()
     {
 		CueBall CB = cueBall.GetComponent<CueBall>();
+		CueFollowMouse CFM = cue.GetComponent<CueFollowMouse>();
 		if (CB != null)
 		{
-			if (CB.hasHit == true && !CB.secondTapAvailable)
+			if (CFM.hasHit == true && !CFM.secondTapAvailable)
 			{
 				bool allBallsStopped = true;
 
@@ -428,7 +429,8 @@ public class GameState : MonoBehaviour
 
 				if (allBallsStopped)
 				{
-					CB.ReadyForNextTurn();
+					CB.HandleScratch();
+					CFM.ReadyForNextTurn();
 					ChangeBilliardsTurn();
 				}
 
