@@ -44,6 +44,7 @@ public class Cue : MonoBehaviour
 		lineRenderer = GetComponent<LineRenderer>();
 		spriteRenderer = GetComponent<SpriteRenderer>();
     }
+
     void Update()
     {
 		if (GameState.state == GameState.States.BILLIARDS)
@@ -55,6 +56,7 @@ public class Cue : MonoBehaviour
 			Aim();
 		}
 	}
+
 	public void ReadyForNextTurn()
 	{
 		hasHit = false;
@@ -74,7 +76,9 @@ public class Cue : MonoBehaviour
 
 	public void SetTargetBall(GameObject targetBall_)
 	{
+		targetBall.GetComponent<NumberBall>().isTargetBall = false;
 		targetBall = targetBall_;
+		targetBall.GetComponent<NumberBall>().isTargetBall = true;
 	}
 
 	public void SetInaccuracy(float inaccuracy_)

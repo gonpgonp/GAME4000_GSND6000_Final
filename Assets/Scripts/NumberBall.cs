@@ -1,21 +1,14 @@
 using UnityEngine;
 
 public class NumberBall : MonoBehaviour
-{    
+{
+    public bool isTargetBall;
+    public bool isCueBall;
     public bool is8Ball;
     public bool isStripe;
     public GameState gameState;
-    public CueBall cueBall;
     public BilliardsUI billiardsUI;
 
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -25,11 +18,10 @@ public class NumberBall : MonoBehaviour
             gameObject.SetActive(false);
         }
         // checking if 8ball was sunk
-        if (!is8Ball)
+        if (!is8Ball && !isCueBall)
         {
             if (isStripe)
             {
-                //scoreManager.p2Score += 1;
                 GameState.p2BilliardsScore += 1;
                 billiardsUI.UpdateBilliardsScoreUI();
                 GameState.p1Rage += 1;
@@ -41,7 +33,6 @@ public class NumberBall : MonoBehaviour
 			}
             else
             {
-                //scoreManager.p1Score += 1;
                 GameState.p1BilliardsScore += 1;
                 billiardsUI.UpdateBilliardsScoreUI();
 				GameState.p2Rage += 1;
@@ -52,35 +43,55 @@ public class NumberBall : MonoBehaviour
                 }
 			}
         }
-        else
+        else if (isCueBall)
+        {
+            GameState.billiardsDidScratch = true;
+			transform.position = new Vector3(100.0f, 0.0f, 0.0f);
+			Rigidbody2D rb = GetComponent<Rigidbody2D>();
+			rb.linearVelocity = Vector2.zero;
+		}
+        else if (is8Ball)
         {
             gameState.CheckBilliardsWinner();
-            //scoreManager.CheckWin();
         }
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision) // still need to add sfx
-    {  
+    {
         // number ball rage checkers
-        if (cueBall.hasBroken)
+        if (GameState.state != GameState.States.BILLIARDS) return;
+
+        NumberBall colliderBall = collision.gameObject.GetComponent<NumberBall>();
+
+        if (collision.collider.CompareTag("NumberBall")) // if this number ball gets hit by any other ball
         {
-            if (collision.collider.CompareTag("NumberBall") || collision.collider.CompareTag("Player")) // if this number ball gets hit by any other ball
+			GameState.billiardsHitAnyBall = true;
+			if (GameState.isBilliardsP1Turn)
             {
-                if (GameState.isBilliardsP1Turn)
+                if (!colliderBall.isStripe) // p1's turn, solid got hit
                 {
-                    if (!isStripe) // p1's turn, solid got hit
-                    {
-                        cueBall.cueHitMyBall = true;
-                    }
-                }
-                else // p2's turn, hits a ball
+                    GameState.billiardsHitOwnBall = true;
+					if (isTargetBall && !GameState.billiardsGotFirstCollision)
+					{
+                        GameState.billiardsCorrectFirstCollision = true;
+                        GameState.billiardsGotFirstCollision = true;
+						Debug.Log("Correct First Collision - Solid");
+					}
+				}
+            }
+            else // p2's turn, hits a ball
+            {
+                if (colliderBall.isStripe) // p2's turn, hits a solid
                 {
-                    if (isStripe) // p2's turn, hits a solid
-                    {
-                        cueBall.cueHitMyBall = true;
-                    }
-                }
+					GameState.billiardsHitOwnBall = true;
+					if (isTargetBall && !GameState.billiardsGotFirstCollision)
+					{
+						GameState.billiardsCorrectFirstCollision = true;
+						GameState.billiardsGotFirstCollision = true;
+						Debug.Log("Correct First Collision - Stripe");
+					}
+				}
             }
         }
     }    

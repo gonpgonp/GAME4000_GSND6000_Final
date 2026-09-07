@@ -16,7 +16,12 @@ public class GameState : MonoBehaviour
 	public static int fightWinner = -1;
 	public static float fightTimer = 0.0f;
 	public static bool isBilliardsP1Turn = true;
+	public static bool billiardsHitAnyBall = false;
+	public static bool billiardsHitOwnBall = false;
+	public static bool billiardsCorrectFirstCollision = false;
+	public static bool billiardsGotFirstCollision = false;
 	public static bool billiardsScoredThisTurn = false;
+	public static bool billiardsDidScratch = false;
 	public static int p1BilliardsScore = 0;
     public static int p2BilliardsScore = 0;
     public static float p1Rage = 0.0f;
@@ -36,9 +41,9 @@ public class GameState : MonoBehaviour
 	private InputAction debugRageAction;
 
 	public CameraHandler cameraHandler;
-    public GameObject cue;
-    public GameObject cueBall;
-    public GameObject billiardsUI;
+    public Cue cue;
+    public NumberBall cueBall;
+    public BilliardsUI billiardsUI;
 	public SkillTreeUI p1Shop;
 	public SkillTreeUI p2Shop;
     public GameObject fightUI;
@@ -81,8 +86,8 @@ public class GameState : MonoBehaviour
         gameOverAction = playerInput.currentActionMap.FindAction("GameOver");
 		debugPointsAction = playerInput.currentActionMap.FindAction("Give10Points");
 		debugRageAction = playerInput.currentActionMap.FindAction("Give1Rage");
-		cue.SetActive(false);
-        billiardsUI.SetActive(false);
+		cue.gameObject.SetActive(false);
+        billiardsUI.gameObject.SetActive(false);
         fightUI.SetActive(false);
 		fightMusic.volume = 0.0f;
 		billiardsMusic.volume = 0.5f;
@@ -182,8 +187,9 @@ public class GameState : MonoBehaviour
         player1.DoReset();
         player2.DoReset();
 		state = States.BILLIARDS;
-        cue.SetActive(true);
-        billiardsUI.SetActive(true);
+        cue.gameObject.SetActive(true);
+		cue.SetTargetBall(cueBall.gameObject);
+		billiardsUI.gameObject.SetActive(true);
 		BilliardsUI BUI = billiardsUI.GetComponent<BilliardsUI>();
 		BUI.SetRageMeter();
 		BUI.SetFightButton();
@@ -214,8 +220,8 @@ public class GameState : MonoBehaviour
 			p2Rage = 0.0f;
 		}
 		state = States.FIGHT;
-		cue.SetActive(false);
-		billiardsUI.SetActive(false);
+		cue.gameObject.SetActive(false);
+		billiardsUI.gameObject.SetActive(false);
 		fightUI.SetActive(true);
 		fightMusic.volume = 0.2f;
 		billiardsMusic.volume = 0.0f;
@@ -226,8 +232,8 @@ public class GameState : MonoBehaviour
     public void GameOver()
     {
 		state = States.GAME_OVER;
-		cue.SetActive(false);
-        billiardsUI.SetActive(false);
+		cue.gameObject.SetActive(false);
+        billiardsUI.gameObject.SetActive(false);
         fightUI.SetActive(false);
         winOverlay.SetActive(true);
 	}
@@ -342,15 +348,13 @@ public class GameState : MonoBehaviour
 
 	public void AddRageEndOfTurn()
 	{
-		CueBall CB = cueBall.GetComponent<CueBall>();
-		BilliardsUI BUI = billiardsUI.GetComponent<BilliardsUI>();
 		if (isBilliardsP1Turn)
 		{
-			if (!CB.cueHitAnyBall) // p1 didn't hit any number balls
+			if (!billiardsHitAnyBall) // p1 didn't hit any number balls
 			{
 				p1Rage += 2;
 			}
-			if (!CB.cueHitMyBall) // p1 didn't hit any of own balls
+			if (!billiardsHitOwnBall) // p1 didn't hit any of own balls
 			{
 				p1Rage += 2;
 				
@@ -362,11 +366,11 @@ public class GameState : MonoBehaviour
 		}
 		else
 		{
-			if (!CB.cueHitAnyBall) // p2 didn't hit any number balls
+			if (!billiardsHitAnyBall) // p2 didn't hit any number balls
 			{
 				p2Rage += 2;
 			}
-			if (!CB.cueHitMyBall) // p2 didn't hit any of own balls
+			if (!billiardsHitOwnBall) // p2 didn't hit any of own balls
 			{
 				p2Rage += 2;
 			}
@@ -375,62 +379,59 @@ public class GameState : MonoBehaviour
 				p2Rage += 2;
 			}
 		}
-		
+
 
 		// need to add rage if you don't score that turn, but may change in pool rules update, with scratching?
 
-		CB.cueHitAnyBall = false;
-		CB.cueHitMyBall = false;
+		billiardsHitAnyBall = false;
+		billiardsHitOwnBall = false;
 	}
 
 	public void ChangeBilliardsTurn()
     {
-		BilliardsUI BUI = billiardsUI.GetComponent<BilliardsUI>();
 		AddRageEndOfTurn();
-		BUI.SetRageMeter();
-		isBilliardsP1Turn = !isBilliardsP1Turn;
-		BUI.SetFightButton();
-		BUI.SetTurnUI();
-		BUI.SetPissedMessages();
+		billiardsUI.SetRageMeter();
+		if (!billiardsCorrectFirstCollision || !billiardsScoredThisTurn)
+		{
+			isBilliardsP1Turn = !isBilliardsP1Turn;
+		}
+		billiardsGotFirstCollision = false;
+		billiardsCorrectFirstCollision = false;
+		billiardsUI.SetFightButton();
+		billiardsUI.SetTurnUI();
+		billiardsUI.SetPissedMessages();
 		billiardsScoredThisTurn = false;
 	}
 
     public void CheckEndBilliardsTurn()
     {
-		CueBall CB = cueBall.GetComponent<CueBall>();
-		Cue C = cue.GetComponent<Cue>();
-		if (CB != null)
+		if (cueBall != null)
 		{
-			if (C.hasHit == true && !C.secondTapAvailable)
+			if (cue.hasHit == true && !cue.secondTapAvailable)
 			{
 				bool allBallsStopped = true;
 
 				GameObject[] numBalls = GameObject.FindGameObjectsWithTag("NumberBall");
 
-				Rigidbody2D cueRb = cueBall.GetComponent<Rigidbody2D>();
-				float cueSpeed = cueRb.linearVelocity.magnitude;
+				foreach (GameObject numBall in numBalls)
+				{
+					Rigidbody2D numRb = numBall.GetComponent<Rigidbody2D>();
 
-				if (cueSpeed > 0.1f) // if the cue ball is still moving, allBallsStopped = false;
-				{
-					allBallsStopped = false;
-				}
-				else // if the cue ball is still, check if any numballs are still moving; if so, set allBallsStopped to false
-				{
-					foreach (GameObject numBall in numBalls)
+					if (numRb.linearVelocity.magnitude > 0.1f)
 					{
-						Rigidbody2D numRb = numBall.GetComponent<Rigidbody2D>();
-
-						if (numRb.linearVelocity.magnitude > 0.1f)
-						{
-							allBallsStopped = false;
-						}
+						allBallsStopped = false;
 					}
 				}
 
 				if (allBallsStopped)
 				{
-					CB.HandleScratch();
-					C.ReadyForNextTurn();
+					if (billiardsDidScratch)
+					{
+						cueBall.transform.position = new Vector3(-4.0f, 0.0f, 0.0f);
+						billiardsDidScratch = false;
+					}
+					cue.ReadyForNextTurn();
+					cue.SetTargetBall(cueBall.gameObject);
 					ChangeBilliardsTurn();
 				}
 

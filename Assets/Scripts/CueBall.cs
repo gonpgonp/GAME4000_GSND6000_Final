@@ -9,13 +9,13 @@ public class CueBall : MonoBehaviour
 	public GameState gameState;
 	public GameObject cue;
 	public GameObject powerUpHandler;
-	public bool hasHit;
-	public bool secondTapAvailable;
-	public bool cueHitAnyBall = false;
-	public bool cueHitMyBall = false;
-	public bool hasBroken = false;
+	//public bool hasHit;
+	//public bool secondTapAvailable;
+	//public bool cueHitAnyBall = false;
+	//public bool cueHitMyBall = false;
+	//public bool hasBroken = false;
 
-    bool didScratch;
+    //bool didScratch;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,8 +33,8 @@ public class CueBall : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("NumberBall"))
         {
-            hasBroken = true;
-            cueHitAnyBall = true;
+            //hasBroken = true;
+            GameState.billiardsHitAnyBall = true;
         }
     }
 
@@ -47,17 +47,8 @@ public class CueBall : MonoBehaviour
 			if (rb != null)
             {
                 rb.linearVelocity = Vector2.zero;
-                didScratch = true;
+				GameState.billiardsDidScratch = true;
             }
-		}
-	}
-
-    public void HandleScratch()
-    {
-		if (didScratch)
-		{
-			transform.position = new Vector3(-4.0f, 0.0f, 0.0f);
-			didScratch = false;
 		}
 	}
 }
