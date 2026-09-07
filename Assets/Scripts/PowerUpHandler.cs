@@ -8,8 +8,6 @@ using UnityEngine.InputSystem;
 
 public class PowerUpHandler : MonoBehaviour
 {
-	public Camera camera_;
-
 	public CueBall cueBall;
     public Cue cue;
 	public GameObject pocketPreview;
@@ -107,7 +105,7 @@ public class PowerUpHandler : MonoBehaviour
         }
         else if (cueActive[2])
         {
-            InaccurateShot();
+			HitAnyBall();
         }
         else if (ballActive[0])
         {
@@ -157,7 +155,6 @@ public class PowerUpHandler : MonoBehaviour
 		cue.SetSeePath(false);
 		cue.SetInaccuracy(0.0f);
 		cue.SetSecondTap(false);
-		cue.SetMass(1.0f);
 
 		//reset shop activations (probably will get rewritten to hotbar activations that need to be reset
 	}
@@ -180,10 +177,39 @@ public class PowerUpHandler : MonoBehaviour
 		cueActive[2] = false;
 	}
 
+    private void HitAnyBall()
+    {
+		Vector2 vec = pointAction.ReadValue<Vector2>();
+		Vector3 worldVec = Camera.main.ScreenToWorldPoint(vec);
+		var balls = GameObject.FindGameObjectsWithTag("NumberBall");
+		GameObject hoveredBall = null;
+
+		foreach (var ball in balls)
+		{
+			if (ball.GetComponent<Collider2D>().OverlapPoint(worldVec))
+			{
+				ball.GetComponent<SpriteRenderer>().color = Color.red;
+				hoveredBall = ball;
+			}
+			else
+			{
+				ball.GetComponent<SpriteRenderer>().color = Color.white;
+			}
+		}
+
+
+		if (clickAction.WasPressedThisFrame() && hoveredBall != null)
+		{
+			cue.SetTargetBall(hoveredBall);
+			hoveredBall.GetComponent<SpriteRenderer>().color = Color.white;
+			cueActive[2] = false;
+		}
+	}
+
     private void SwapBalls()
     {
 		Vector2 vec = pointAction.ReadValue<Vector2>();
-		Vector3 worldVec = camera_.ScreenToWorldPoint(vec);
+		Vector3 worldVec = Camera.main.ScreenToWorldPoint(vec);
 		var numBalls = GameObject.FindGameObjectsWithTag("NumberBall");
         GameObject hoveredBall = null;
 
@@ -217,30 +243,11 @@ public class PowerUpHandler : MonoBehaviour
             }
 		}
 	}
-
-    private void ShuffleBalls()
-    {
-		var numBalls = GameObject.FindGameObjectsWithTag("NumberBall");
-        List<Vector3> positionList = new List<Vector3>();
-		foreach (var ball in numBalls)
-		{
-            positionList.Add(ball.transform.position);
-		}
-
-		foreach (var ball in numBalls)
-		{
-            int i = Random.Range(0, positionList.Count);
-			ball.transform.position = positionList[i];
-            positionList.RemoveAt(i);
-		}
-
-		ballActive[1] = false;
-	}
     
     private void MoveBall()
     {
 		Vector2 vec = pointAction.ReadValue<Vector2>();
-		Vector3 worldVec = camera_.ScreenToWorldPoint(vec);
+		Vector3 worldVec = Camera.main.ScreenToWorldPoint(vec);
 		var numBalls = GameObject.FindGameObjectsWithTag("NumberBall");
 		if (moveBall == null)
         {
@@ -312,12 +319,6 @@ public class PowerUpHandler : MonoBehaviour
 		}
 	}
 
-	private void HeavyBall()
-    {
-		cue.SetMass(10.0f);
-		ballActive[2] = false;
-	}
-
     private void IgnoreEnemyBalls()
     {
 		var numBalls = GameObject.FindGameObjectsWithTag("NumberBall");
@@ -346,7 +347,7 @@ public class PowerUpHandler : MonoBehaviour
 	private void MagneticPocket()
     {
 		Vector2 vec = pointAction.ReadValue<Vector2>();
-		Vector3 worldVec = camera_.ScreenToWorldPoint(vec);
+		Vector3 worldVec = Camera.main.ScreenToWorldPoint(vec);
 		var pockets = GameObject.FindGameObjectsWithTag("Pocket");
 		GameObject hoveredPocket = null;
 
@@ -375,7 +376,7 @@ public class PowerUpHandler : MonoBehaviour
     private void BlockPocket()
     {
 		Vector2 vec = pointAction.ReadValue<Vector2>();
-		Vector3 worldVec = camera_.ScreenToWorldPoint(vec);
+		Vector3 worldVec = Camera.main.ScreenToWorldPoint(vec);
 		var pockets = GameObject.FindGameObjectsWithTag("Pocket");
 		GameObject hoveredPocket = null;
 
@@ -403,7 +404,7 @@ public class PowerUpHandler : MonoBehaviour
     private void AddPocket()
     {
 		Vector2 vec = pointAction.ReadValue<Vector2>();
-		Vector3 worldVec = camera_.ScreenToWorldPoint(vec);
+		Vector3 worldVec = Camera.main.ScreenToWorldPoint(vec);
         worldVec.x = Mathf.Clamp(worldVec.x, -8, 8);
         worldVec.y = Mathf.Clamp(worldVec.y, -4, 4);
         worldVec.z = 0f;

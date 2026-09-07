@@ -52,24 +52,28 @@ public class BilliardsUI : MonoBehaviour
         if (p1Rage >= GameState.MINIMUM_FIGHT_RAGE)
         {
             p1RageBar.color = rageColor;
-            _dickHead.Play("DickHeadPissed");
+			if (_dickHead.isActiveAndEnabled)
+				_dickHead.Play("DickHeadPissed");
         }
         else
         {
             p1RageBar.color = calmColor;
-            _dickHead.Play("DickCalm");
+			if (_dickHead.isActiveAndEnabled)
+				_dickHead.Play("DickCalm");
         }
     
     
         if (p2Rage >= GameState.MINIMUM_FIGHT_RAGE)
         {
             p2RageBar.color = rageColor;
-            _richardHead.Play("RichardHeadPissed");
+			if (_richardHead.isActiveAndEnabled)
+				_richardHead.Play("RichardHeadPissed");
         }
         else
         {
             p2RageBar.color = calmColor;
-            _richardHead.Play("RichardCalm");
+            if (_richardHead.isActiveAndEnabled)
+				_richardHead.Play("RichardCalm");
         }
         
     }

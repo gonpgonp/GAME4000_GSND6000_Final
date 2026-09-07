@@ -17,6 +17,8 @@ public class Cue : MonoBehaviour
 	public bool hasBroken = false;
 
 
+	private bool canShoot = true;
+	private float noShootTimer = 0.0f;
 	private bool seePath = false;
 	private float inaccuracy = 0.0f;
 	private float angerInaccuracy = 0.0f;
@@ -48,6 +50,7 @@ public class Cue : MonoBehaviour
 		{
 			DoCueVisual();
 			CheckAngerInaccuracy();
+			CheckCanShoot();
 			CheckClicking();
 			Aim();
 		}
@@ -69,14 +72,14 @@ public class Cue : MonoBehaviour
 		secondTapAvailable = secondTapAvailable_;
 	}
 
+	public void SetTargetBall(GameObject targetBall_)
+	{
+		targetBall = targetBall_;
+	}
+
 	public void SetInaccuracy(float inaccuracy_)
 	{
 		inaccuracy = inaccuracy_;
-	}
-
-	public void SetMass(float mass_)
-	{
-		//GetComponent<Rigidbody2D>().mass = mass_;
 	}
 
 	private void DoCueVisual()
@@ -152,9 +155,23 @@ public class Cue : MonoBehaviour
 		}
 	}
 
+	private void CheckCanShoot()
+	{
+		canShoot = true;
+		if (GameState.isShopOpen || powerUpHandler.IsAnyActive() )
+		{
+			noShootTimer = 0.2f;
+		}
+		if (noShootTimer > 0)
+		{
+			canShoot = false;
+		}
+		noShootTimer = Mathf.Max(0.0f, noShootTimer - Time.deltaTime);
+	}
+
 	private void CheckClicking()
 	{
-		if (!GameState.isShopOpen && clickAction.WasPressedThisFrame())
+		if (canShoot && clickAction.WasPressedThisFrame())
 		{
 			if (!hasHit || secondTapAvailable)
 			{
