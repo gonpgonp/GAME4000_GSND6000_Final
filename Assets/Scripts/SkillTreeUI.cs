@@ -8,6 +8,8 @@ public class SkillTreeUI : MonoBehaviour
 
     public Button xButton;
 
+    public GameObject dimBg;
+
     public PowerUpHandler powerUpHandler;
     public SkillUnlockManager skillUnlockManager;
     public SkillButton cue1;
@@ -111,6 +113,7 @@ public class SkillTreeUI : MonoBehaviour
     void XButtonCloseShop()
     {
         gameObject.SetActive(false);
+        dimBg.SetActive(false);
         GameState.isShopOpen = false;
     }
 }

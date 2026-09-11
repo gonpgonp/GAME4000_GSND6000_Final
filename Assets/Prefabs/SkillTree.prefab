@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.79992676, y: -175.75278}
+  m_AnchoredPosition: {x: 0.79992676, y: -182.4}
   m_SizeDelta: {x: 800, y: 39.104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2882042349339528590
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1 Swagger to unlock, 1 Swagger for each use, one use per round.
+  m_text: Use resets after a fight.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
   m_sharedMaterial: {fileID: -7574107518586453781, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
@@ -171,7 +171,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.79992676, y: -161.23999}
+  m_AnchoredPosition: {x: 0.79992676, y: -172.7}
   m_SizeDelta: {x: 800, y: 74.078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2499766025826974794
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Magnetic: Choose a pocket to become magnetic for both players.
+  m_text: 'Allure: Make any pocket on the table magnetic.
 
 
 '
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -311,7 +311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.79992676, y: -175.836}
+  m_AnchoredPosition: {x: 0.79992676, y: -188.4}
   m_SizeDelta: {x: 800, y: 39.104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5146433438244383896
@@ -342,8 +342,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3 Swagger to unlock, 3 Swagger for each use, lasts until the end of the
-    round.
+  m_text: Use resets after a fight.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
   m_sharedMaterial: {fileID: -7574107518586453781, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
@@ -449,7 +448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.7999573, y: -181.82639}
+  m_AnchoredPosition: {x: 0.7999573, y: -188.1}
   m_SizeDelta: {x: 800, y: 69.473}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5925071821621109413
@@ -480,8 +479,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1 Swagger to unlock, 1 Swagger for each use, lasts until the end of the
-    round.
+  m_text: Lasts until the next fight.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
   m_sharedMaterial: {fileID: -7574107518586453781, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
@@ -702,7 +700,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillTreeUI
   isP1Shop: 0
   xButton: {fileID: 1935876750586128613}
-  shopOpen: 0
   powerUpHandler: {fileID: 0}
   skillUnlockManager: {fileID: 6327330997067917488}
   cue1: {fileID: 8183149586722954236}
@@ -819,8 +816,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3 Swagger to unlock, 3 Swagger for each use, one use per round, lasts the
-    whole game.
+  m_text: One use per game. Pocket lasts for the rest of the game.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
   m_sharedMaterial: {fileID: -7574107518586453781, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
@@ -926,7 +922,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.79992676, y: -187.6}
+  m_AnchoredPosition: {x: 0.79992676, y: -184}
   m_SizeDelta: {x: 800, y: 39.104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4921003647152579911
@@ -957,7 +953,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3 Swagger to unlock, 3 Swagger for each use, one use per round.
+  m_text: Use resets after a fight.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
   m_sharedMaterial: {fileID: -7574107518586453781, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
@@ -1063,7 +1059,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.79992676, y: -163.94841}
+  m_AnchoredPosition: {x: 0.79992676, y: -171.5}
   m_SizeDelta: {x: 800, y: 69.017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7821541945201088437
@@ -1094,10 +1090,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cover: Block one of the pockets for both players.
-
-
-'
+  m_text: 'Buzzkill: Permanently cover one of the pockets.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0d2b8e40663a04f8c8d9453a9da66929, type: 2}
   m_sharedMaterial: {fileID: -2120858699270524666, guid: 0d2b8e40663a04f8c8d9453a9da66929, type: 2}
@@ -1130,7 +1123,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1278,7 +1271,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.79992676, y: -157.19998}
+  m_AnchoredPosition: {x: 0.79992676, y: -157.4}
   m_SizeDelta: {x: 800, y: 35.274}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4236324573772383651
@@ -1309,10 +1302,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Heavy: Make your opponent''s cue ball super heavy.
-
-
-'
+  m_text: 'Phantasm: Make all opponent balls ghost, allowing any balls to pass through
+    them.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0d2b8e40663a04f8c8d9453a9da66929, type: 2}
   m_sharedMaterial: {fileID: -2120858699270524666, guid: 0d2b8e40663a04f8c8d9453a9da66929, type: 2}
@@ -1345,7 +1336,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1493,7 +1484,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.79992676, y: -157.20001}
+  m_AnchoredPosition: {x: 0.79992676, y: -162.5}
   m_SizeDelta: {x: 800, y: 35.274}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1147005834949678186
@@ -1524,8 +1515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Swap Balls: Swap two balls of your choice.
-
+  m_text: 'Switcheroo: Swap two non-cue balls of your choice.
 
 '
   m_isRightToLeft: 0
@@ -1560,7 +1550,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1633,7 +1623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.79992676, y: -160.24}
+  m_AnchoredPosition: {x: 0.79992676, y: -170.6}
   m_SizeDelta: {x: 800, y: 69.017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7910338885914509213
@@ -1664,7 +1654,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Add Pocket: Add a pocket to anywhere on the table felt for both players.
+  m_text: 'Landscaper: Add a pocket to the table, including on the felt.
 
 
 '
@@ -1700,7 +1690,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1773,7 +1763,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.79992676, y: -187.24002}
+  m_AnchoredPosition: {x: 0.79992676, y: -183.1}
   m_SizeDelta: {x: 800, y: 39.104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1433711845462850858
@@ -1804,7 +1794,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2 Swagger to unlock, 2 Swagger for each use, one use per round.
+  m_text: Use resets after a fight.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
   m_sharedMaterial: {fileID: -7574107518586453781, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
@@ -2016,8 +2006,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1 Swagger to unlock, 1 Swagger for each use, one use per round, lasts the
-    whole game.
+  m_text: One use per game. Lasts for the rest of the game.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
   m_sharedMaterial: {fileID: -7574107518586453781, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
@@ -2533,7 +2522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.79992676, y: -175.75278}
+  m_AnchoredPosition: {x: 0.79992676, y: -181.6}
   m_SizeDelta: {x: 800, y: 39.104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7737144143003686356
@@ -2564,8 +2553,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2 Swagger to unlock, 2 Swagger for each use, one use per round, lasts the
-    whole game.
+  m_text: One use per game. Cover lasts for the rest of the game.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
   m_sharedMaterial: {fileID: -7574107518586453781, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
@@ -3073,7 +3061,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.79992676, y: -164.784}
+  m_AnchoredPosition: {x: 0.79992676, y: -171.2}
   m_SizeDelta: {x: 800, y: 73.185}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3486345758747189844
@@ -3104,7 +3092,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Randomize Balls: Randomize all the balls currently on the table.
+  m_text: 'Sticky Fingers: Move a non-cue ball to anywhere on the table.
 
 
 '
@@ -3140,7 +3128,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -3213,7 +3201,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.79992676, y: -175.75278}
+  m_AnchoredPosition: {x: 0.79999, y: -188.67}
   m_SizeDelta: {x: 800, y: 39.104}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &563046919312065474
@@ -3244,7 +3232,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2 Swagger to unlock, 2 Swagger for each use, one use per round.
+  m_text: Use resets after a fight.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
   m_sharedMaterial: {fileID: -7574107518586453781, guid: a484ac54d68d44a7eb4c8023befa9fff, type: 2}
@@ -3350,7 +3338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.79992676, y: -164.964}
+  m_AnchoredPosition: {x: 0.79992676, y: -172.5}
   m_SizeDelta: {x: 800, y: 74.085}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1708180109942261636
@@ -3381,7 +3369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Wacky Shot: Make your opponent''s next shot inaccurate.
+  m_text: 'Wildcard: Pick a non-cue ball to shoot instead of the cue ball.
 
 
 '
@@ -3417,7 +3405,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -3521,7 +3509,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Second Tap: Take a second shot on your turn.
+  m_text: 'Bullseye: Set a target on the felt to which your cue ball will automatically
+    navigate.
 
 
 '
@@ -3557,7 +3546,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -3630,7 +3619,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.7999878, y: -157.20001}
+  m_AnchoredPosition: {x: 0.7999878, y: -164.4}
   m_SizeDelta: {x: 800, y: 35.274}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5687060892344282816
@@ -3661,7 +3650,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Aim: See where you''re aiming.
+  m_text: 'Ricochet: Extend your sight line to see collisions.
 
 '
   m_isRightToLeft: 0
@@ -3696,7 +3685,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4370,7 +4359,7 @@ PrefabInstance:
     - target: {fileID: 5280232408917342130, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7283174425786427449, guid: 59b0a6792b0f44474b6d52b58d76cc82, type: 3}
+      objectReference: {fileID: 4192739883567050303, guid: 0bcd11e25caa04d699bc6f016a6c480a, type: 3}
     - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_text
       value: 'Randomize Balls: Randomize all balls on the table.'
@@ -4799,7 +4788,7 @@ PrefabInstance:
     - target: {fileID: 5280232408917342130, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 5168645406658300347, guid: 215c0c1c9779c46be9ef81ac9885d4e9, type: 3}
+      objectReference: {fileID: -1915246252562531041, guid: 86295abe2d0784ec09e7e24db7cb34b1, type: 3}
     - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_text
       value: 'Wacky: Make your opponent''s next shot inaccurate.
@@ -4994,6 +4983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CueSkill1
       objectReference: {fileID: 0}
+    - target: {fileID: 5280232408917342130, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1991252620400956941, guid: 56d199075c09340e6bd301abb39941b6, type: 3}
     - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_text
       value: 'Aim: See where you''re aiming.
@@ -5401,7 +5394,7 @@ PrefabInstance:
     - target: {fileID: 5280232408917342130, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -373691578625994236, guid: 95a6776a5e8d04085965f31b0aa42915, type: 3}
+      objectReference: {fileID: -3561148701943319872, guid: 0970a9f220bd84af488f71d324d35988, type: 3}
     - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_text
       value: 'Second Tap: Take a second shot on your turn.'
@@ -5610,7 +5603,7 @@ PrefabInstance:
     - target: {fileID: 5280232408917342130, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2316819536790688417, guid: dc0e421f87a9a435b8870568c2667e89, type: 3}
+      objectReference: {fileID: 4448715427215634006, guid: a784a9ed40af1491b813bcfc2ed3ba32, type: 3}
     - target: {fileID: 6096923363366574540, guid: 1bce0c4d0f43f014180e829c4fd62fa1, type: 3}
       propertyPath: m_text
       value: 'Heavy: Make your opponent''s cue ball super heavy.'
