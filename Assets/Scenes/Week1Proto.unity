@@ -15204,6 +15204,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 735090285}
     - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
+      propertyPath: isCueBall
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176750739871423426, guid: 5732e47e3751c468b9af6548cace99f0, type: 3}
       propertyPath: billiardsUI
       value: 
       objectReference: {fileID: 143117324}

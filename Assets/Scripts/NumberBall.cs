@@ -17,44 +17,28 @@ public class NumberBall : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-        // checking if 8ball was sunk
-        if (!is8Ball && !isCueBall)
-        {
-            if (isStripe)
-            {
-                GameState.p2BilliardsScore += 1;
-                billiardsUI.UpdateBilliardsScoreUI();
-                GameState.p1Rage += 1;
-                billiardsUI.SetRageMeter();
-				if (!GameState.isBilliardsP1Turn)
-				{
-					GameState.billiardsScoredThisTurn = true;
-				}
-			}
-            else
-            {
-                GameState.p1BilliardsScore += 1;
-                billiardsUI.UpdateBilliardsScoreUI();
-				GameState.p2Rage += 1;
-                billiardsUI.SetRageMeter();
-				if (GameState.isBilliardsP1Turn)
-                {
-                    GameState.billiardsScoredThisTurn = true;
-                }
-			}
-        }
-        else if (isCueBall)
-        {
-            GameState.billiardsDidScratch = true;
+		// checking if 8ball was sunk
+		if (isCueBall)
+		{
+			GameState.billiardsDidScratch = true;
 			transform.position = new Vector3(100.0f, 0.0f, 0.0f);
 			Rigidbody2D rb = GetComponent<Rigidbody2D>();
 			rb.linearVelocity = Vector2.zero;
 		}
-        else if (is8Ball)
+		else if (is8Ball)
+		{
+			gameState.CheckBilliardsWinner();
+		}
+        else
         {
-            gameState.CheckBilliardsWinner();
+            if (!GameState.billiardsBallsSelected)
+            {
+                GameState.billiardsP1Solids = GameState.billiardsP1Turn != isStripe;
+                GameState.billiardsBallsSelected = true;
+                Debug.Log("P1 is solids : " + GameState.billiardsP1Solids);
+            }
+            gameState.SinkBall(isStripe);
         }
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision) // still need to add sfx
@@ -67,29 +51,29 @@ public class NumberBall : MonoBehaviour
         if (collision.collider.CompareTag("NumberBall")) // if this number ball gets hit by any other ball
         {
 			GameState.billiardsHitAnyBall = true;
-			if (GameState.isBilliardsP1Turn)
+			if (GameState.billiardsP1Turn)
             {
-                if (!colliderBall.isStripe) // p1's turn, solid got hit
+                if (GameState.billiardsBallsSelected && GameState.billiardsP1Solids != colliderBall.isStripe)
                 {
                     GameState.billiardsHitOwnBall = true;
 					if (isTargetBall && !GameState.billiardsGotFirstCollision)
 					{
                         GameState.billiardsCorrectFirstCollision = true;
                         GameState.billiardsGotFirstCollision = true;
-						Debug.Log("Correct First Collision - Solid");
+						Debug.Log("Correct First Collision - P1");
 					}
 				}
             }
             else // p2's turn, hits a ball
             {
-                if (colliderBall.isStripe) // p2's turn, hits a solid
+                if (GameState.billiardsBallsSelected && !GameState.billiardsP1Solids != colliderBall.isStripe)
                 {
 					GameState.billiardsHitOwnBall = true;
 					if (isTargetBall && !GameState.billiardsGotFirstCollision)
 					{
 						GameState.billiardsCorrectFirstCollision = true;
 						GameState.billiardsGotFirstCollision = true;
-						Debug.Log("Correct First Collision - Stripe");
+						Debug.Log("Correct First Collision - P2");
 					}
 				}
             }

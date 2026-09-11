@@ -330,12 +330,12 @@ public class PowerUpHandler : MonoBehaviour
             {
                 continue;
             }
-			else if (numberBall.isStripe && GameState.isBilliardsP1Turn )
+			else if (numberBall.isStripe && GameState.billiardsP1Turn)
             {
                 ball.GetComponent<Collider2D>().enabled = false;
                 ball.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.5f);
             }
-            else if (!numberBall.isStripe && !GameState.isBilliardsP1Turn)
+            else if (!numberBall.isStripe && !GameState.billiardsP1Turn)
 			{
 				ball.GetComponent<Collider2D>().enabled = false;
 				ball.GetComponent<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.25f);

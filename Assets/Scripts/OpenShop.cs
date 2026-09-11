@@ -24,22 +24,22 @@ public class OpenShop : MonoBehaviour
 
     void ButtonOpenCloseShop()
     {
-        if (GameState.isBilliardsP1Turn && !GameState.isShopOpen)
+        if (GameState.billiardsP1Turn && !GameState.isShopOpen)
         {
             p1Shop.SetActive(true);
             GameState.isShopOpen = true;
         }
-        else if (GameState.isBilliardsP1Turn && GameState.isShopOpen)
+        else if (GameState.billiardsP1Turn && GameState.isShopOpen)
         {
             p1Shop.SetActive(false);
             GameState.isShopOpen = false;
         }
-        else if (!GameState.isBilliardsP1Turn && !GameState.isShopOpen)
+        else if (!GameState.billiardsP1Turn && !GameState.isShopOpen)
         {
             p2Shop.SetActive(true);
             GameState.isShopOpen = true;
         }
-        else if (!GameState.isBilliardsP1Turn && GameState.isShopOpen)
+        else if (!GameState.billiardsP1Turn && GameState.isShopOpen)
         {
             p2Shop.SetActive(false);
             GameState.isShopOpen = false;

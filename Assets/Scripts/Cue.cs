@@ -140,7 +140,7 @@ public class Cue : MonoBehaviour
 	private void CheckAngerInaccuracy()
 	{
 		float rage = 0.0f;
-		if (GameState.isBilliardsP1Turn)
+		if (GameState.billiardsP1Turn)
 		{
 			rage = GameState.p1Rage;
 		}
@@ -242,6 +242,14 @@ public class Cue : MonoBehaviour
 			Vector2 f = new Vector2(x, y);
 			f = f.normalized * distance * forceMult;
 			rb.AddForce(f, ForceMode2D.Impulse);
+
+			NumberBall t = targetBall.GetComponent<NumberBall>();
+			if (!t.isCueBall && !t.is8Ball && ((GameState.billiardsP1Turn && GameState.billiardsP1Solids) != t.isStripe))
+			{
+				GameState.billiardsCorrectFirstCollision = true;
+				GameState.billiardsGotFirstCollision = true;
+			}
+
 			if (!hasHit)
 			{
 				hasHit = true;

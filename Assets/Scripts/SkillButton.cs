@@ -42,7 +42,7 @@ public class SkillButton : MonoBehaviour
 
         int swag;
 
-        if (GameState.isBilliardsP1Turn)
+        if (GameState.billiardsP1Turn)
         {
             swag = GameState.p1SkillPoints;
         }
@@ -179,7 +179,7 @@ public class SkillButton : MonoBehaviour
         string str;
 
         // subtract the cost and update the swag score
-        if (GameState.isBilliardsP1Turn)
+        if (GameState.billiardsP1Turn)
         {
 			GameState.p1SkillPoints -= cost;
             str = GameState.p1SkillPoints.ToString();

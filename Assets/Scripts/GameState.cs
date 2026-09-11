@@ -15,7 +15,9 @@ public class GameState : MonoBehaviour
 	public static int gameWinner = -1;
 	public static int fightWinner = -1;
 	public static float fightTimer = 0.0f;
-	public static bool isBilliardsP1Turn = true;
+	public static bool billiardsP1Turn = true;
+	public static bool billiardsP1Solids = true;
+	public static bool billiardsBallsSelected = false;
 	public static bool billiardsHitAnyBall = false;
 	public static bool billiardsHitOwnBall = false;
 	public static bool billiardsCorrectFirstCollision = false;
@@ -67,7 +69,8 @@ public class GameState : MonoBehaviour
 		gameWinner = -1;
 		fightWinner = -1;
 		fightTimer = 0.0f;
-		isBilliardsP1Turn = true;
+		billiardsP1Turn = true;
+		billiardsBallsSelected = false;
 		billiardsScoredThisTurn = false;
 		p1BilliardsScore = 0;
 		p2BilliardsScore = 0;
@@ -152,7 +155,7 @@ public class GameState : MonoBehaviour
 
 	private void GivePoints(int points)
 	{
-		if (isBilliardsP1Turn)
+		if (billiardsP1Turn)
 		{
 			p1SkillPoints += points;
 			p1Shop.UpdateSwaggerDisplay();
@@ -169,7 +172,7 @@ public class GameState : MonoBehaviour
 
 	private void GiveRage(float rage)
 	{
-		if (isBilliardsP1Turn)
+		if (billiardsP1Turn)
 		{
 			p1Rage += rage;
 		}
@@ -211,7 +214,7 @@ public class GameState : MonoBehaviour
 			ui.SetScoreUI();
 		}
 
-		if (isBilliardsP1Turn)
+		if (billiardsP1Turn)
 		{
 			p1Rage = 0.0f;
 		}
@@ -306,7 +309,7 @@ public class GameState : MonoBehaviour
     public bool CheckBilliardsWinner()
     {
 		bool gameOver = false;
-		if (isBilliardsP1Turn)
+		if (billiardsP1Turn)
 		{
 			if (p1BilliardsScore >= 7) // p1 is the winner
 			{
@@ -348,35 +351,35 @@ public class GameState : MonoBehaviour
 
 	public void AddRageEndOfTurn()
 	{
-		if (isBilliardsP1Turn)
+		if (billiardsP1Turn)
 		{
-			if (!billiardsHitAnyBall) // p1 didn't hit any number balls
-			{
-				p1Rage += 2;
-			}
-			if (!billiardsHitOwnBall) // p1 didn't hit any of own balls
-			{
-				p1Rage += 2;
-				
-			}
 			if (!billiardsScoredThisTurn)
 			{
 				p1Rage += 2;
+				if (!billiardsHitAnyBall) // p1 didn't hit any number balls
+				{
+					p1Rage += 2;
+				}
+				if (!billiardsHitOwnBall && billiardsBallsSelected) // p1 didn't hit any of own balls
+				{
+					p1Rage += 2;
+
+				}
 			}
 		}
 		else
 		{
-			if (!billiardsHitAnyBall) // p2 didn't hit any number balls
-			{
-				p2Rage += 2;
-			}
-			if (!billiardsHitOwnBall) // p2 didn't hit any of own balls
-			{
-				p2Rage += 2;
-			}
 			if (!billiardsScoredThisTurn)
 			{
 				p2Rage += 2;
+				if (!billiardsHitAnyBall) // p2 didn't hit any number balls
+				{
+					p2Rage += 2;
+				}
+				if (!billiardsHitOwnBall && billiardsBallsSelected) // p2 didn't hit any of own balls
+				{
+					p2Rage += 2;
+				}
 			}
 		}
 
@@ -393,7 +396,7 @@ public class GameState : MonoBehaviour
 		billiardsUI.SetRageMeter();
 		if (!billiardsCorrectFirstCollision || !billiardsScoredThisTurn)
 		{
-			isBilliardsP1Turn = !isBilliardsP1Turn;
+			billiardsP1Turn = !billiardsP1Turn;
 		}
 		billiardsGotFirstCollision = false;
 		billiardsCorrectFirstCollision = false;
@@ -437,5 +440,29 @@ public class GameState : MonoBehaviour
 
 			}
 		}
+	}
+
+	public void SinkBall(bool isStripe)
+	{
+		if (billiardsP1Solids != isStripe)
+		{
+			p1BilliardsScore += 1;
+			p2Rage += 1;
+			if (billiardsP1Turn)
+			{
+				billiardsScoredThisTurn = true;
+			}
+		}
+		else
+		{
+			p2BilliardsScore += 1;
+			p1Rage += 1;
+			if (!billiardsP1Turn)
+			{
+				billiardsScoredThisTurn = true;
+			}
+		}
+		billiardsUI.UpdateBilliardsScoreUI();
+		billiardsUI.SetRageMeter();
 	}
 }

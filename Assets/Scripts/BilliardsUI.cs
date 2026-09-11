@@ -80,11 +80,11 @@ public class BilliardsUI : MonoBehaviour
 
     public void SetFightButton()
     {
-        if (GameState.isBilliardsP1Turn && GameState.p1Rage >= GameState.MINIMUM_FIGHT_RAGE)
+        if (GameState.billiardsP1Turn && GameState.p1Rage >= GameState.MINIMUM_FIGHT_RAGE)
         {
 			startFightButton.SetActive(true);
 		}
-        else if (!GameState.isBilliardsP1Turn && GameState.p2Rage >= GameState.MINIMUM_FIGHT_RAGE)
+        else if (!GameState.billiardsP1Turn && GameState.p2Rage >= GameState.MINIMUM_FIGHT_RAGE)
         {
 			startFightButton.SetActive(true);
 		}
@@ -96,15 +96,13 @@ public class BilliardsUI : MonoBehaviour
 
     public void UpdateBilliardsScoreUI()
     {
-        //p1ScoreTMP.text = scoreManager.p1Score.ToString();
 		p1ScoreTMP.text = GameState.p1BilliardsScore.ToString();
-		//p2ScoreTMP.text = scoreManager.p2Score.ToString();
 		p2ScoreTMP.text = GameState.p2BilliardsScore.ToString();
 	}
 
     public void SetTurnUI()
     {
-        if (GameState.isBilliardsP1Turn)
+        if (GameState.billiardsP1Turn)
         {
             _p1TurnSwap.Play("P1Turn");
             
@@ -136,11 +134,11 @@ public class BilliardsUI : MonoBehaviour
 
     public void SetPissedMessages()
     {
-        if (GameState.isBilliardsP1Turn && GameState.p1Rage >= GameState.MINIMUM_FIGHT_RAGE)
+        if (GameState.billiardsP1Turn && GameState.p1Rage >= GameState.MINIMUM_FIGHT_RAGE)
         {
             _pissedMessages.Play("DickPissed");
         }
-        else if (!GameState.isBilliardsP1Turn && GameState.p2Rage >= GameState.MINIMUM_FIGHT_RAGE)
+        else if (!GameState.billiardsP1Turn && GameState.p2Rage >= GameState.MINIMUM_FIGHT_RAGE)
         {
             _pissedMessages.Play("RichardPissed");
         }
