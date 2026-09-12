@@ -25,6 +25,8 @@ public class SkillButton : MonoBehaviour
     public SkillTreeUI skillTreeUI;
 
     public Hotbar hotbar;
+    public TextMeshProUGUI mouseMessage;
+
 
     void Start()
     {
@@ -127,27 +129,31 @@ public class SkillButton : MonoBehaviour
 
         if (state == 0) // avail to buy
         {
+            mouseMessage.text = null;
             button.image.sprite = availSprite;
-            bg.sprite = normalCostBg;
+            //bg.sprite = normalCostBg;
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(BuySkill);
         }
         else if (state == 1) // unavail to buy
         {
+            mouseMessage.text = "This skill is locked.";
             button.image.sprite = unavailSprite;
-            bg.sprite = normalCostBg;
+            //bg.sprite = normalCostBg;
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(Unavail);
         }
         else if (state == 2) // avail to buy but can't afford
         {
+            mouseMessage.text = "You don't have enough Swagger to buy this.";
             button.image.sprite = availSprite;
-            bg.sprite = unavailBg;
+            //bg.sprite = unavailBg;
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(CantAfford);
         }
         else if (state == 3) // bought
         {
+            mouseMessage.text = "You already bought this!";
             button.image.sprite = availSprite;
             priceObj.SetActive(false);
             bg.sprite = boughtCheckmark;
@@ -156,6 +162,7 @@ public class SkillButton : MonoBehaviour
         }
         else if (state == 4) // usable in the hotbar
         {
+            mouseMessage.text = null;
             button.image.sprite = availSprite;
             priceBg.SetActive(false);
             priceObj.SetActive(false);
@@ -164,6 +171,7 @@ public class SkillButton : MonoBehaviour
         }
         else if (state == 5) // timeout in the hotbar
         {
+            mouseMessage.text = null;
             priceBg.SetActive(false);
             priceObj.SetActive(false);
             button.image.sprite = timeoutSprite;

@@ -308,11 +308,11 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+          m_MethodName: 
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -363,9 +363,7 @@ MonoBehaviour:
   state: 0
   skillUnlockManager: {fileID: 0}
   availSprite: {fileID: 0}
-  cantAffordSprite: {fileID: 0}
   unavailSprite: {fileID: 0}
-  boughtSprite: {fileID: 0}
   timeoutSprite: {fileID: 0}
   boughtCheckmark: {fileID: 5744904054898057027, guid: f24dc007c71bf46318f8a98034ad6b1a, type: 3}
   unavailBg: {fileID: -4103568293071658852, guid: 2cdb3f302bbd944a193b0641abbb0301, type: 3}
