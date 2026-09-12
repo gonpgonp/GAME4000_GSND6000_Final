@@ -5,8 +5,6 @@ using System.Collections;
 
 public class BilliardsUI : MonoBehaviour
 {
-    public ScoreManager scoreManager;
-    public RageManager rageManager;
     public Image p1RageBar;
     public Image p2RageBar;
     public GameObject startFightButton;
@@ -19,6 +17,8 @@ public class BilliardsUI : MonoBehaviour
 
     public GameObject dicksTurnObj;
     public GameObject richardsTurnObj;
+    public Animator _dicksTurnAnim;
+    public Animator _richardsTurnAnim;
 
     public GameObject dicksHead;
     public GameObject richardsHead;
@@ -31,6 +31,9 @@ public class BilliardsUI : MonoBehaviour
 
     public Animator _p2TurnSwap;
 
+    public TextMeshProUGUI p1TurnTMP;
+    public TextMeshProUGUI p2TurnTMP;
+
     public GameObject p1Hotbar;
     public GameObject p2Hotbar;
 
@@ -38,6 +41,7 @@ public class BilliardsUI : MonoBehaviour
     {
         SetRageMeter();
         SetTurnUI();
+        SetStripesSolidsUI();
     }
 
     public void SetRageMeter()
@@ -99,6 +103,29 @@ public class BilliardsUI : MonoBehaviour
 		p1ScoreTMP.text = GameState.p1BilliardsScore.ToString();
 		p2ScoreTMP.text = GameState.p2BilliardsScore.ToString();
 	}
+
+    public void SetStripesSolidsUI()
+    {
+        if (GameState.billiardsP1Solids && GameState.billiardsBallsSelected)
+        {
+            _dicksTurnAnim.Play("DicksTurnSolids");
+            _richardsTurnAnim.Play("RichardsTurnStripes");
+            p1TurnTMP.text = "DICK'S TURN\n(SOLIDS)";
+            p2TurnTMP.text = "RICHARD'S TURN\n(STRIPES)";
+        }
+        else if (!GameState.billiardsP1Solids && GameState.billiardsBallsSelected)
+        {
+            _dicksTurnAnim.Play("DicksTurnStripes");
+            _richardsTurnAnim.Play("RichardsTurnSolids");
+            p1TurnTMP.text = "DICK'S TURN\n(STRIPES)";
+            p2TurnTMP.text = "RICHARD'S TURN\n(SOLIDS)";
+        }
+        else
+        {
+            _dicksTurnAnim.Play("DicksTurnNeutral");
+            _richardsTurnAnim.Play("RichardsTurnNeutral");
+        }
+    }
 
     public void SetTurnUI()
     {

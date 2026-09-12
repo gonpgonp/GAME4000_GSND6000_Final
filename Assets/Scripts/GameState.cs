@@ -403,6 +403,7 @@ public class GameState : MonoBehaviour
 		billiardsUI.SetFightButton();
 		billiardsUI.SetTurnUI();
 		billiardsUI.SetPissedMessages();
+		billiardsUI.SetStripesSolidsUI();
 		billiardsScoredThisTurn = false;
 	}
 

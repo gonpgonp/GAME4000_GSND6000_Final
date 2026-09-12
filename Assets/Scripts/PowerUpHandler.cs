@@ -34,6 +34,10 @@ public class PowerUpHandler : MonoBehaviour
     private bool[] ballActive = new bool[3];
     private bool[] tableActive = new bool[3];
 
+	public Animator _pissedMessages; // since tutorials show up in the same place as pissed messages, I just made them all the same animator
+
+	public BilliardsUI billiardsUI;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -106,15 +110,18 @@ public class PowerUpHandler : MonoBehaviour
         else if (cueActive[2])
         {
 			HitAnyBall();
+			_pissedMessages.Play("Wildcard_tut");
         }
         else if (ballActive[0])
         {
             SwapBalls();
+			_pissedMessages.Play("Switcheroo_tut");
         }
         else if (ballActive[1])
         {
             //ShuffleBalls();
             MoveBall();
+			_pissedMessages.Play("Sticky_tut");
         }
         else if (ballActive[2])
         {
@@ -124,14 +131,17 @@ public class PowerUpHandler : MonoBehaviour
         else if (tableActive[0])
         {
             MagneticPocket();
+			_pissedMessages.Play("Allure_tut");
         }
         else if (tableActive[1])
         {
             BlockPocket();
+			_pissedMessages.Play("Buzzkill_tut");
         }
         else if (tableActive[2])
         {
             AddPocket();
+			_pissedMessages.Play("Landscaper_tut");
         }
     }
 
@@ -155,6 +165,8 @@ public class PowerUpHandler : MonoBehaviour
 		cue.SetSeePath(false);
 		cue.SetInaccuracy(0.0f);
 		cue.SetSecondTap(false);
+
+		billiardsUI.SetPissedMessages();
 
 		//reset shop activations (probably will get rewritten to hotbar activations that need to be reset
 	}
