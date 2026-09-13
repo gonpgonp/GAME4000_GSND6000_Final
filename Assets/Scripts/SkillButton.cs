@@ -27,6 +27,8 @@ public class SkillButton : MonoBehaviour
     public Hotbar hotbar;
     public GameObject mouseMessage;
 
+    public GameObject mouseMessageBg;
+
 
     void Start()
     {
@@ -224,21 +226,21 @@ public class SkillButton : MonoBehaviour
     {
         Debug.Log("this isn't available");
         mouseMessage.GetComponent<TextMeshProUGUI>().text = "This skill is locked.";
-        mouseMessage.SetActive(true);
+        mouseMessageBg.SetActive(true);
     }
 
     void CantAfford()
     {
         Debug.Log("this is avail but you can't afford it");
-        mouseMessage.GetComponent<TextMeshProUGUI>().text  = "You don't have enough Swagger to purchase this skill.";
-        mouseMessage.SetActive(true);
+        mouseMessage.GetComponent<TextMeshProUGUI>().text  = "You don't have enough Swagger\nto purchase this skill.";
+        mouseMessageBg.SetActive(true);
     }
 
     void Bought()
     {
         Debug.Log("you already bought this");
         mouseMessage.GetComponent<TextMeshProUGUI>().text  = "You already bought this!";
-        mouseMessage.SetActive(true);
+        mouseMessageBg.SetActive(true);
     }
 
     void UseSkillFromHotbar()
