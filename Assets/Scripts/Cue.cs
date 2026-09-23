@@ -131,7 +131,7 @@ public class Cue : MonoBehaviour
 			spriteRenderer.color = new Color(1f, 1f, 1f, .3f);
 		}
 
-		if (powerUpHandler.IsAnyActive())
+		if (PowerUpHandler.IsAnyActive())
 		{
 			spriteRenderer.color = new Color(1f, 1f, 1f, 0f);
 		}
@@ -162,7 +162,7 @@ public class Cue : MonoBehaviour
 	private void CheckCanShoot()
 	{
 		canShoot = true;
-		if (GameState.isShopOpen || powerUpHandler.IsAnyActive() )
+		if (GameState.isShopOpen || PowerUpHandler.IsAnyActive() )
 		{
 			noShootTimer = 0.2f;
 		}

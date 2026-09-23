@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 public class SkillButton : MonoBehaviour
 {
+    public enum SkillType { CUE, BALL, TABLE };
+
+    public SkillType type;
     public int level; // what tier this skill is (1, 2, 3)
     public int cost; // how much it costs
     public int state;  // 0 = avail, 1 = unavail, 2 = avail but can't afford, 3 = bought, 4 = usable state in hotbar, 5 = hotbar timeout
@@ -56,7 +59,7 @@ public class SkillButton : MonoBehaviour
         }
 
         // set button's state based on a) if it's already bought and b) the skillUnlockManager state
-        if (this.CompareTag("CueSkill"))
+        if (type == SkillType.CUE)
         {
             if (state == 3)
             {
@@ -78,7 +81,7 @@ public class SkillButton : MonoBehaviour
                 state = 1; // not avail
             }
         }
-        if (this.CompareTag("BallSkill"))
+        if (type == SkillType.BALL)
         {
             if (state == 3)
             {
@@ -100,7 +103,7 @@ public class SkillButton : MonoBehaviour
                 state = 1; // not avail
             }
         }
-        if (this.CompareTag("TableSkill"))
+        if (type == SkillType.TABLE)
         {
             if (state == 3)
             {
@@ -247,6 +250,19 @@ public class SkillButton : MonoBehaviour
     {
         // grab the skill's category from name, then inside poweruphandler do the correct ActivateXXXAbility(level-1)
         Debug.Log("you clicked on this skill in the hotbar");
+		if (type == SkillType.CUE)
+		{
+            PowerUpHandler.ActivateCueAbility(level - 1);
+		}
+		else if (type == SkillType.BALL)
+		{
+			PowerUpHandler.ActivateBallAbility(level - 1);
+		}
+		else if (type == SkillType.TABLE)
+		{
+			PowerUpHandler.ActivateTableAbility(level - 1);
+		}
+		
         state = 5;
         SetButtonBehavior();
     }

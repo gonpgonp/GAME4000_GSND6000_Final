@@ -8,7 +8,6 @@ using UnityEngine.InputSystem;
 
 public class PowerUpHandler : MonoBehaviour
 {
-	public CueBall cueBall;
     public Cue cue;
 	public GameObject pocketPreview;
 	public GameObject pocketPrefab;
@@ -30,16 +29,52 @@ public class PowerUpHandler : MonoBehaviour
 	private GameObject swapBall = null;
     private GameObject moveBall = null;
 
-    private bool[] cueActive = new bool[3];
-    private bool[] ballActive = new bool[3];
-    private bool[] tableActive = new bool[3];
+    private static bool[] cueActive = new bool[3];
+    private static bool[] ballActive = new bool[3];
+    private static bool[] tableActive = new bool[3];
 
 	public Animator _pissedMessages; // since tutorials show up in the same place as pissed messages, I just made them all the same animator
 
 	public BilliardsUI billiardsUI;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+	public static void ActivateCueAbility(int i)
+	{
+		cueActive[i] = true;
+	}
+
+	public static void ActivateBallAbility(int i)
+	{
+		ballActive[i] = true;
+	}
+
+	public static void ActivateTableAbility(int i)
+	{
+		tableActive[i] = true;
+	}
+
+	public static bool IsAnyActive()
+	{
+		foreach (var c in cueActive)
+		{
+			if (c) return true;
+		}
+
+		foreach (var b in ballActive)
+		{
+			if (b) return true;
+		}
+
+		foreach (var t in tableActive)
+		{
+			if (t) return true;
+		}
+
+		return false;
+	}
+
+
+	// Start is called once before the first execution of Update after the MonoBehaviour is created
+	void Start()
     {
 		playerInput = GetComponent<PlayerInput>();
 		clickAction = playerInput.currentActionMap.FindAction("Click");
@@ -183,12 +218,6 @@ public class PowerUpHandler : MonoBehaviour
 		cueActive[1] = false;
 	}
 
-    private void InaccurateShot()
-    {
-		cue.SetInaccuracy(10.0f);
-		cueActive[2] = false;
-	}
-
     private void HitAnyBall()
     {
 		Vector2 vec = pointAction.ReadValue<Vector2>();
@@ -305,11 +334,6 @@ public class PowerUpHandler : MonoBehaviour
 					tooClose = true;
 					break;
 				}
-			}
-
-			if (Vector2.Distance(worldVec, cueBall.transform.position) < 0.5f)
-			{
-				tooClose = true;
 			}
 
             if (worldVec.x > 7.5 || worldVec.x < -7.5 || worldVec.y > 3.5 || worldVec.y < -3.5)
@@ -430,38 +454,4 @@ public class PowerUpHandler : MonoBehaviour
 		}
 	}
 
-    public void ActivateCueAbility(int i)
-    {
-        cueActive[i] = true;
-    }
-
-    public void ActivateBallAbility(int i)
-    {
-        ballActive[i] = true;
-    }
-
-    public void ActivateTableAbility(int i)
-    {
-        tableActive[i] = true;
-    }
-    
-    public bool IsAnyActive()
-    {
-        foreach (var c in cueActive)
-        {
-            if (c) return true;
-        }
-
-		foreach (var b in ballActive)
-		{
-			if (b) return true;
-		}
-
-		foreach (var t in tableActive)
-		{
-			if (t) return true;
-		}
-
-        return false;
-	}
 }
