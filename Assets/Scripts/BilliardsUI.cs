@@ -122,6 +122,8 @@ public class BilliardsUI : MonoBehaviour
         }
         else
         {
+            p1TurnTMP.text = "DICK'S TURN";
+            p2TurnTMP.text = "RICHARD'S TURN";
             _dicksTurnAnim.Play("DicksTurnNeutral");
             _richardsTurnAnim.Play("RichardsTurnNeutral");
         }
@@ -140,7 +142,7 @@ public class BilliardsUI : MonoBehaviour
 
     
             richardsTurnObj.SetActive(false);
-            richardsHead.SetActive(false);
+            //richardsHead.SetActive(false);
             p2Hotbar.SetActive(false);
 
         }
@@ -154,7 +156,7 @@ public class BilliardsUI : MonoBehaviour
             p2Hotbar.SetActive(true);
 
             dicksTurnObj.SetActive(false);
-            dicksHead.SetActive(false);
+            //dicksHead.SetActive(false);
             p1Hotbar.SetActive(false);
         }
     }
