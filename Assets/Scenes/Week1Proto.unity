@@ -1766,7 +1766,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 594ed9e9fc926b74ca52fbf913b4a3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  cueBall: {fileID: 0}
   cue: {fileID: 633192785}
   pocketPreview: {fileID: 954100720}
   pocketPrefab: {fileID: 7856522251055307003, guid: f503daafbbaa64ac2934031aa0daa270, type: 3}
@@ -10558,10 +10557,6 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: hotbar
       value: 
       objectReference: {fileID: 1950804374}
@@ -10569,18 +10564,6 @@ PrefabInstance:
       propertyPath: availSprite
       value: 
       objectReference: {fileID: 4192739883567050303, guid: 0bcd11e25caa04d699bc6f016a6c480a, type: 3}
-    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 1051201972}
-    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 1322062541}
-    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1344893476}
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
@@ -10593,14 +10576,6 @@ PrefabInstance:
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: 8747313028104095379, guid: 5f119d87074084673b12df2d662e0342, type: 3}
-    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1515103003}
-    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 1329900148}
     - target: {fileID: 374226922374414898, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_TagString
       value: TableSkill
@@ -11030,10 +11005,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: hotbar
       value: 
       objectReference: {fileID: 1950804374}
@@ -11041,18 +11012,6 @@ PrefabInstance:
       propertyPath: availSprite
       value: 
       objectReference: {fileID: -3823233994670677566, guid: ca04bfa6cf43a4e37a91c2b4c78da75d, type: 3}
-    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 1051201972}
-    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 1322062541}
-    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1344893476}
     - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
@@ -11065,14 +11024,6 @@ PrefabInstance:
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: -5053339429613149898, guid: d5451f0d64ef9404ca286e9bb927b44b, type: 3}
-    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1515103003}
-    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 1329900148}
     - target: {fileID: 1757185907717912670, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Camera
       value: 
@@ -11254,10 +11205,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: hotbar
       value: 
       objectReference: {fileID: 1950804374}
@@ -11265,18 +11212,6 @@ PrefabInstance:
       propertyPath: availSprite
       value: 
       objectReference: {fileID: 6268559112226348763, guid: 5cab98580deb047dcaf34642bae098ab, type: 3}
-    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 1051201972}
-    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 1322062541}
-    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1344893476}
     - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
@@ -11289,14 +11224,6 @@ PrefabInstance:
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: -9016307610996349934, guid: 61cba243573a44bf0b4e9fe66b6e2ed0, type: 3}
-    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1515103003}
-    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 1329900148}
     - target: {fileID: 2337841778685229448, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -11506,10 +11433,6 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: hotbar
       value: 
       objectReference: {fileID: 1950804374}
@@ -11517,18 +11440,6 @@ PrefabInstance:
       propertyPath: availSprite
       value: 
       objectReference: {fileID: 3006084584083100669, guid: afcc51e67b3cb40f9ac358c2ba90f312, type: 3}
-    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 1051201972}
-    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 1322062541}
-    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1344893476}
     - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
@@ -11541,14 +11452,6 @@ PrefabInstance:
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: 4328197327421766996, guid: 379505d26d0d24ea4b2eacfa5e2141b7, type: 3}
-    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1515103003}
-    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 1329900148}
     - target: {fileID: 3982624800636769512, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.9
@@ -11651,10 +11554,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: hotbar
       value: 
       objectReference: {fileID: 1950804374}
@@ -11662,18 +11561,6 @@ PrefabInstance:
       propertyPath: availSprite
       value: 
       objectReference: {fileID: -1915246252562531041, guid: 86295abe2d0784ec09e7e24db7cb34b1, type: 3}
-    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 1051201972}
-    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 1322062541}
-    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1344893476}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
@@ -11686,14 +11573,6 @@ PrefabInstance:
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: -21140220519260757, guid: 9c0ba96d0fb224281bd7a459a3db5ac7, type: 3}
-    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1515103003}
-    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 1329900148}
     - target: {fileID: 5968106438212031406, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -11983,10 +11862,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: hotbar
       value: 
       objectReference: {fileID: 1950804374}
@@ -11994,18 +11869,6 @@ PrefabInstance:
       propertyPath: availSprite
       value: 
       objectReference: {fileID: 4448715427215634006, guid: a784a9ed40af1491b813bcfc2ed3ba32, type: 3}
-    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 1051201972}
-    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 1322062541}
-    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1344893476}
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
@@ -12018,20 +11881,8 @@ PrefabInstance:
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: -8049553959062295312, guid: 8669a2535fb8c4bef8c8379af7f6a48f, type: 3}
-    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1515103003}
-    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 1329900148}
     - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: cost
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -12042,18 +11893,6 @@ PrefabInstance:
       propertyPath: availSprite
       value: 
       objectReference: {fileID: -7674126136112139331, guid: cbf2a875393a74648a8c8fc2ce20cf1a, type: 3}
-    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 1051201972}
-    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 1322062541}
-    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1344893476}
     - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
@@ -12066,20 +11905,8 @@ PrefabInstance:
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: -5894539002436463840, guid: b828feeb9b28e46ca82c46f70b1ca647, type: 3}
-    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1515103003}
-    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 1329900148}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: cost
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -12090,18 +11917,6 @@ PrefabInstance:
       propertyPath: availSprite
       value: 
       objectReference: {fileID: -3561148701943319872, guid: 0970a9f220bd84af488f71d324d35988, type: 3}
-    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 1051201972}
-    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 1322062541}
-    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1344893476}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
@@ -12114,14 +11929,6 @@ PrefabInstance:
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: 2716542253071600219, guid: 47d2c428732324a588aa5c1d88148d8b, type: 3}
-    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1515103003}
-    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 1329900148}
     - target: {fileID: 7977432351886588848, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -12299,10 +12106,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: hotbar
       value: 
       objectReference: {fileID: 1950804374}
@@ -12310,18 +12113,6 @@ PrefabInstance:
       propertyPath: availSprite
       value: 
       objectReference: {fileID: -1991252620400956941, guid: 56d199075c09340e6bd301abb39941b6, type: 3}
-    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 1051201972}
-    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 1322062541}
-    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1344893476}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
@@ -12334,14 +12125,6 @@ PrefabInstance:
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: -6376801022481762830, guid: 9c1722fa3c64f42edb35c2849a3ef3c6, type: 3}
-    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1515103003}
-    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 1329900148}
     - target: {fileID: 8291087251376093728, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Delegates.Array.size
       value: 3
@@ -15932,11 +15715,6 @@ CanvasRenderer:
 --- !u!1 &1781499950 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3078969600729792336, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 2120488451277475718}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1782251962 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6508604129914350414, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
   m_PrefabInstance: {fileID: 2120488451277475718}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1790764142 stripped
@@ -19605,10 +19383,6 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: state
       value: 1
       objectReference: {fileID: 0}
@@ -19621,18 +19395,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4192739883567050303, guid: 0bcd11e25caa04d699bc6f016a6c480a, type: 3}
     - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 796020587}
-    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 2120488451277475719}
-    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1782251962}
-    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 0}
@@ -19644,14 +19406,6 @@ PrefabInstance:
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: 8747313028104095379, guid: 5f119d87074084673b12df2d662e0342, type: 3}
-    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1803711726}
-    - target: {fileID: 180364028454206060, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 135970091}
     - target: {fileID: 374226922374414898, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_TagString
       value: TableSkill
@@ -20069,10 +19823,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: state
       value: 0
       objectReference: {fileID: 0}
@@ -20085,18 +19835,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -3823233994670677566, guid: ca04bfa6cf43a4e37a91c2b4c78da75d, type: 3}
     - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 796020587}
-    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 2120488451277475719}
-    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1782251962}
-    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 0}
@@ -20108,14 +19846,6 @@ PrefabInstance:
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: -5053339429613149898, guid: d5451f0d64ef9404ca286e9bb927b44b, type: 3}
-    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1803711726}
-    - target: {fileID: 1502153725624334067, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 135970091}
     - target: {fileID: 1698541632549635777, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -20393,10 +20123,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: state
       value: 0
       objectReference: {fileID: 0}
@@ -20409,18 +20135,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6268559112226348763, guid: 5cab98580deb047dcaf34642bae098ab, type: 3}
     - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 796020587}
-    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 2120488451277475719}
-    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1782251962}
-    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 0}
@@ -20432,14 +20146,6 @@ PrefabInstance:
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: -9016307610996349934, guid: 61cba243573a44bf0b4e9fe66b6e2ed0, type: 3}
-    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1803711726}
-    - target: {fileID: 2250282181415369724, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 135970091}
     - target: {fileID: 2337841778685229448, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -20696,10 +20402,6 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: state
       value: 0
       objectReference: {fileID: 0}
@@ -20712,18 +20414,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3006084584083100669, guid: afcc51e67b3cb40f9ac358c2ba90f312, type: 3}
     - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 796020587}
-    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 2120488451277475719}
-    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1782251962}
-    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 0}
@@ -20735,14 +20425,6 @@ PrefabInstance:
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: 4328197327421766996, guid: 379505d26d0d24ea4b2eacfa5e2141b7, type: 3}
-    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1803711726}
-    - target: {fileID: 3933115355067579129, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 135970091}
     - target: {fileID: 4017326146062945731, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -20853,10 +20535,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: state
       value: 0
       objectReference: {fileID: 0}
@@ -20869,21 +20547,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1915246252562531041, guid: 86295abe2d0784ec09e7e24db7cb34b1, type: 3}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 796020587}
-    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 2120488451277475719}
-    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: boughtSprite
       value: 
       objectReference: {fileID: 5744904054898057027, guid: f24dc007c71bf46318f8a98034ad6b1a, type: 3}
-    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1782251962}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
@@ -20897,17 +20563,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -21140220519260757, guid: 9c0ba96d0fb224281bd7a459a3db5ac7, type: 3}
     - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1803711726}
-    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: cantAffordSprite
       value: 
       objectReference: {fileID: -4103568293071658852, guid: 2cdb3f302bbd944a193b0641abbb0301, type: 3}
-    - target: {fileID: 5385790086798338866, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 135970091}
     - target: {fileID: 5453993572348367258, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
@@ -21205,10 +20863,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: state
       value: 1
       objectReference: {fileID: 0}
@@ -21221,18 +20875,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4448715427215634006, guid: a784a9ed40af1491b813bcfc2ed3ba32, type: 3}
     - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 796020587}
-    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 2120488451277475719}
-    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1782251962}
-    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 0}
@@ -21244,20 +20886,8 @@ PrefabInstance:
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: -8049553959062295312, guid: 8669a2535fb8c4bef8c8379af7f6a48f, type: 3}
-    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1803711726}
-    - target: {fileID: 7463126316416787457, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 135970091}
     - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: cost
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -21273,18 +20903,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -7674126136112139331, guid: cbf2a875393a74648a8c8fc2ce20cf1a, type: 3}
     - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 796020587}
-    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 2120488451277475719}
-    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1782251962}
-    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 0}
@@ -21296,20 +20914,8 @@ PrefabInstance:
       propertyPath: unavailSprite
       value: 
       objectReference: {fileID: -5894539002436463840, guid: b828feeb9b28e46ca82c46f70b1ca647, type: 3}
-    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1803711726}
-    - target: {fileID: 7725176401015510002, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 135970091}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: cost
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
@@ -21325,21 +20931,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -3561148701943319872, guid: 0970a9f220bd84af488f71d324d35988, type: 3}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 796020587}
-    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 2120488451277475719}
-    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: boughtSprite
       value: 
       objectReference: {fileID: 5744904054898057027, guid: f24dc007c71bf46318f8a98034ad6b1a, type: 3}
-    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1782251962}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
@@ -21353,17 +20947,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2716542253071600219, guid: 47d2c428732324a588aa5c1d88148d8b, type: 3}
     - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1803711726}
-    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: cantAffordSprite
       value: 
       objectReference: {fileID: -4103568293071658852, guid: 2cdb3f302bbd944a193b0641abbb0301, type: 3}
-    - target: {fileID: 7890593173478765588, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 135970091}
     - target: {fileID: 7977432351886588848, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -21545,14 +21131,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: level
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: state
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: hotbar
       value: 
       objectReference: {fileID: 138364328}
@@ -21561,21 +21139,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1991252620400956941, guid: 56d199075c09340e6bd301abb39941b6, type: 3}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillTreeUI
-      value: 
-      objectReference: {fileID: 796020587}
-    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: swagDisplay
-      value: 
-      objectReference: {fileID: 2120488451277475719}
-    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: boughtSprite
       value: 
       objectReference: {fileID: 2617152825401110832, guid: f41d2680275284e65a38104fa61bba27, type: 3}
-    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessage
-      value: 
-      objectReference: {fileID: 1782251962}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: scoreManager
       value: 
@@ -21589,17 +21155,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -6376801022481762830, guid: 9c1722fa3c64f42edb35c2849a3ef3c6, type: 3}
     - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: mouseMessageBg
-      value: 
-      objectReference: {fileID: 1803711726}
-    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: cantAffordSprite
       value: 
       objectReference: {fileID: -5160979417409147319, guid: ff63600495828974b8cb84e1570ce5dc, type: 3}
-    - target: {fileID: 8183149586722954236, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-      propertyPath: skillUnlockManager
-      value: 
-      objectReference: {fileID: 135970091}
     - target: {fileID: 8291087251376093728, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
       propertyPath: m_Delegates.Array.size
       value: 3
@@ -22165,11 +21723,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
---- !u!1 &2120488451277475719 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4866644290526670642, guid: a57c6eb80b8d86b45a27c530670e6068, type: 3}
-  m_PrefabInstance: {fileID: 2120488451277475718}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
