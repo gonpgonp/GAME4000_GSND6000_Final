@@ -17,6 +17,8 @@ public class GameState : MonoBehaviour
 	public static float fightTimer = 0.0f;
 	public static bool billiardsP1Turn = true;
 	public static bool billiardsP1Solids = true;
+	public static int billiardsTutorial = 0; // increments through tutorials 1-5, 0 means tutorial is done.
+	public static int billiardsTurnNumber = 0; // keeps track of first set of shots for tutorial;
 	public static bool billiardsBallsSelected = false;
 	public static bool billiardsHitAnyBall = false;
 	public static bool billiardsHitOwnBall = false;
@@ -61,6 +63,8 @@ public class GameState : MonoBehaviour
     public AudioSource billiardsMusic;
     public AudioSource fightMusic;
 
+	public GameObject Tutorial;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -94,6 +98,8 @@ public class GameState : MonoBehaviour
         fightUI.SetActive(false);
 		fightMusic.volume = 0.0f;
 		billiardsMusic.volume = 0.5f;
+		billiardsTutorial = 1;
+		billiardsTurnNumber = 0;
 	}
 
     // Update is called once per frame
@@ -202,6 +208,10 @@ public class GameState : MonoBehaviour
 		fightMusic.volume = 0.0f;
 		billiardsMusic.volume = 0.5f;
         cameraHandler.SetTarget(new Vector3(0, 0, -10), 6.5f);
+		if (billiardsTutorial == 1)
+		{
+			Tutorial.SetActive(true);
+		}
 	}
 
     public void StartFight()

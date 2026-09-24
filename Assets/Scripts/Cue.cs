@@ -9,6 +9,7 @@ public class Cue : MonoBehaviour
 	public GameObject targetBall;
 	public PowerUpHandler powerUpHandler;
 	public float maxCueDistance = 2.5f;
+	public Tutorial tutorial;
 
 	public bool hasHit;
 	public bool secondTapAvailable;
@@ -125,6 +126,16 @@ public class Cue : MonoBehaviour
 		if (clickedOnBall)
 		{
 			spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+			if (GameState.billiardsTutorial == 1)
+			{
+				GameState.billiardsTutorial++;
+				tutorial.PlayTutorial();
+			}
+			else if (GameState.billiardsTutorial == 0 && GameState.billiardsTurnNumber <= 2)
+			{
+				GameState.billiardsTutorial = 3;
+				tutorial.PlayTutorial();
+			}
 		}
 		else
 		{
@@ -264,6 +275,14 @@ public class Cue : MonoBehaviour
 				lineRenderer.enabled = false;
 				spriteRenderer.enabled = false;
 			}
+
+			if (GameState.billiardsTutorial == 2 || GameState.billiardsTutorial == 3)
+			{
+				GameState.billiardsTutorial = 0;
+				tutorial.PlayTutorial();
+			}
+
+			GameState.billiardsTurnNumber++;
 		}
 	}
 }
