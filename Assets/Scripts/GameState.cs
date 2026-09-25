@@ -189,8 +189,7 @@ public class GameState : MonoBehaviour
 		{
 			p2Rage += rage;
 		}
-		BilliardsUI BUI = billiardsUI.GetComponent<BilliardsUI>();
-		BUI.SetRageMeter();
+		billiardsUI.SetRageMeter();
 		Debug.Log("Added rage");
 	}
 
@@ -202,11 +201,11 @@ public class GameState : MonoBehaviour
         cue.gameObject.SetActive(true);
 		cue.SetTargetBall(cueBall.gameObject);
 		billiardsUI.gameObject.SetActive(true);
-		BilliardsUI BUI = billiardsUI.GetComponent<BilliardsUI>();
-		BUI.SetRageMeter();
-		BUI.SetFightButton();
-		BUI.SetTurnUI();
-		BUI.SetPissedMessages();
+		billiardsUI.SetRageMeter();
+		billiardsUI.SetFightButton();
+		billiardsUI.SetTurnUI();
+		billiardsUI.SetStripesSolidsUI();
+		billiardsUI.SetPissedMessages();
 		fightUI.SetActive(false);
 		fightMusic.volume = 0.0f;
 		billiardsMusic.volume = 0.5f;
