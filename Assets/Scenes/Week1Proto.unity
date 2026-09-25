@@ -1039,11 +1039,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -1059,8 +1059,8 @@ Canvas:
   m_GameObject: {fileID: 107211293}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 871455059}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1070,7 +1070,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -669571717
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &107211297
@@ -5204,7 +5204,7 @@ MonoBehaviour:
   targetBall: {fileID: 128978825}
   powerUpHandler: {fileID: 158641964}
   maxCueDistance: 2.5
-  tutorial: {fileID: 107211298}
+  _tutorial: {fileID: 49944772}
   hasHit: 0
   secondTapAvailable: 0
   cueHitAnyBall: 0
@@ -6133,7 +6133,8 @@ MonoBehaviour:
   p2ScoreText: {fileID: 809421621}
   billiardsMusic: {fileID: 489890792}
   fightMusic: {fileID: 1541251786}
-  Tutorial: {fileID: 107211293}
+  _tutorial: {fileID: 49944772}
+  tutorial: {fileID: 107211293}
 --- !u!4 &735090286
 Transform:
   m_ObjectHideFlags: 0
@@ -6299,6 +6300,7 @@ MonoBehaviour:
   p1Shop: {fileID: 796020580}
   p2Shop: {fileID: 1051201970}
   dimBg: {fileID: 711434890}
+  Tutorial: {fileID: 107211293}
 --- !u!1 &742163108
 GameObject:
   m_ObjectHideFlags: 0

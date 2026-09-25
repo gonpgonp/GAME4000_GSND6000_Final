@@ -17,8 +17,6 @@ public class GameState : MonoBehaviour
 	public static float fightTimer = 0.0f;
 	public static bool billiardsP1Turn = true;
 	public static bool billiardsP1Solids = true;
-	public static int billiardsTutorial = 0; // increments through tutorials 1-5, 0 means tutorial is done.
-	public static int billiardsTurnNumber = 0; // keeps track of first set of shots for tutorial;
 	public static bool billiardsBallsSelected = false;
 	public static bool billiardsHitAnyBall = false;
 	public static bool billiardsHitOwnBall = false;
@@ -35,6 +33,10 @@ public class GameState : MonoBehaviour
     public static int p1SkillPoints = 0;
 	public static int p2SkillPoints = 0;
     public static bool isShopOpen = false;
+	public static int billiardsTutorial = 0; // increments through tutorials 1-5, 0 means tutorial is done.
+	public static int billiardsTurnNumber = 0; // keeps track of first set of shots for tutorial
+	public static bool firstFightCompleted = false;
+	public static bool shopOpenedFirstTime = false;
 
 	private PlayerInput playerInput;
 	private InputAction startBilliardsAction;
@@ -63,7 +65,8 @@ public class GameState : MonoBehaviour
     public AudioSource billiardsMusic;
     public AudioSource fightMusic;
 
-	public GameObject Tutorial;
+	public Animator _tutorial;
+	public GameObject tutorial;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -208,9 +211,21 @@ public class GameState : MonoBehaviour
 		fightMusic.volume = 0.0f;
 		billiardsMusic.volume = 0.5f;
         cameraHandler.SetTarget(new Vector3(0, 0, -10), 6.5f);
+		
 		if (billiardsTutorial == 1)
 		{
-			Tutorial.SetActive(true);
+			tutorial.SetActive(true);
+			_tutorial.Play("Tutorial1");
+		}
+		if (firstFightCompleted)
+		{
+			_tutorial.Play("Tutorial5");
+			billiardsTutorial = 5;
+		}
+		if (firstFightCompleted && billiardsTutorial == 0)
+		{
+			_tutorial.Play("Tutorial5");
+			billiardsTutorial = 5;
 		}
 	}
 
@@ -240,6 +255,18 @@ public class GameState : MonoBehaviour
 		billiardsMusic.volume = 0.0f;
 		cameraHandler.SetTarget(new Vector3(0, -10, -10), 17.0f);
         fightTimer = 20.0f;
+
+		if (!firstFightCompleted)
+		{
+			_tutorial.Play("Tutorial4");
+			firstFightCompleted = true;
+			billiardsTutorial = 4;
+		}
+		if (billiardsTutorial == 5)
+		{
+			_tutorial.Play("Tutorial0");
+			billiardsTutorial = 0;
+		}
 	}
 
     public void GameOver()

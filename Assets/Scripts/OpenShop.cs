@@ -11,6 +11,7 @@ public class OpenShop : MonoBehaviour
     public GameObject p2Shop;
 
     public GameObject dimBg;
+    public GameObject Tutorial;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -49,6 +50,12 @@ public class OpenShop : MonoBehaviour
             p2Shop.SetActive(false);
             dimBg.SetActive(false);
             GameState.isShopOpen = false;
+        }
+
+        if (!GameState.shopOpenedFirstTime)
+        {
+            Tutorial.SetActive(false);
+            GameState.shopOpenedFirstTime = true;
         }
     }
 }
