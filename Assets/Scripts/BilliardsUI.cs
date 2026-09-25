@@ -7,6 +7,13 @@ public class BilliardsUI : MonoBehaviour
 {
     public Image p1RageBar;
     public Image p2RageBar;
+    public float rageMaxHeight;
+    public RectTransform p1EndcapRect;
+    public RectTransform p2EndcapRect;
+    public GameObject p1Endcap;
+    public GameObject p2Endcap;
+    public RectTransform rageBarContainer;
+
     public GameObject startFightButton;
 
     private Color32 rageColor = new Color32(255, 44, 0, 255);
@@ -49,33 +56,65 @@ public class BilliardsUI : MonoBehaviour
         float p1Rage = GameState.p1Rage;
         float p2Rage = GameState.p2Rage;
 
-        p1RageBar.rectTransform.localScale = new Vector3(.4f, p1Rage/25, .4f);
-        p2RageBar.rectTransform.localScale = new Vector3(.4f, p2Rage/25, .4f);
-        // want to fine-tune this behavior to look a little nicer later
+        rageMaxHeight = 10;
+        float p1RageHeight = Mathf.Clamp(p1Rage, 0f, rageMaxHeight);
+        float p2RageHeight = Mathf.Clamp(p2Rage, 0f, rageMaxHeight);
+        
+        p1RageBar.fillAmount = p1RageHeight / rageMaxHeight;
+        p2RageBar.fillAmount = p2RageHeight / rageMaxHeight;
+
+        if (p1Rage == 0)
+        {
+            p1Endcap.SetActive(false);
+        }
+        else
+        {
+            p1Endcap.SetActive(true);
+        }
+        
+        if (p2Rage == 0)
+        {
+            p2Endcap.SetActive(false);
+        }
+        else
+        {
+            p2Endcap.SetActive(true);
+        }
+        
+        float totalHeight = rageBarContainer.rect.height;
+        float p1FillRatio = p1RageHeight / rageMaxHeight;
+        float p2FillRatio = p2RageHeight / rageMaxHeight;
+        float p1TargetY = p1FillRatio * totalHeight;
+        float p2TargetY = p2FillRatio * totalHeight;
+        p1EndcapRect.anchoredPosition = new Vector2(p1EndcapRect.anchoredPosition.x, p1TargetY);
+        p2EndcapRect.anchoredPosition = new Vector2(p2EndcapRect.anchoredPosition.x, p2TargetY);
 
         if (p1Rage >= GameState.MINIMUM_FIGHT_RAGE)
         {
             p1RageBar.color = rageColor;
+            p1Endcap.GetComponent<Image>().color = rageColor;
 			if (_dickHead.isActiveAndEnabled)
 				_dickHead.Play("DickHeadPissed");
         }
         else
         {
             p1RageBar.color = calmColor;
+            p1Endcap.GetComponent<Image>().color = calmColor;
 			if (_dickHead.isActiveAndEnabled)
 				_dickHead.Play("DickCalm");
         }
     
-    
         if (p2Rage >= GameState.MINIMUM_FIGHT_RAGE)
         {
             p2RageBar.color = rageColor;
+            p2Endcap.GetComponent<Image>().color = rageColor;
 			if (_richardHead.isActiveAndEnabled)
 				_richardHead.Play("RichardHeadPissed");
         }
         else
         {
             p2RageBar.color = calmColor;
+            p2Endcap.GetComponent<Image>().color = calmColor;
             if (_richardHead.isActiveAndEnabled)
 				_richardHead.Play("RichardCalm");
         }
