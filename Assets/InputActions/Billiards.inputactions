@@ -240,7 +240,7 @@
                 {
                     "name": "",
                     "id": "11011e5b-e2a3-46f9-b7c0-ec2b5180e5c2",
-                    "path": "<Mouse>/rightButton",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -207,6 +207,7 @@ public class Cue : MonoBehaviour
 		{
 			clickedOnBall = false;
 			lineRenderer.enabled = false;
+			_tutorial.Play("Tutorial0");
 		}
 	}
 
