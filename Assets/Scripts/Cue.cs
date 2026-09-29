@@ -1,7 +1,9 @@
+using Unity.VisualScripting;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.U2D;
+using static UnityEngine.UI.Image;
 public class Cue : MonoBehaviour
 {
 	const float MAX_POWER_DISTANCE = 2.5f;
@@ -215,16 +217,24 @@ public class Cue : MonoBehaviour
 	{
 		if (clickedOnBall)
 		{
-			lineRenderer.enabled = seePath;
-			lineRenderer.SetPosition(0, targetBall.transform.position);
+			lineRenderer.enabled = true;
+			Vector2 startPos = targetBall.transform.position;
+			lineRenderer.SetPosition(0, startPos);
 			Vector2 vec = pointAction.ReadValue<Vector2>();
-			Vector3 worldVec = Camera.main.ScreenToWorldPoint(vec);
-			worldVec.z = 0;
-			var ballPos = targetBall.transform.position;
-			ballPos.z = 0;
-			Vector3 endPos = (ballPos - worldVec).normalized * 10.0f;
-			endPos = endPos + ballPos;
-			lineRenderer.SetPosition(1, endPos);
+			Vector2 worldVec = Camera.main.ScreenToWorldPoint(vec);
+			Vector2 direction = (startPos - worldVec).normalized;
+
+			RaycastHit2D[] hits = Physics2D.RaycastAll(
+				startPos, direction, 20.0f);
+
+			foreach (RaycastHit2D hit in hits)
+			{
+				if (hit.collider != null && !hit.collider.isTrigger && hit.collider != targetBall.GetComponent<Collider2D>())
+				{
+					lineRenderer.SetPosition(1, hit.point);
+					break;
+				}
+			}
 
 			if (clickAction.WasReleasedThisFrame())
 			{

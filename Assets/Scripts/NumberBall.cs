@@ -13,7 +13,7 @@ public class NumberBall : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         // number ball goes in pocket
-        if (collider.CompareTag("Pocket"))
+        if (collider.CompareTag("Pocket") && !isCueBall)
         {
             gameObject.SetActive(false);
         }

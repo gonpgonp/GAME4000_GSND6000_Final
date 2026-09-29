@@ -11,6 +11,8 @@ public class PowerUpHandler : MonoBehaviour
     public Cue cue;
 	public GameObject pocketPreview;
 	public GameObject pocketPrefab;
+	public GameObject bumperPreview;
+	public GameObject bumperPrefab;
 
 	private PlayerInput playerInput;
 	private InputAction clickAction;
@@ -32,6 +34,8 @@ public class PowerUpHandler : MonoBehaviour
     private static bool[] cueActive = new bool[3];
     private static bool[] ballActive = new bool[3];
     private static bool[] tableActive = new bool[3];
+
+	private static float clickLockoutTimer = 0.0f;
 
 	public Animator _pissedMessages; // since tutorials show up in the same place as pissed messages, I just made them all the same animator
 
@@ -72,6 +76,21 @@ public class PowerUpHandler : MonoBehaviour
 		return false;
 	}
 
+	public static void CancelAllAbilities()
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			cueActive[i] = false;
+			ballActive[i] = false;
+			tableActive[i] = false;
+		}
+	}
+
+	public static void SetClickLockout()
+	{
+		clickLockoutTimer = 0.1f;
+	}
+
 
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
 	void Start()
@@ -89,6 +108,8 @@ public class PowerUpHandler : MonoBehaviour
         table1Action = playerInput.currentActionMap.FindAction("Table1");
 		table2Action = playerInput.currentActionMap.FindAction("Table2");
 		table3Action = playerInput.currentActionMap.FindAction("Table3");
+
+		CancelAllAbilities();
 	}
 
     // Update is called once per frame
@@ -170,7 +191,7 @@ public class PowerUpHandler : MonoBehaviour
         }
         else if (tableActive[1])
         {
-            BlockPocket();
+			AddBumper();
 			_pissedMessages.Play("Buzzkill_tut");
         }
         else if (tableActive[2])
@@ -178,7 +199,10 @@ public class PowerUpHandler : MonoBehaviour
             AddPocket();
 			_pissedMessages.Play("Landscaper_tut");
         }
-    }
+
+		clickLockoutTimer = Mathf.Max(0.0f, clickLockoutTimer - Time.deltaTime);
+
+	}
 
     public void ResetPowerUps()
     {
@@ -239,7 +263,7 @@ public class PowerUpHandler : MonoBehaviour
 		}
 
 
-		if (clickAction.WasPressedThisFrame() && hoveredBall != null)
+		if (clickAction.WasPressedThisFrame() && clickLockoutTimer == 0.0f && hoveredBall != null)
 		{
 			cue.SetTargetBall(hoveredBall);
 			hoveredBall.GetComponent<SpriteRenderer>().color = Color.white;
@@ -267,7 +291,7 @@ public class PowerUpHandler : MonoBehaviour
 			}
 		}
 
-		if (clickAction.WasPressedThisFrame() && hoveredBall != null)
+		if (clickAction.WasPressedThisFrame() && clickLockoutTimer == 0.0f && hoveredBall != null)
         {
             if (swapBall == null)
             {
@@ -307,7 +331,7 @@ public class PowerUpHandler : MonoBehaviour
 				}
 			}
 
-			if (clickAction.WasPressedThisFrame() && hoveredBall != null)
+			if (clickAction.WasPressedThisFrame() && clickLockoutTimer == 0.0f && hoveredBall != null)
 			{
 				moveBall = hoveredBall;
 				moveBall.GetComponent<SpriteRenderer>().color = Color.white;
@@ -346,7 +370,7 @@ public class PowerUpHandler : MonoBehaviour
 				moveBall.transform.position = new Vector3(worldVec.x, worldVec.y);
 			}
 
-			if (clickAction.WasPressedThisFrame())
+			if (clickAction.WasPressedThisFrame() && clickLockoutTimer == 0.0f)
 			{
 				moveBall.GetComponent<SpriteRenderer>().color = Color.white;
 				moveBall = null;
@@ -401,7 +425,7 @@ public class PowerUpHandler : MonoBehaviour
 		}
 
 
-		if (clickAction.WasPressedThisFrame() && hoveredPocket != null)
+		if (clickAction.WasPressedThisFrame() && clickLockoutTimer == 0.0f && hoveredPocket != null)
         {
             hoveredPocket.GetComponent<Pocket>().SetGravity(true);
 			hoveredPocket.GetComponent<SpriteRenderer>().color = Color.black;
@@ -409,44 +433,35 @@ public class PowerUpHandler : MonoBehaviour
         }
     }
 
-    private void BlockPocket()
-    {
+
+	private void AddBumper()
+	{
 		Vector2 vec = pointAction.ReadValue<Vector2>();
-		Vector3 worldVec = Camera.main.ScreenToWorldPoint(vec);
-		var pockets = GameObject.FindGameObjectsWithTag("Pocket");
-		GameObject hoveredPocket = null;
+		Vector2 worldVec = Camera.main.ScreenToWorldPoint(vec);
+		worldVec.x = Mathf.Clamp(worldVec.x, -8, 8);
+		worldVec.y = Mathf.Clamp(worldVec.y, -4, 4);
+		bumperPreview.transform.position = worldVec;
+		bumperPreview.transform.localScale = bumperPrefab.transform.localScale;
 
-		foreach (var pocket in pockets)
+		if (clickAction.WasPressedThisFrame() && clickLockoutTimer == 0.0f)
 		{
-			if (pocket.GetComponent<Collider2D>().OverlapPoint(worldVec))
-			{
-				pocket.GetComponent<SpriteRenderer>().color = Color.red;
-				hoveredPocket = pocket;
-			}
-			else
-			{
-				pocket.GetComponent<SpriteRenderer>().color = Color.black;
-			}
-		}
-
-		if (clickAction.WasPressedThisFrame() && hoveredPocket != null)
-		{
-			hoveredPocket.GetComponent<Pocket>().SetBlocker(true);
-			hoveredPocket.GetComponent<SpriteRenderer>().color = Color.black;
+			Instantiate(bumperPrefab, worldVec, Quaternion.identity);
+			pocketPreview.transform.position = new Vector3(100, 0, 0);
 			tableActive[1] = false;
 		}
 	}
 
-    private void AddPocket()
+
+	private void AddPocket()
     {
 		Vector2 vec = pointAction.ReadValue<Vector2>();
-		Vector3 worldVec = Camera.main.ScreenToWorldPoint(vec);
+		Vector2 worldVec = Camera.main.ScreenToWorldPoint(vec);
         worldVec.x = Mathf.Clamp(worldVec.x, -8, 8);
         worldVec.y = Mathf.Clamp(worldVec.y, -4, 4);
-        worldVec.z = 0f;
         pocketPreview.transform.position = worldVec;
+		pocketPreview.transform.localScale = pocketPrefab.transform.localScale;
 
-		if (clickAction.WasPressedThisFrame())
+		if (clickAction.WasPressedThisFrame() && clickLockoutTimer == 0.0f)
 		{
             Instantiate(pocketPrefab, worldVec, Quaternion.identity);
             pocketPreview.transform.position = new Vector3(100, 0, 0);

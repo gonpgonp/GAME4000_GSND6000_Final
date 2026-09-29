@@ -250,6 +250,7 @@ public class SkillButton : MonoBehaviour
     {
         // grab the skill's category from name, then inside poweruphandler do the correct ActivateXXXAbility(level-1)
         Debug.Log("you clicked on this skill in the hotbar");
+        PowerUpHandler.SetClickLockout();
 		if (type == SkillType.CUE)
 		{
             PowerUpHandler.ActivateCueAbility(level - 1);
