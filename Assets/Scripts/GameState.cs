@@ -33,7 +33,7 @@ public class GameState : MonoBehaviour
     public static int p1SkillPoints = 0;
 	public static int p2SkillPoints = 0;
     public static bool isShopOpen = false;
-	public static int billiardsTutorial = 0; // increments through tutorials 1-5, 0 means tutorial is done.
+	public static int billiardsTutorial = 0; // increments through tutorials 1-5, 0 means tutorial is done
 	public static int billiardsTurnNumber = 0; // keeps track of first set of shots for tutorial
 	public static bool firstFightCompleted = false;
 	public static bool shopOpenedFirstTime = false;
@@ -206,6 +206,7 @@ public class GameState : MonoBehaviour
 		billiardsUI.SetTurnUI();
 		billiardsUI.SetStripesSolidsUI();
 		billiardsUI.SetPissedMessages();
+		billiardsUI.SetShopActive();
 		fightUI.SetActive(false);
 		fightMusic.volume = 0.0f;
 		billiardsMusic.volume = 0.5f;

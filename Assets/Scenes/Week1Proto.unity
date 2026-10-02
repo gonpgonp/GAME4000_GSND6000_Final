@@ -1085,7 +1085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &107211294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1750,6 +1750,7 @@ MonoBehaviour:
   p2Endcap: {fileID: 66495496}
   rageBarContainer: {fileID: 1316397205}
   startFightButton: {fileID: 870304771}
+  openShopButton: {fileID: 738578146}
   p1ScoreTMP: {fileID: 780306837}
   p2ScoreTMP: {fileID: 143264800}
   dicksTurnObj: {fileID: 299360601}
@@ -6252,7 +6253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &738578147
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7499,6 +7500,7 @@ GameObject:
   - component: {fileID: 870304774}
   - component: {fileID: 870304773}
   - component: {fileID: 870304772}
+  - component: {fileID: 870304776}
   m_Layer: 5
   m_Name: StartFight
   m_TagString: Untagged
@@ -7631,6 +7633,28 @@ RectTransform:
   m_AnchoredPosition: {x: 276.8, y: 269}
   m_SizeDelta: {x: 322, y: 94}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &870304776
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870304771}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 87b4c3f11021a48e7ba4af0c7a2c4a20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &871455056
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class BilliardsUI : MonoBehaviour
     public RectTransform rageBarContainer;
 
     public GameObject startFightButton;
-
+    public GameObject openShopButton;
     private Color32 rageColor = new Color32(255, 44, 0, 255);
     private Color32 calmColor = new Color32(255, 255, 255, 255);
 
@@ -213,6 +213,15 @@ public class BilliardsUI : MonoBehaviour
         else
         {
             _pissedMessages.Play("NoOnePissed");
+        }
+    }
+
+    public void SetShopActive()
+    {
+        if (GameState.firstFightCompleted)
+        {
+            openShopButton.SetActive(true);
+            startFightButton.GetComponent<Animator>().Play("StartFightButton");
         }
     }
 }
