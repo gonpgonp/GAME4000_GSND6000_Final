@@ -6,15 +6,15 @@ using UnityEngine.InputSystem;
 
 public class GameState : MonoBehaviour
 {
-    public enum States { TITLE, BILLIARDS, FIGHT, FIGHT_SCORING, GAME_OVER };
+    public enum States { TITLE, BILLIARDS, FIGHT_COUNTDOWN, FIGHT, FIGHT_SCORING, GAME_OVER };
 
     public static States state { get; private set; } = States.TITLE;
 
     public const float MINIMUM_FIGHT_RAGE = 7.0f;
 
 	public static int gameWinner = -1;
-	public static int fightWinner = -1;
-	public static float fightTimer = 0.0f;
+
+	//Billiards
 	public static bool billiardsP1Turn = true;
 	public static bool billiardsP1Solids = true;
 	public static bool billiardsBallsSelected = false;
@@ -28,15 +28,21 @@ public class GameState : MonoBehaviour
     public static int p2BilliardsScore = 0;
     public static float p1Rage = 0.0f;
     public static float p2Rage = 0.0f;
-    public static int p1FightScore = 0;
-    public static int p2FightScore = 0;
-    public static int p1SkillPoints = 0;
+	public static int p1SkillPoints = 0;
 	public static int p2SkillPoints = 0;
-    public static bool isShopOpen = false;
+	public static bool isShopOpen = false;
 	public static int billiardsTutorial = 0; // increments through tutorials 1-5, 0 means tutorial is done
 	public static int billiardsTurnNumber = 0; // keeps track of first set of shots for tutorial
-	public static bool firstFightCompleted = false;
 	public static bool shopOpenedFirstTime = false;
+
+	//Fight
+	public static int fightWinner = -1;
+	public static float fightTimer = 0.0f;
+	public static float fightCountdownTimer = 0.0f;
+	public static int p1FightScore = 0;
+    public static int p2FightScore = 0;
+	public static int fightScore = 0; // negative is p1, positive is p2
+	public static bool firstFightCompleted = false;
 
 	private PlayerInput playerInput;
 	private InputAction startBilliardsAction;
@@ -154,6 +160,18 @@ public class GameState : MonoBehaviour
 			case States.BILLIARDS:
 				CheckEndBilliardsTurn();
 				break;
+			case States.FIGHT_COUNTDOWN:
+				if (fightCountdownTimer > 0.0f)
+				{
+					fightCountdownTimer -= Time.deltaTime;
+				}
+				else
+				{
+					fightCountdownTimer = 0.0f;
+					_tutorial.Play("Tutorial0");
+					state = States.FIGHT;
+				}
+				break;
             case States.FIGHT:
                 if (fightTimer > 0.0f)
                 {
@@ -239,6 +257,7 @@ public class GameState : MonoBehaviour
     {
 		p1FightScore = 0;
 		p2FightScore = 0;
+		fightScore = 0;
 		FightUI ui = fightUI.GetComponent<FightUI>();
 		if (ui != null)
 		{
@@ -253,14 +272,15 @@ public class GameState : MonoBehaviour
 		{
 			p2Rage = 0.0f;
 		}
-		state = States.FIGHT;
+		state = States.FIGHT_COUNTDOWN;
 		cue.gameObject.SetActive(false);
 		billiardsUI.gameObject.SetActive(false);
 		fightUI.SetActive(true);
 		fightMusic.volume = 0.2f;
 		billiardsMusic.volume = 0.0f;
 		cameraHandler.SetTarget(new Vector3(0, -10, -10), 17.0f);
-        fightTimer = 20.0f;
+        fightTimer = 10.0f;
+		fightCountdownTimer = 3.0f;
 
 		if (!firstFightCompleted)
 		{
@@ -288,37 +308,45 @@ public class GameState : MonoBehaviour
     {
 		state = States.FIGHT_SCORING;
         scoreOverlay.SetActive(true);
-        richardHeadAnimator.Play("Idle");
+		p1ScoreText.SetText("0");
+		p2ScoreText.SetText("0");
+		richardHeadAnimator.Play("Idle");
         dickHeadAnimator.Play("Idle");
-        if (p1FightScore > p2FightScore)
+		int p1ScoreGain = 0;
+		int p2ScoreGain = 0;
+        if (fightScore < 0)
         {
             fightWinner = 1;
+			p1ScoreGain = fightScore < -2 ? 2 : 1;
         }
-        else if (p1FightScore < p2FightScore)
+        else if (fightScore > 0)
         {
             fightWinner = 2;
-        }
+			p2ScoreGain = fightScore > 2 ? 2 : 1;
+		}
         else
         {
             fightWinner = -1;
+			p1ScoreGain = 1;
+			p2ScoreGain = 1;
         }
 		yield return new WaitForSeconds(1.0f);
         int p1ScoreCount = 0;
         int p2ScoreCount = 0;
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 2; i++)
         {
-            if (p1FightScore > 0)
+            if (p1ScoreGain > 0)
             {
-                p1FightScore -= 1;
+				p1ScoreGain -= 1;
                 p1SkillPoints += 1;
                 p1ScoreCount += 1;
 				dickHeadAnimator.Play("Count");
 				yellowSwagDotAnim.Play("SwagDotYellow");
             }
 
-			if (p2FightScore > 0)
+			if (p2ScoreGain > 0)
 			{
-				p2FightScore -= 1;
+				p2ScoreGain -= 1;
 				p2SkillPoints += 1;
                 p2ScoreCount += 1;
 				richardHeadAnimator.Play("Count");
@@ -333,13 +361,13 @@ public class GameState : MonoBehaviour
 
 		yield return new WaitForSeconds(0.3f);
 
-        if (fightWinner == 1)
+        if (fightWinner != 1)
+        {
+			dickHeadAnimator.Play("Angry");
+        }
+        if (fightWinner != 2)
         {
 			richardHeadAnimator.Play("Angry");
-        }
-        else if (fightWinner == 2)
-        {
-            dickHeadAnimator.Play("Angry");
         }
 
 		yield return new WaitForSeconds(1.0f);

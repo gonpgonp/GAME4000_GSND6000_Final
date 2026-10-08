@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,24 +6,24 @@ public class FightUI : MonoBehaviour
 {
     public Animator p1Score;
     public Animator p2Score;
+
+	public TextMeshProUGUI timer;
+
 	public Image dial;
+
 	public Image dialArrow;
 
 
-    public void SetScoreUI()
-    {
-    	float p1Score = GameState.p1FightScore;
-		float totalScore = GameState.p1FightScore + GameState.p2FightScore;
+	private void FixedUpdate()
+	{
+		timer.text = Mathf.Ceil(GameState.fightTimer).ToString();
+	}
 
-		if (totalScore != 0)
-		{
-			float scoreRatio = p1Score / totalScore;
-			dial.fillAmount = scoreRatio;
-		}
-		else
-		{
-			dial.fillAmount = .5f;
-		}
+	public void SetScoreUI()
+    {
+		float scoreRatio = (GameState.fightScore + 5) / 10.0f;
+		Debug.Log("Dial - Score ratio: " + scoreRatio);
+		dial.fillAmount = scoreRatio;
 
 		float dialAngle = 90 - (dial.fillAmount * 180);
 		
