@@ -5,9 +5,7 @@ public class FightUI : MonoBehaviour
 {
     public Animator p1Score;
     public Animator p2Score;
-
 	public Image dial;
-
 	public Image dialArrow;
 
 

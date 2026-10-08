@@ -60,6 +60,8 @@ public class GameState : MonoBehaviour
     public GameObject winOverlay;
     public Animator dickHeadAnimator;
     public Animator richardHeadAnimator;
+	public Animator yellowSwagDotAnim;
+	public Animator whiteSwagDotAnim;
     public TextMeshProUGUI p1ScoreText;
     public TextMeshProUGUI p2ScoreText;
     public AudioSource billiardsMusic;
@@ -88,6 +90,10 @@ public class GameState : MonoBehaviour
 		p1SkillPoints = 0;
 		p2SkillPoints = 0;
 		isShopOpen = false;
+		billiardsTutorial = 0; // increments through tutorials 1-5, 0 means tutorial is done
+		billiardsTurnNumber = 0;
+		firstFightCompleted = false;
+		shopOpenedFirstTime = false;
 
 		playerInput = GetComponent<PlayerInput>();
         startBilliardsAction = playerInput.currentActionMap.FindAction("StartBilliards");
@@ -307,6 +313,7 @@ public class GameState : MonoBehaviour
                 p1SkillPoints += 1;
                 p1ScoreCount += 1;
 				dickHeadAnimator.Play("Count");
+				yellowSwagDotAnim.Play("SwagDotYellow");
             }
 
 			if (p2FightScore > 0)
@@ -315,6 +322,7 @@ public class GameState : MonoBehaviour
 				p2SkillPoints += 1;
                 p2ScoreCount += 1;
 				richardHeadAnimator.Play("Count");
+				whiteSwagDotAnim.Play("SwagDotWhite");
 			}
 
             p1ScoreText.SetText(p1ScoreCount.ToString());
