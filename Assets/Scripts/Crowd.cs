@@ -19,10 +19,10 @@ public class Crowd : MonoBehaviour
         //CrowdLeft.Play("CrowdLeft_Calm");
         //CrowdRight.Play("CrowdRight_calm");
         
-        int fightRatio = GetFightRatio();
-        Debug.Log("FightRatio: " + fightRatio);
+        //int fightRatio = GetFightRatio();
+        //Debug.Log("FightRatio: " + fightRatio);
 
-        if (fightRatio > 5)
+        if (GameState.fightScore < -1)
         {
             CrowdLeft.Play("CrowdLeft_Wild");
         }
@@ -30,7 +30,7 @@ public class Crowd : MonoBehaviour
         {
             CrowdLeft.Play("CrowdLeft_Calm");
         }
-        if (fightRatio < 5)
+        if (GameState.fightScore > 1)
         {
             CrowdRight.Play("CrowdRight_Wild");
         }

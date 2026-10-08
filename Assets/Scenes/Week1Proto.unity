@@ -7397,6 +7397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   p1Score: {fileID: 1510564763}
   p2Score: {fileID: 176930954}
+  timer: {fileID: 1379166932}
   dial: {fileID: 14446871}
   dialArrow: {fileID: 1805385696}
 --- !u!114 &850284086

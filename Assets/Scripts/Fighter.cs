@@ -54,15 +54,21 @@ public class Fighter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FaceOpponent();
-        DoAttacks();
-        DoGuards();
+        if (GameState.state == GameState.States.FIGHT)
+        {
+			FaceOpponent();
+			DoAttacks();
+			DoGuards();
+		}
     }
 
 	private void FixedUpdate()
 	{
-		DoMovement();
-        DecrementTimers();
+        if (GameState.state == GameState.States.FIGHT)
+        {
+            DoMovement();
+            DecrementTimers();
+        }
 	}
 
 	void FaceOpponent()
@@ -190,18 +196,22 @@ public class Fighter : MonoBehaviour
             if (index == 1)
             {
                 //GameState.p1FightScore = Mathf.Min(5, GameState.p1FightScore + 1);
-				//GameState.p2FightScore = Mathf.Max(0, GameState.p2FightScore - 1);
-                GameState.p1FightScore++;
+                //GameState.p2FightScore = Mathf.Max(0, GameState.p2FightScore - 1);
+                //GameState.p1FightScore++;
+                GameState.fightScore--;
             }
             else if (index == 2)
             {
 				//GameState.p2FightScore = Mathf.Min(5, GameState.p2FightScore + 1);
 				//GameState.p1FightScore = Mathf.Max(0, GameState.p1FightScore - 1);
-                GameState.p2FightScore++;
+				//GameState.p2FightScore++;
+				GameState.fightScore++;
 			}
-            
-			fightUI.SetScoreUI();   
-            crowd.UpdateCrowdAnims();        
+
+            Debug.Log(GameState.fightScore);
+
+            fightUI.SetScoreUI();
+            crowd.UpdateCrowdAnims();
 		}
     }
     public void SetGuarding(int input)
