@@ -221,7 +221,6 @@ public class BilliardsUI : MonoBehaviour
         if (GameState.firstFightCompleted)
         {
             openShopButton.SetActive(true);
-            startFightButton.GetComponent<Animator>().Play("StartFightButton");
         }
     }
 }

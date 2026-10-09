@@ -235,6 +235,7 @@ public class GameState : MonoBehaviour
 		fightMusic.volume = 0.0f;
 		billiardsMusic.volume = 0.5f;
         cameraHandler.SetTarget(new Vector3(0, 0, -10), 6.5f);
+		tutorial.SetActive(true);
 		
 		if (billiardsTutorial == 1)
 		{
@@ -359,7 +360,7 @@ public class GameState : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
 		}
 
-		yield return new WaitForSeconds(0.3f);
+		yield return new WaitForSeconds(1.0f);
 
         if (fightWinner != 1)
         {
@@ -477,6 +478,7 @@ public class GameState : MonoBehaviour
 		billiardsUI.SetTurnUI();
 		billiardsUI.SetPissedMessages();
 		billiardsUI.SetStripesSolidsUI();
+		billiardsUI.SetShopActive();
 		billiardsScoredThisTurn = false;
 	}
 
