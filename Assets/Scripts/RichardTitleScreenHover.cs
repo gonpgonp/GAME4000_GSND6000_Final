@@ -4,13 +4,15 @@ using UnityEngine.InputSystem;
 
 public class RichardTitleScreenHover : MonoBehaviour
 {
-   [SerializeField] TextMeshProUGUI phrase;
+   public TextMeshProUGUI phrase;
+   public GameObject phraseBG;
 
     public string[] richardDescs = new string[]
     {
         "Richard likes the sea.",
         "Richard likes jelly and peanut butter.",
-        "Richard pronounces it 'jif'."
+        "Richard pronounces it 'jif'.",
+        "Richard likes pasta."
     };
 
     void OnEnable()
@@ -23,6 +25,6 @@ public class RichardTitleScreenHover : MonoBehaviour
     void Update()
     {
         Vector2 mousePos = Mouse.current.position.ReadValue();
-        transform.position = mousePos;
+        phraseBG.transform.position = mousePos;
     }
 }
