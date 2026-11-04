@@ -21,8 +21,9 @@ public class Pocket : MonoBehaviour
     }
 	private void OnTriggerStay2D(Collider2D collision)
 	{
-        Vector2 pull = (transform.position - collision.transform.position).normalized * gravityStrength;
-        collision.GetComponent<Rigidbody2D>().AddForce(pull);
+		Vector2 pull = (transform.position - collision.transform.position).normalized * gravityStrength;
+        Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
+        if (rb) rb.AddForce(pull);
 	}
 
 	public void SetGravity(bool b)

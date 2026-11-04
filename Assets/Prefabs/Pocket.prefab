@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6701862703521596146}
   - component: {fileID: 3342132569660922570}
   - component: {fileID: 8749406712339397406}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GravitySensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 8523034935114313278}
   - component: {fileID: 7496458645094656930}
   - component: {fileID: 1432631354519844262}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Blocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 5186045149807941108}
   - component: {fileID: 7226588290694960494}
   - component: {fileID: 7680990920917947076}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pocket
   m_TagString: Pocket
   m_Icon: {fileID: 0}

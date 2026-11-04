@@ -50,11 +50,11 @@ public class Cue : MonoBehaviour
 
     void Update()
     {
-		if (GameState.state == GameState.States.BILLIARDS)
+		if (GameState.state == GameState.States.BILLIARDS || GameState.state == GameState.States.SCRATCH)
 		{
+			CheckCanShoot();
 			DoCueVisual();
 			CheckAngerInaccuracy();
-			CheckCanShoot();
 			CheckClicking();
 			Aim();
 		}
@@ -110,6 +110,9 @@ public class Cue : MonoBehaviour
 		float xDiff = cuePos.x - mousePosCam.x;
 		float yDiff = cuePos.y - mousePosCam.y;
 
+		if (xDiff == 0) xDiff = 0.0001f;
+		if (yDiff == 0) yDiff = 0.0001f;
+
 		if (xDiff < 0)
 		{
 			float f = (Mathf.Atan(yDiff / xDiff) * (180 / Mathf.PI)) + 180;
@@ -144,7 +147,7 @@ public class Cue : MonoBehaviour
 			spriteRenderer.color = new Color(1f, 1f, 1f, .3f);
 		}
 
-		if (PowerUpHandler.IsAnyActive())
+		if (!canShoot)
 		{
 			spriteRenderer.color = new Color(1f, 1f, 1f, 0f);
 		}
@@ -175,7 +178,7 @@ public class Cue : MonoBehaviour
 	private void CheckCanShoot()
 	{
 		canShoot = true;
-		if (GameState.isShopOpen || PowerUpHandler.IsAnyActive() )
+		if (GameState.isShopOpen || PowerUpHandler.IsAnyActive() || GameState.billiardsDidScratch)
 		{
 			noShootTimer = 0.2f;
 		}

@@ -12,12 +12,8 @@ public class NumberBall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        // number ball goes in pocket
-        if (collider.CompareTag("Pocket") && !isCueBall)
-        {
-            gameObject.SetActive(false);
-        }
-		// checking if 8ball was sunk
+        if (!collider.CompareTag("Pocket")) return;
+
 		if (isCueBall)
 		{
 			GameState.billiardsDidScratch = true;
@@ -38,7 +34,8 @@ public class NumberBall : MonoBehaviour
                 Debug.Log("P1 is solids : " + GameState.billiardsP1Solids);
             }
             gameState.SinkBall(isStripe);
-        }
+			gameObject.SetActive(false);
+		}
     }
 
     private void OnCollisionEnter2D(Collision2D collision) // still need to add sfx

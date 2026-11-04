@@ -312,7 +312,9 @@ public class PowerUpHandler : MonoBehaviour
     private void MoveBall()
     {
 		Vector2 vec = pointAction.ReadValue<Vector2>();
-		Vector3 worldVec = Camera.main.ScreenToWorldPoint(vec);
+		Vector2 worldVec = Camera.main.ScreenToWorldPoint(vec);
+		worldVec.x = Mathf.Clamp(worldVec.x, -7.75f, 7.75f);
+		worldVec.y = Mathf.Clamp(worldVec.y, -3.75f, 3.75f);
 		var numBalls = GameObject.FindGameObjectsWithTag("NumberBall");
 		if (moveBall == null)
         {
@@ -360,14 +362,9 @@ public class PowerUpHandler : MonoBehaviour
 				}
 			}
 
-            if (worldVec.x > 7.5 || worldVec.x < -7.5 || worldVec.y > 3.5 || worldVec.y < -3.5)
-            {
-                tooClose = true;
-            }
-
 			if (!tooClose)
             {
-				moveBall.transform.position = new Vector3(worldVec.x, worldVec.y);
+				moveBall.transform.position = worldVec;
 			}
 
 			if (clickAction.WasPressedThisFrame() && clickLockoutTimer == 0.0f)

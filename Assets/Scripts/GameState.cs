@@ -1,12 +1,13 @@
-using UnityEngine;
 using System.Collections;
-using UnityEngine.Rendering.Universal;
 using TMPro;
+using UnityEditor.Timeline.Actions;
+using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 public class GameState : MonoBehaviour
 {
-    public enum States { TITLE, BILLIARDS, FIGHT_COUNTDOWN, FIGHT, FIGHT_SCORING, GAME_OVER };
+    public enum States { TITLE, BILLIARDS, SCRATCH, FIGHT_COUNTDOWN, FIGHT, FIGHT_SCORING, GAME_OVER };
 
     public static States state { get; private set; } = States.TITLE;
 
@@ -52,9 +53,13 @@ public class GameState : MonoBehaviour
 	private InputAction debugPointsAction;
 	private InputAction debugRageAction;
 
+	private InputAction clickAction;
+	private InputAction pointAction;
+
 	public CameraHandler cameraHandler;
     public Cue cue;
     public NumberBall cueBall;
+	public GameObject scratchPreview;
     public BilliardsUI billiardsUI;
 	public SkillTreeUI p1Shop;
 	public SkillTreeUI p2Shop;
@@ -87,6 +92,7 @@ public class GameState : MonoBehaviour
 		billiardsP1Turn = true;
 		billiardsBallsSelected = false;
 		billiardsScoredThisTurn = false;
+		billiardsDidScratch = false;
 		p1BilliardsScore = 0;
 		p2BilliardsScore = 0;
 		p1Rage = 0.0f;
@@ -115,6 +121,9 @@ public class GameState : MonoBehaviour
 		billiardsMusic.volume = 0.5f;
 		billiardsTutorial = 1;
 		billiardsTurnNumber = 0;
+
+		clickAction = playerInput.currentActionMap.FindAction("Click");
+		pointAction = playerInput.currentActionMap.FindAction("Point");
 	}
 
     // Update is called once per frame
@@ -159,6 +168,9 @@ public class GameState : MonoBehaviour
         {
 			case States.BILLIARDS:
 				CheckEndBilliardsTurn();
+				break;
+			case States.SCRATCH:
+				DoScratch();
 				break;
 			case States.FIGHT_COUNTDOWN:
 				if (fightCountdownTimer > 0.0f)
@@ -464,6 +476,51 @@ public class GameState : MonoBehaviour
 		billiardsHitOwnBall = false;
 	}
 
+	public void DoScratch()
+	{
+		cue.gameObject.SetActive(false);
+
+		Vector2 vec = pointAction.ReadValue<Vector2>();
+		Vector2 worldVec = Camera.main.ScreenToWorldPoint(vec);
+		worldVec.x = Mathf.Clamp(worldVec.x, -7.75f, -4f);
+		worldVec.y = Mathf.Clamp(worldVec.y, -3.75f, 3.75f);
+
+		bool tooClose = false;
+		var pockets = GameObject.FindGameObjectsWithTag("Pocket");
+		foreach (var pocket in pockets)
+		{
+			if (Vector2.Distance(worldVec, pocket.transform.position) < 1.0f)
+			{
+				tooClose = true;
+				break;
+			}
+		}
+
+		var numBalls = GameObject.FindGameObjectsWithTag("NumberBall");
+		foreach (var ball in numBalls)
+		{
+			if (Vector2.Distance(worldVec, ball.transform.position) < 0.409f / 2.0f)
+			{
+				tooClose = true;
+				break;
+			}
+		}
+
+		if (!tooClose)
+		{
+			scratchPreview.transform.position = worldVec;
+		}
+
+		if (clickAction.WasPressedThisFrame())
+		{
+			billiardsDidScratch = false;
+			cueBall.transform.position = worldVec;
+			scratchPreview.transform.position = new Vector3(100, 0, 0);
+			state = States.BILLIARDS;
+			cue.gameObject.SetActive(true);
+		}
+	}
+
 	public void ChangeBilliardsTurn()
     {
 		AddRageEndOfTurn();
@@ -506,8 +563,7 @@ public class GameState : MonoBehaviour
 				{
 					if (billiardsDidScratch)
 					{
-						cueBall.transform.position = new Vector3(-4.0f, 0.0f, 0.0f);
-						billiardsDidScratch = false;
+						state = States.SCRATCH;
 					}
 					cue.ReadyForNextTurn();
 					cue.SetTargetBall(cueBall.gameObject);
